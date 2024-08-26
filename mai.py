@@ -40,6 +40,9 @@ def generar_pdf(foto, nombre, grado, reseña, correo, resumen_platica, enlace_pd
     pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}")
 
+    pdf.ln(10)  # Añadir un espacio vertical después de la sección "Acerca del autor"
+
+
     # Sobre la plática
     pdf.set_y(80)  # Ajustar la posición para empezar después de la imagen y texto
     pdf.set_font("Arial", "B", 12)
@@ -47,6 +50,9 @@ def generar_pdf(foto, nombre, grado, reseña, correo, resumen_platica, enlace_pd
     pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, resumen_platica)
 
+    pdf.ln(10)  # Añadir un espacio vertical después de la sección "Sobre la plática"
+
+    
     # Enlace al PDF de diapositivas
     if enlace_pdf:
         pdf.set_font("Arial", "B", 12)

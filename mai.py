@@ -28,7 +28,7 @@ def pagina_ejemplo():
     st.title("Evento: Creación y tipos de hipótesis")
 
     # Datos del autor
-    foto = "ruta/a/la/foto.jpg"  # Cambia esta ruta a la imagen del autor
+    foto = "DrHuerta.jpg"  # Cambia esta ruta a la imagen del autor
     nombre = "Miguel Huerta"
     grado = "PhD en Ciencias"
     resumen = ("Miguel Huerta es un experto en metodología de la investigación con más de 10 años de experiencia "

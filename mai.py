@@ -46,7 +46,7 @@ def pagina_ejemplo():
     mostrar_sobre_la_platica(resumen_platica)
     
     # Enlace directo al PDF
-    enlace_pdf = "https://www.ejemplo.com/diapositivas.pdf"  # Reemplaza con el enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/asp.pdf"  # Reemplaza con el enlace directo al PDF
     mostrar_diapositivas(enlace_pdf)
 
 # Página principal

@@ -50,6 +50,9 @@ def generar_pdf(foto, nombre, grado, reseña, correo, resumen_platica, enlace_pd
     pdf.set_font("Arial", "B", 16)
     pdf.cell(200, 10, txt="Evento: Creación y tipos de hipótesis", ln=True, align='C')
 
+    pdf.ln(10)  # Añadir un espacio vertical después de la sección "Acerca del autor"
+
+    
     # Acerca del autor
     pdf.set_font("Arial", "B", 12)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
@@ -62,7 +65,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, resumen_platica, enlace_pd
 
 
     # Sobre la plática
-    pdf.set_y(80)  # Ajustar la posición para empezar después de la imagen y texto
+    pdf.set_y(100)  # Ajustar la posición para empezar después de la imagen y texto
     pdf.set_font("Arial", "B", 12)
     pdf.cell(200, 10, txt="Sobre la plática", ln=True)
     pdf.set_font("Arial", "", 12)

@@ -28,7 +28,7 @@ def pagina_ejemplo():
     st.title("Evento: Creación y tipos de hipótesis")
 
     # Datos del autor
-    foto = "ruta/a/la/foto.jpg"  # Cambia esta ruta a la imagen del autor
+    foto = "DrHuerta.jpg"  # Cambia esta ruta a la imagen del autor
     nombre = "Miguel Huerta"
     grado = "PhD en Ciencias"
     reseña = ("Miguel Huerta es un experto en metodología de la investigación con más de 10 años de experiencia "
@@ -47,7 +47,7 @@ def pagina_ejemplo():
     mostrar_sobre_la_platica(resumen_platica)
     
     # Mostrar diapositivas (en PDF)
-    pdf_file = None  # Reemplaza con la ruta al archivo PDF de las diapositivas, o déjalo como None si no hay PDF disponible
+    pdf_file = asp.pdf   # Reemplaza con la ruta al archivo PDF de las diapositivas, o déjalo como None si no hay PDF disponible
     mostrar_diapositivas(pdf_file)
 
 # Página principal

@@ -9,6 +9,8 @@ def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo):
     st.write(f"**Grado:** {grado}")
     st.write(reseña)
     st.write(f"**Correo:** {correo}")
+    st.write(f"[Perfil de Google Scholar]({perfil_scholar})")
+
 
 # Función para mostrar información sobre la plática
 def mostrar_sobre_la_platica(resumen):
@@ -95,6 +97,7 @@ def pagina_ejemplo():
                "en la enseñanza de técnicas científicas. Ha colaborado en múltiples proyectos de investigación "
                "y publicado numerosos artículos en revistas indexadas.")
     correo = "miguel.huerta@example.com"
+    perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"
     
     # Mostrar sección "Acerca del autor"
     mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo)

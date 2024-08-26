@@ -14,12 +14,22 @@ def mostrar_sobre_la_platica(resumen):
     st.subheader("Sobre la plática")
     st.write(resumen)
 
-# Función para convertir PDF a base64 y mostrarlo en un iframe
+# Función para mostrar diapositivas en PDF
 def mostrar_diapositivas(pdf_file):
     st.subheader("Diapositivas")
     if pdf_file:
         with open(pdf_file, "rb") as f:
-            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+            pdf_data = f.read()
+
+        st.download_button(
+            label="Descargar PDF",
+            data=pdf_data,
+            file_name="diapositivas.pdf",
+            mime="application/pdf"
+        )
+
+        # Mostrar el PDF usando un componente HTML embebido
+        base64_pdf = base64.b64encode(pdf_data).decode('utf-8')
         pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="500" type="application/pdf"></iframe>'
         st.markdown(pdf_display, unsafe_allow_html=True)
     else:

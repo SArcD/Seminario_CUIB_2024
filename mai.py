@@ -47,7 +47,7 @@ def pagina_ejemplo():
     mostrar_sobre_la_platica(resumen_platica)
     
     # Mostrar diapositivas (en PDF)
-    pdf_file = asp.pdf   # Reemplaza con la ruta al archivo PDF de las diapositivas, o déjalo como None si no hay PDF disponible
+    pdf_file = "asp.pdf"   # Reemplaza con la ruta al archivo PDF de las diapositivas, o déjalo como None si no hay PDF disponible
     mostrar_diapositivas(pdf_file)
 
 # Página principal

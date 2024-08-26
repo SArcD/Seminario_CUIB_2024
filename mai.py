@@ -77,7 +77,7 @@ def main():
         st.write("Haz clic en una fecha para ver más detalles sobre el evento.")
         # Mostrar el calendario de eventos con enlaces
         for date, event in dates.items():
-            st.markdown(f"[{date}](#){event}", unsafe_allow
+            st.markdown(f"[{date}](#){event}", unsafe_allow)
     elif page == "30 de agosto: Miguel Huerta":
         pagina_ejemplo()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos

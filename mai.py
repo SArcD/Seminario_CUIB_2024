@@ -1,91 +1,84 @@
 import streamlit as st
 
-# Configuración de la barra lateral para la selección de la página
-st.sidebar.title("Calendario de Eventos Académicos")
-page = st.sidebar.selectbox(
-    "Selecciona una página:",
-    [
-        "Inicio",
-        "30 de agosto: Miguel Huerta",
-        "06 de septiembre: Mónica Ríos",
-        "13 de septiembre: Mariano, Julio y Minerva",
-        "20 de septiembre: Daniela Rios y Victoria García y Julián",
-        "27 de septiembre: Julián",
-        "04 de octubre: Fernanda y Cesar",
-        "11 de octubre: Yoli y Mónica Ríos",
-        "18 de octubre: Ricardo y Fernanda García",
-        "25 de octubre: Liliana y Alondra",
-        "08 de noviembre: Paola García y Angie Del Toro",
-        "15 de noviembre: Xóchitl Trujillo",
-        "22 de noviembre: Santiago Arceo",
-        "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra",
-    ]
-)
+# Función para mostrar información del autor
+def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo):
+    st.image(foto, width=150)
+    st.subheader(nombre)
+    st.write(f"**Grado:** {grado}")
+    st.write(resumen)
+    st.write(f"**Correo:** {correo}")
 
-# Diccionario para almacenar los enlaces de las fechas
-dates = {
-    "30 de agosto": "30 de agosto: Miguel Huerta",
-    "06 de septiembre": "06 de septiembre: Mónica Ríos",
-    "13 de septiembre": "13 de septiembre: Mariano, Julio y Minerva",
-    "20 de septiembre": "20 de septiembre: Daniela Rios y Victoria García y Julián",
-    "27 de septiembre": "27 de septiembre: Julián",
-    "04 de octubre": "04 de octubre: Fernanda y Cesar",
-    "11 de octubre": "11 de octubre: Yoli y Mónica Ríos",
-    "18 de octubre": "18 de octubre: Ricardo y Fernanda García",
-    "25 de octubre": "25 de octubre: Liliana y Alondra",
-    "08 de noviembre": "08 de noviembre: Paola García y Angie Del Toro",
-    "15 de noviembre": "15 de noviembre: Xóchitl Trujillo",
-    "22 de noviembre": "22 de noviembre: Santiago Arceo",
-    "29 de noviembre": "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra"
-}
+# Función para mostrar información sobre la plática
+def mostrar_sobre_la_platica(resumen):
+    st.subheader("Sobre la plática")
+    st.write(resumen)
 
-# Función para mostrar el contenido de cada página
-def show_page(page):
+# Función para mostrar diapositivas en PDF
+def mostrar_diapositivas(pdf_file):
+    st.subheader("Diapositivas")
+    if pdf_file:
+        st.write("Visualiza las diapositivas a continuación:")
+        st.download_button("Descargar PDF", pdf_file)
+        st.markdown(f'<iframe src="data:application/pdf;base64,{pdf_file}" width="700" height="500" type="application/pdf"></iframe>', unsafe_allow_html=True)
+    else:
+        st.write("No hay diapositivas disponibles para esta plática.")
+
+# Página de ejemplo
+def pagina_ejemplo():
+    st.title("Evento: Creación y tipos de hipótesis")
+
+    # Datos del autor
+    foto = "ruta/a/la/foto.jpg"  # Cambia esta ruta a la imagen del autor
+    nombre = "Miguel Huerta"
+    grado = "PhD en Ciencias"
+    resumen = ("Miguel Huerta es un experto en metodología de la investigación con más de 10 años de experiencia "
+               "en la enseñanza de técnicas científicas. Ha colaborado en múltiples proyectos de investigación "
+               "y publicado numerosos artículos en revistas indexadas.")
+    correo = "miguel.huerta@example.com"
+    
+    # Mostrar sección "Acerca del autor"
+    mostrar_acerca_del_autor(foto, nombre, grado, resumen, correo)
+    
+    # Información sobre la plática
+    resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
+                       "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
+    
+    # Mostrar sección "Sobre la plática"
+    mostrar_sobre_la_platica(resumen_platica)
+    
+    # Mostrar diapositivas (en PDF)
+    pdf_file = None  # Reemplaza con la ruta al archivo PDF de las diapositivas, o déjalo como None si no hay PDF disponible
+    mostrar_diapositivas(pdf_file)
+
+# Página principal
+def main():
+    st.sidebar.title("Calendario de Eventos Académicos")
+    page = st.sidebar.selectbox(
+        "Selecciona una fecha para ver más detalles:",
+        [
+            "Inicio",
+            "30 de agosto: Miguel Huerta",
+            "06 de septiembre: Mónica Ríos",
+            "13 de septiembre: Mariano, Julio y Minerva",
+            "20 de septiembre: Daniela Rios y Victoria García y Julián",
+            "27 de septiembre: Julián",
+            "04 de octubre: Fernanda y Cesar",
+            "11 de octubre: Yoli y Mónica Ríos",
+            "18 de octubre: Ricardo y Fernanda García",
+            "25 de octubre: Liliana y Alondra",
+            "08 de noviembre: Paola García y Angie Del Toro",
+            "15 de noviembre: Xóchitl Trujillo",
+            "22 de noviembre: Santiago Arceo",
+            "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra",
+        ]
+    )
+    
     if page == "Inicio":
         st.title("Calendario de Eventos Académicos")
-        st.write("Haz clic en una fecha para ver más detalles sobre el evento.")
-        # Mostrar el calendario de eventos con enlaces
-        for date, event in dates.items():
-            st.markdown(f"[{date}](#){event}", unsafe_allow_html=True)
+        st.write("Selecciona una fecha en la barra lateral para ver más detalles.")
     elif page == "30 de agosto: Miguel Huerta":
-        st.title("30 de agosto: Miguel Huerta")
-        st.write("**Tema:** Creación y tipos de hipótesis")
-    elif page == "06 de septiembre: Mónica Ríos":
-        st.title("06 de septiembre: Mónica Ríos")
-        st.write("**Tema:** Aspectos de la investigación científica")
-    elif page == "13 de septiembre: Mariano, Julio y Minerva":
-        st.title("13 de septiembre: Mariano, Julio y Minerva")
-        st.write("**Tema:** Diseños experimentales")
-    elif page == "20 de septiembre: Daniela Rios y Victoria García y Julián":
-        st.title("20 de septiembre: Daniela Rios, Victoria García y Julián")
-        st.write("**Tema:** Bioética y diseño experimental")
-    elif page == "27 de septiembre: Julián":
-        st.title("27 de septiembre: Julián")
-        st.write("**Tema:** Diseño experimental: ejercicio")
-    elif page == "04 de octubre: Fernanda y Cesar":
-        st.title("04 de octubre: Fernanda y Cesar")
-        st.write("**Tema:** Estudios transversales")
-    elif page == "11 de octubre: Yoli y Mónica Ríos":
-        st.title("11 de octubre: Yoli y Mónica Ríos")
-        st.write("**Tema:** Casos y controles")
-    elif page == "18 de octubre: Ricardo y Fernanda García":
-        st.title("18 de octubre: Ricardo y Fernanda García")
-        st.write("**Tema:** Estudios de cohorte")
-    elif page == "25 de octubre: Liliana y Alondra":
-        st.title("25 de octubre: Liliana y Alondra")
-        st.write("**Tema:** Ensayos clínicos")
-    elif page == "08 de noviembre: Paola García y Angie Del Toro":
-        st.title("08 de noviembre: Paola García y Angie Del Toro")
-        st.write("**Tema:** Investigación científica del cambio ambiental")
-    elif page == "15 de noviembre: Xóchitl Trujillo":
-        st.title("15 de noviembre: Xóchitl Trujillo")
-        st.write("**Tema:** Aspectos de las publicaciones científicas y el emprendimiento")
-    elif page == "22 de noviembre: Santiago Arceo":
-        st.title("22 de noviembre: Santiago Arceo")
-        st.write("**Tema:** Machine-learning en el análisis clínico")
-    elif page == "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra":
-        st.title("29 de noviembre: Alberto Bricio, Ricardo Marentes y Valeria Ibarra")
-        st.write("**Tema:** Bioética e Investigación clínica y Retribución social")
+        pagina_ejemplo()
+    # Aquí añadirás funciones similares para cada una de las fechas/eventos
 
-# Mostrar el contenido de la página seleccionada
-show_page(page)
+if __name__ == "__main__":
+    main()

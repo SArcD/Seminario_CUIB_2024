@@ -68,6 +68,9 @@ def pagina_ejemplo():
 
 # Página principal
 def main():
+    if "page" not in st.session_state:
+        st.session_state.page = "Inicio"
+    
     st.sidebar.title("Calendario de Eventos Académicos")
     page = st.sidebar.selectbox(
         "Selecciona una fecha para ver más detalles:",
@@ -86,18 +89,27 @@ def main():
             "15 de noviembre: Xóchitl Trujillo",
             "22 de noviembre: Santiago Arceo",
             "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra",
-        ]
+        ],
+        index=["Inicio", "30 de agosto: Miguel Huerta", "06 de septiembre: Mónica Ríos", "13 de septiembre: Mariano, Julio y Minerva",
+               "20 de septiembre: Daniela Rios y Victoria García y Julián", "27 de septiembre: Julián", "04 de octubre: Fernanda y Cesar",
+               "11 de octubre: Yoli y Mónica Ríos", "18 de octubre: Ricardo y Fernanda García", "25 de octubre: Liliana y Alondra",
+               "08 de noviembre: Paola García y Angie Del Toro", "15 de noviembre: Xóchitl Trujillo", "22 de noviembre: Santiago Arceo",
+               "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra"].index(st.session_state.page)
     )
     
     if page == "Inicio":
+        st.session_state.page = "Inicio"
         st.title("Calendario de Eventos Académicos")
         st.write("Haz clic en una fecha para ver más detalles sobre el evento.")
         # Mostrar el calendario de eventos con enlaces
         for date, event in dates.items():
-            st.markdown(f"[{date}](#){event}",  unsafe_allow_html=True)
+            if st.button(date):
+                st.session_state.page = event
+                st.experimental_rerun()
     elif page == "30 de agosto: Miguel Huerta":
+        st.session_state.page = "30 de agosto: Miguel Huerta"
         pagina_ejemplo()
-    # Aquí añadirás funciones similares para cada una de las fechas/eventos
+    # Añadirás funciones similares para cada una de las fechas/eventos
 
 if __name__ == "__main__":
     main()

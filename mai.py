@@ -5,7 +5,7 @@ def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo):
     st.image(foto, width=150)
     st.subheader(nombre)
     st.write(f"**Grado:** {grado}")
-    st.write(resumen)
+    st.write(reseña)
     st.write(f"**Correo:** {correo}")
 
 # Función para mostrar información sobre la plática
@@ -28,16 +28,16 @@ def pagina_ejemplo():
     st.title("Evento: Creación y tipos de hipótesis")
 
     # Datos del autor
-    foto = "DrHuerta.jpg"  # Cambia esta ruta a la imagen del autor
+    foto = "ruta/a/la/foto.jpg"  # Cambia esta ruta a la imagen del autor
     nombre = "Miguel Huerta"
     grado = "PhD en Ciencias"
-    resumen = ("Miguel Huerta es un experto en metodología de la investigación con más de 10 años de experiencia "
+    reseña = ("Miguel Huerta es un experto en metodología de la investigación con más de 10 años de experiencia "
                "en la enseñanza de técnicas científicas. Ha colaborado en múltiples proyectos de investigación "
                "y publicado numerosos artículos en revistas indexadas.")
     correo = "miguel.huerta@example.com"
     
     # Mostrar sección "Acerca del autor"
-    mostrar_acerca_del_autor(foto, nombre, grado, resumen, correo)
+    mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo)
     
     # Información sobre la plática
     resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
@@ -47,7 +47,7 @@ def pagina_ejemplo():
     mostrar_sobre_la_platica(resumen_platica)
     
     # Mostrar diapositivas (en PDF)
-    pdf_file = asp.pdf  # Reemplaza con la ruta al archivo PDF de las diapositivas, o déjalo como None si no hay PDF disponible
+    pdf_file = None  # Reemplaza con la ruta al archivo PDF de las diapositivas, o déjalo como None si no hay PDF disponible
     mostrar_diapositivas(pdf_file)
 
 # Página principal

@@ -101,15 +101,13 @@ def main():
         st.session_state.page = "Inicio"
         st.title("Calendario de Eventos Académicos")
         st.write("Haz clic en una fecha para ver más detalles sobre el evento.")
-        # Mostrar el calendario de eventos con enlaces
+        # Mostrar el calendario de eventos con botones
         for date, event in dates.items():
             if st.button(date):
                 st.session_state.page = event
-                st.experimental_rerun()
-    elif page == "30 de agosto: Miguel Huerta":
-        st.session_state.page = "30 de agosto: Miguel Huerta"
+    elif st.session_state.page == "30 de agosto: Miguel Huerta":
         pagina_ejemplo()
-    # Añadirás funciones similares para cada una de las fechas/eventos
+    # Aquí añadirás funciones similares para cada una de las fechas/eventos
 
 if __name__ == "__main__":
     main()

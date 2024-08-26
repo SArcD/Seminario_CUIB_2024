@@ -87,12 +87,7 @@ def pagina_ejemplo():
     foto = "DrHuerta.jpg"  # Cambia esta ruta a la imagen del autor
     nombre = "Miguel Huerta"
     grado = "PhD en Ciencias"
-    reseña = "Miguel Huerta Doctor en Ciencias con especialidad en Fisiología y Biofísica. "
-              "Es Profesor-Investigador Titular C del Centro Universitario de Investigaciones Biomédicas "
-              "de la Universidad de Colima. Es miembro del Sistema Nacional de Investigadores en el nivel 3 emérito. "
-              "Su campo de investigación es la Biomedicina, con énfasis en la fisiología y biofísica del sistema neuromuscular "
-              "y la fisiopatología de la diabetes mellitus. Ha publicado más de cien artículos revistas indizadas al Journal "
-              "of Citation Reports y ha graduado a más de 40 Maestros y Doctores en Ciencias en programas SNP-CONAHCyT."
+    reseña = "Miguel Huerta Doctor en Ciencias con especialidad en Fisiología y Biofísica Es Profesor-Investigador Titular C del Centro Universitario de Investigaciones Biomédicas de la Universidad de Colima. Es miembro del Sistema Nacional de Investigadores en el nivel 3 emérito. Su campo de investigación es la Biomedicina, con énfasis en la fisiología y biofísica del sistema neuromuscular y la fisiopatología de la diabetes mellitus. Ha publicado más de cien artículos revistas indizadas al Journal of Citation Reports y ha graduado a más de 40 Maestros y Doctores en Ciencias en programas SNP-CONAHCyT."
     st.markdown(f"<p style='text-align: justify;'>{reseña}</p>", unsafe_allow_html=True)
     correo = "huertam@ucol.mx"
     perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"

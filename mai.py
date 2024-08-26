@@ -18,7 +18,7 @@ def mostrar_diapositivas(enlace_pdf):
     st.subheader("Diapositivas")
     if enlace_pdf:
         st.markdown(f"[Haz clic aquí para ver las diapositivas]( {enlace_pdf})", unsafe_allow_html=True)
-        st.markdown(f"![Ver diapositivas en PDF]({enlace_pdf})")
+        #st.markdown(f"![Ver diapositivas en PDF]({enlace_pdf})")
     else:
         st.write("No hay diapositivas disponibles para esta plática.")
 

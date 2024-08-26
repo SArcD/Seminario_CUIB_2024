@@ -23,6 +23,24 @@ def mostrar_diapositivas(enlace_pdf):
     else:
         st.write("No hay diapositivas disponibles para esta plática.")
 
+dates = {
+    "30 de agosto": "30 de agosto: Miguel Huerta",
+    "06 de septiembre": "06 de septiembre: Mónica Ríos",
+    "13 de septiembre": "13 de septiembre: Mariano, Julio y Minerva",
+    "20 de septiembre": "20 de septiembre: Daniela Rios y Victoria García y Julián",
+    "27 de septiembre": "27 de septiembre: Julián",
+    "04 de octubre": "04 de octubre: Fernanda y Cesar",
+    "11 de octubre": "11 de octubre: Yoli y Mónica Ríos",
+    "18 de octubre": "18 de octubre: Ricardo y Fernanda García",
+    "25 de octubre": "25 de octubre: Liliana y Alondra",
+    "08 de noviembre": "08 de noviembre: Paola García y Angie Del Toro",
+    "15 de noviembre": "15 de noviembre: Xóchitl Trujillo",
+    "22 de noviembre": "22 de noviembre: Santiago Arceo",
+    "29 de noviembre": "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra"
+}
+
+
+
 # Función para generar un PDF con la información de la página
 def generar_pdf(foto, nombre, grado, reseña, correo, resumen_platica, enlace_pdf):
     pdf = FPDF()

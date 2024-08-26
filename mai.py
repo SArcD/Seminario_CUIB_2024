@@ -25,6 +25,7 @@ def mostrar_diapositivas(enlace_pdf):
         st.write("No hay diapositivas disponibles para esta plática.")
 
 dates = {
+    "Inicio": "Inicio",
     "30 de agosto: Miguel Huerta": "30 de agosto: Miguel Huerta",
     "06 de septiembre: Mónica Ríos": "06 de septiembre: Mónica Ríos",
     "13 de septiembre: Mariano, Julio y Minerva": "13 de septiembre: Mariano, Julio y Minerva",
@@ -141,6 +142,7 @@ def main():
         for date, event in dates.items():
             if st.button(date):
                 st.session_state.page = event
+                st.experimental_rerun()
     elif st.session_state.page == "30 de agosto: Miguel Huerta":
         pagina_ejemplo()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos

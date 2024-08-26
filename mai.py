@@ -44,7 +44,7 @@ dates = {
 
 
 # Función para generar un PDF con la información de la página
-def generar_pdf(foto, nombre, grado, reseña, correo, resumen_platica, enlace_pdf):
+def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar,  resumen_platica, enlace_pdf):
     pdf = FPDF()
     pdf.add_page()
 
@@ -61,7 +61,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, resumen_platica, enlace_pd
     pdf.image(foto, x=10, y=40, w=30)  # Añadir la imagen del autor
     pdf.set_xy(55, 30)  # Posicionar el texto al lado de la imagen
     pdf.set_font("Arial", "", 12)
-    pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}")
+    pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}\n[Perfil de Google Scholar]: {perfil_scholar}")
 
     pdf.ln(10)  # Añadir un espacio vertical después de la sección "Acerca del autor"
 
@@ -100,7 +100,7 @@ def pagina_ejemplo():
     perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"
     
     # Mostrar sección "Acerca del autor"
-    mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo)
+    mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar)
     
     # Información sobre la plática
     resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
@@ -114,7 +114,7 @@ def pagina_ejemplo():
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF
-    pdf = generar_pdf(foto, nombre, grado, reseña, correo, resumen_platica, enlace_pdf)
+    pdf = generar_pdf(foto, nombre, grado, reseña, correo,perfil_scholar, resumen_platica, enlace_pdf)
     st.download_button(
         label="Descargar PDF con los datos del evento",
         data=pdf,

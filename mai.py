@@ -57,7 +57,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, resumen_platica, enlace_pd
     pdf.set_font("Arial", "B", 12)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
     pdf.image(foto, x=10, y=30, w=30)  # Añadir la imagen del autor
-    pdf.set_xy(45, 30)  # Posicionar el texto al lado de la imagen
+    pdf.set_xy(55, 30)  # Posicionar el texto al lado de la imagen
     pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}")
 

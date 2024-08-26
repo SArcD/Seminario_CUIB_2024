@@ -1,5 +1,4 @@
 import streamlit as st
-import base64
 
 # Función para mostrar información del autor
 def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo):
@@ -14,22 +13,12 @@ def mostrar_sobre_la_platica(resumen):
     st.subheader("Sobre la plática")
     st.write(resumen)
 
-# Función para mostrar un enlace para visualizar el PDF
-def mostrar_diapositivas(pdf_file):
+# Función para mostrar un enlace directo al PDF
+def mostrar_diapositivas(enlace_pdf):
     st.subheader("Diapositivas")
-    if pdf_file:
-        with open(pdf_file, "rb") as f:
-            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        
-        pdf_url = f"data:application/pdf;base64,{base64_pdf}"
-        st.markdown(f"[Haz clic aquí para ver las diapositivas](data:application/pdf;base64,{base64_pdf})", unsafe_allow_html=True)
-
-        st.download_button(
-            label="Descargar PDF",
-            data=base64_pdf,
-            file_name="diapositivas.pdf",
-            mime="application/pdf"
-        )
+    if enlace_pdf:
+        st.markdown(f"[Haz clic aquí para ver las diapositivas]( {enlace_pdf})", unsafe_allow_html=True)
+        st.markdown(f"![Ver diapositivas en PDF]({enlace_pdf})")
     else:
         st.write("No hay diapositivas disponibles para esta plática.")
 
@@ -56,9 +45,9 @@ def pagina_ejemplo():
     # Mostrar sección "Sobre la plática"
     mostrar_sobre_la_platica(resumen_platica)
     
-    # Mostrar diapositivas (en PDF)
-    pdf_file = "asp.pdf"   # Reemplaza con la ruta al archivo PDF de las diapositivas
-    mostrar_diapositivas(pdf_file)
+    # Enlace directo al PDF
+    enlace_pdf = "https://www.ejemplo.com/diapositivas.pdf"  # Reemplaza con el enlace directo al PDF
+    mostrar_diapositivas(enlace_pdf)
 
 # Página principal
 def main():

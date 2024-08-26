@@ -119,6 +119,27 @@ def pagina_ejemplo():
         mime="application/pdf",
     )
 
+# Página de inicio con el resumen
+def pagina_inicio():
+    st.title("Seminario del Centro de Investigaciones Biomédicas")
+    
+    st.write("""
+    **Objetivo de las sesiones del seminario:**
+    
+    El seminario del Centro de Investigaciones Biomédicas de la Universidad de Colima tiene como objetivo fomentar la 
+    actualización y el intercambio de conocimientos entre investigadores, profesores y estudiantes en temas de 
+    relevancia científica. Durante las sesiones, se abordarán diversas áreas de la biomedicina con un enfoque en 
+    la innovación y la colaboración interdisciplinaria. Estas sesiones son una oportunidad para que los participantes 
+    presenten sus proyectos, discutan hallazgos recientes y establezcan redes de colaboración.
+    """)
+
+    st.write("""
+    **Datos de contacto:**
+    
+    **Encargado:** Santiago Arceo Díaz  
+    **Correo:** santiarceo@ucol.mx
+    """)
+
 # Página principal
 def main():
     st.sidebar.title("Calendario de Eventos Académicos")
@@ -131,12 +152,7 @@ def main():
     
     # Lógica para mostrar la página seleccionada
     if selected_page == "Inicio":
-        st.title("Calendario de Eventos Académicos")
-        st.write("Haz clic en una fecha para ver más detalles sobre el evento.")
-        # Mostrar el calendario de eventos con botones
-        for date, event in dates.items():
-            if st.button(date):
-                st.session_state.page = event
+        pagina_inicio()
     elif selected_page == "30 de agosto: Miguel Huerta":
         pagina_ejemplo()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos

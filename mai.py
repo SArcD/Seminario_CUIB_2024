@@ -9,7 +9,7 @@ def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_schola
     st.write(f"**Grado:** {grado}")
     st.write(reseña)
     st.write(f"**Correo:** {correo}")
-    st.write(f"**Perfil**({perfil_scholar})")
+    st.write(f"**Perfil:**{perfil_scholar}")
 
 
 # Función para mostrar información sobre la plática

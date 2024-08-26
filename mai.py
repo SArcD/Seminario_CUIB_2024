@@ -93,7 +93,7 @@ def pagina_ejemplo():
               "Su campo de investigación es la Biomedicina, con énfasis en la fisiología y biofísica del sistema neuromuscular "
               "y la fisiopatología de la diabetes mellitus. Ha publicado más de cien artículos revistas indizadas al Journal "
               "of Citation Reports y ha graduado a más de 40 Maestros y Doctores en Ciencias en programas SNP-CONAHCyT.")
-    correo = "miguel.huerta@example.com"
+    correo = "huertam@ucol"
     perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"
     
     # Mostrar sección "Acerca del autor"

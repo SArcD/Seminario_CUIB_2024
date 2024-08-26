@@ -67,7 +67,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar,  resumen_p
 
 
     # Sobre la plática
-    pdf.set_y(100)  # Ajustar la posición para empezar después de la imagen y texto
+    pdf.set_y(150)  # Ajustar la posición para empezar después de la imagen y texto
     pdf.set_font("Arial", "B", 12)
     pdf.cell(200, 10, txt="Sobre la plática", ln=True)
     pdf.set_font("Arial", "", 12)

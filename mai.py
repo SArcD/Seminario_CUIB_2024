@@ -9,7 +9,7 @@ def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_schola
     st.write(f"**Grado:** {grado}")
     st.write(reseña)
     st.write(f"**Correo:** {correo}")
-    st.write(f"[Perfil de Google Scholar]({perfil_scholar})")
+    st.write(f"[Perfil]**({perfil_scholar})")
 
 
 # Función para mostrar información sobre la plática
@@ -61,7 +61,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar,  resumen_p
     pdf.image(foto, x=10, y=40, w=30)  # Añadir la imagen del autor
     pdf.set_xy(55, 30)  # Posicionar el texto al lado de la imagen
     pdf.set_font("Arial", "", 12)
-    pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}\n[Perfil de Google Scholar]: {perfil_scholar}")
+    pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}\n[Perfil]: {perfil_scholar}")
 
     pdf.ln(10)  # Añadir un espacio vertical después de la sección "Acerca del autor"
 

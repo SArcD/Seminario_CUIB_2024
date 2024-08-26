@@ -3,7 +3,7 @@ from fpdf import FPDF
 import base64
 
 # Función para mostrar información del autor
-def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo):
+def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar):
     st.image(foto, width=150)
     st.subheader(nombre)
     st.write(f"**Grado:** {grado}")

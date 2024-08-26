@@ -10,7 +10,6 @@ def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_schola
     st.write(f"**Correo:** {correo}")
     st.write(f"**Perfil:** [Google Scholar]({perfil_scholar})")
 
-
 # Función para mostrar información sobre la plática
 def mostrar_sobre_la_platica(resumen):
     st.subheader("Sobre la plática")
@@ -42,7 +41,7 @@ dates = {
 }
 
 # Función para generar un PDF con la información de la página
-def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar,  resumen_platica, enlace_pdf):
+def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
     pdf = FPDF()
     pdf.add_page()
 
@@ -50,9 +49,8 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar,  resumen_p
     pdf.set_font("Arial", "B", 16)
     pdf.cell(200, 10, txt="Evento: Creación y tipos de hipótesis", ln=True, align='C')
 
-    pdf.ln(10)  # Añadir un espacio vertical después de la sección "Acerca del autor"
+    pdf.ln(10)  # Añadir un espacio vertical después del título
 
-    
     # Acerca del autor
     pdf.set_font("Arial", "B", 12)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
@@ -131,19 +129,15 @@ def main():
         list(dates.keys())
     )
     
-    # Guarda la página seleccionada en session_state
-    st.session_state.page = dates[selected_page]
-    
     # Lógica para mostrar la página seleccionada
-    if st.session_state.page == "Inicio":
+    if selected_page == "Inicio":
         st.title("Calendario de Eventos Académicos")
         st.write("Haz clic en una fecha para ver más detalles sobre el evento.")
         # Mostrar el calendario de eventos con botones
         for date, event in dates.items():
             if st.button(date):
                 st.session_state.page = event
-                st.experimental_rerun()
-    elif st.session_state.page == "30 de agosto: Miguel Huerta":
+    elif selected_page == "30 de agosto: Miguel Huerta":
         pagina_ejemplo()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 

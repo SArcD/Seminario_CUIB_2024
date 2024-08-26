@@ -1,5 +1,5 @@
 import streamlit as st
-import base64
+from pdf2image import convert_from_path
 
 # Función para mostrar información del autor
 def mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo):
@@ -14,24 +14,13 @@ def mostrar_sobre_la_platica(resumen):
     st.subheader("Sobre la plática")
     st.write(resumen)
 
-# Función para mostrar diapositivas en PDF
+# Función para mostrar diapositivas en PDF como imágenes
 def mostrar_diapositivas(pdf_file):
     st.subheader("Diapositivas")
     if pdf_file:
-        with open(pdf_file, "rb") as f:
-            pdf_data = f.read()
-
-        st.download_button(
-            label="Descargar PDF",
-            data=pdf_data,
-            file_name="diapositivas.pdf",
-            mime="application/pdf"
-        )
-
-        # Mostrar el PDF usando un componente HTML embebido
-        base64_pdf = base64.b64encode(pdf_data).decode('utf-8')
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="500" type="application/pdf"></iframe>'
-        st.markdown(pdf_display, unsafe_allow_html=True)
+        images = convert_from_path(pdf_file)
+        for i, image in enumerate(images):
+            st.image(image, caption=f'Diapositiva {i+1}', use_column_width=True)
     else:
         st.write("No hay diapositivas disponibles para esta plática.")
 
@@ -58,7 +47,7 @@ def pagina_ejemplo():
     # Mostrar sección "Sobre la plática"
     mostrar_sobre_la_platica(resumen_platica)
     
-    # Mostrar diapositivas (en PDF)
+    # Mostrar diapositivas (en PDF como imágenes)
     pdf_file = "asp.pdf"   # Reemplaza con la ruta al archivo PDF de las diapositivas
     mostrar_diapositivas(pdf_file)
 

@@ -139,7 +139,7 @@ def veintiseis_abril():
     mostrar_sobre_la_platica(resumen_platica)
     
     # Enlace directo al PDF
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/asp.pdf"  # Reemplaza con el enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/seminario_26_abril_2024.pdf"  # Reemplaza con el enlace directo al PDF
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF

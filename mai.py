@@ -116,7 +116,8 @@ def pagina_ejemplo():
         mime="application/pdf",
     )
 
-# Página de ejemplo
+
+
 def veintiseis_abril():
     st.title("Evento:  Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia")
 
@@ -150,6 +151,20 @@ def veintiseis_abril():
         file_name="evento_24_abril.pdf",
         mime="application/pdf",
     )
+    
+    # Sección "Preguntas Clave"
+    st.subheader("Preguntas Clave")
+    st.write("""
+    1. ¿Cómo cambiará la proporción de adultos mayores en México hacia el año 2050, y cuáles serán las consecuencias para la salud pública?
+    2. ¿Cuál es la prevalencia de sarcopenia en las poblaciones de adultos mayores en México y cómo varía entre diferentes grupos (sin comorbilidades, con diabetes, con hipertensión, etc.)?
+    3. ¿Cómo se utiliza la teoría de conjuntos rugosos y la inteligencia artificial para clasificar y evaluar el riesgo de sarcopenia en adultos mayores?
+    4. ¿Cuáles son las preguntas o variables críticas en la ENASEM que se utilizan para evaluar el riesgo de sarcopenia (por ejemplo, fuerza de presión, caídas, movilidad)?
+    5. ¿Cómo influyen las comorbilidades como la hipertensión y la diabetes en el riesgo de sarcopenia en adultos mayores?
+    6. ¿Existen diferencias significativas en el riesgo de sarcopenia entre hombres y mujeres?
+    7. ¿Cómo se pueden utilizar los modelos desarrollados para mejorar la detección y gestión de la sarcopenia en el ámbito clínico?
+    8. ¿Qué revelan los datos de las encuestas ENASEM 2018 y 2021 sobre la distribución del riesgo de sarcopenia en la población mexicana mayor de 60 años?
+    """)
+
 
 
 

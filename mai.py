@@ -89,7 +89,7 @@ def pagina_ejemplo():
     nombre = "Miguel Huerta"
     grado = "PhD en Ciencias"
     reseña = "Miguel Huerta Doctor en Ciencias con especialidad en Fisiología y Biofísica Es Profesor-Investigador Titular C del Centro Universitario de Investigaciones Biomédicas de la Universidad de Colima. Es miembro del Sistema Nacional de Investigadores en el nivel 3 emérito. Su campo de investigación es la Biomedicina, con énfasis en la fisiología y biofísica del sistema neuromuscular y la fisiopatología de la diabetes mellitus. Ha publicado más de cien artículos revistas indizadas al Journal of Citation Reports y ha graduado a más de 40 Maestros y Doctores en Ciencias en programas SNP-CONAHCyT."
-    st.markdown(f"<p style='text-align: justify;'>{reseña}</p>", unsafe_allow_html=True)
+    #st.markdown(f"<p style='text-align: justify;'>{reseña}</p>", unsafe_allow_html=True)
     correo = "huertam@ucol.mx"
     perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"
     
@@ -125,7 +125,7 @@ def veintiseis_abril():
     nombre = "Santiago Arceo Díaz"
     grado = "Dr. Ciencias (Astrofísica)"
     reseña = "Licenciatura y Maestría en Física y Doctor en Ciencias (Astrofísica), por las Universidades de Colima y Guanajuato, respectivamente. En su formación académica se especializó en la creación de modelos analíticos y numéricos, aplicados a las ciencias exactas y a la ingeniería aplicada. Dentro de la astrofísica, su área de investigación se centra en la evolución estelar y su relación con la tasa de producción de neutrinos y axiones, concretamente las estrellas gigantes rojas. También ha realizado trabajos en múltiples áreas de la ingeniería y la arquitectura (con simulaciones numéricas aplicadas a la sostenibilidad ambiental de las que se han realizado 6 tesis de maestría). Se encuentra realizando una estancia postdoctoral en la Universidad de Colima en la que se enfoca en el uso del machine learning para la clasificación de pacientes geriátricos, a partir de variables antropométricas."
-    st.markdown(f"<p style='text-align: justify;'>{reseña}</p>", unsafe_allow_html=True)
+    #st.markdown(f"<p style='text-align: justify;'>{reseña}</p>", unsafe_allow_html=True)
     correo = "santiagoarceo@ucol.mx"
     perfil_scholar = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
     

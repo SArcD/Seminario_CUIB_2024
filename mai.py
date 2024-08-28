@@ -204,7 +204,7 @@ def main():
         pagina_inicio()
     elif selected_page == "30 de agosto: Miguel Huerta":
         pagina_ejemplo()
-    elif selected_page == "26 de abril de 2024: Santiago Arceo":
+    elif selected_page == "26 de abril: Santiago Arceo":
         veintiseis_abril()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 

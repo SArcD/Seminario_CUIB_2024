@@ -25,7 +25,7 @@ def mostrar_diapositivas(enlace_pdf):
 
 dates = {
     "Inicio": "Inicio",
-    "26 de abril de 2020: Santiago Arceo": "26 de abril de 2020: Santiago Arceo",
+    "26 de abril: Santiago Arceo": "26 de abril: Santiago Arceo",
     "30 de agosto: Miguel Huerta": "30 de agosto: Miguel Huerta",
     "06 de septiembre: Mónica Ríos": "06 de septiembre: Mónica Ríos",
     "13 de septiembre: Mariano, Julio y Minerva": "13 de septiembre: Mariano, Julio y Minerva",
@@ -204,7 +204,7 @@ def main():
         pagina_inicio()
     elif selected_page == "30 de agosto: Miguel Huerta":
         pagina_ejemplo()
-    elif selected_page == "26 de abril de 2020: Santiago Arceo":
+    elif selected_page == "26 de abril de 2024: Santiago Arceo":
         veintiseis_abril()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 

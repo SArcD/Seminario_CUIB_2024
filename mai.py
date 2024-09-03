@@ -166,6 +166,53 @@ def veintiseis_abril():
     """)
 
 
+def seis_de_septiembre():
+    st.title("Evento:  Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia")
+
+    # Datos del autor
+    foto = "ArceoS.jpg"  # Cambia esta ruta a la imagen del autor
+    nombre = "Santiago Arceo Díaz"
+    grado = "Dr. Ciencias (Astrofísica)"
+    reseña = "Licenciatura y Maestría en Física y Doctor en Ciencias (Astrofísica), por las Universidades de Colima y Guanajuato, respectivamente. En su formación académica se especializó en la creación de modelos analíticos y numéricos, aplicados a las ciencias exactas y a la ingeniería aplicada. Dentro de la astrofísica, su área de investigación se centra en la evolución estelar y su relación con la tasa de producción de neutrinos y axiones, concretamente las estrellas gigantes rojas. También ha realizado trabajos en múltiples áreas de la ingeniería y la arquitectura (con simulaciones numéricas aplicadas a la sostenibilidad ambiental de las que se han realizado 6 tesis de maestría). Se encuentra realizando una estancia postdoctoral en la Universidad de Colima en la que se enfoca en el uso del machine learning para la clasificación de pacientes geriátricos, a partir de variables antropométricas."
+    #st.markdown(f"<p style='text-align: justify;'>{reseña}</p>", unsafe_allow_html=True)
+    correo = "santiagoarceo@ucol.mx"
+    perfil_scholar = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
+    
+    # Mostrar sección "Acerca del autor"
+    mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar)
+    
+    # Información sobre la plática
+    resumen_platica = ("Se aborda el uso de inteligencia artificial y la teoría de conjuntos rugosos para evaluar el riesgo de sarcopenia en adultos mayores mexicanos, utilizando datos de las encuestas ENASEM 2018 y 2021. Se utilizaron conjuntos rugosos y árboles de decisión para clasificar y evaluar el riesgo de sarcopenia, basándose en variables como fuerza, caídas, y movilidad. Se analizaron subconjuntos de pacientes con respuestas idénticas, permitiendo extraer perfiles de riesgo. Los modelos permitieron clasificar pacientes con distintos niveles de riesgo de sarcopenia, mostrando una mayor prevalencia de riesgo en mujeres y en pacientes con hipertensión y diabetes. La clasificación mediante inteligencia artificial y conjuntos rugosos es efectiva para evaluar el riesgo de sarcopenia, incluso sin medidas antropométricas directas. Se observaron diferencias significativas en el riesgo entre hombres y mujeres, y la presencia de comorbilidades como hipertensión y diabetes aumenta el riesgo.")
+    
+    # Mostrar sección "Sobre la plática"
+    mostrar_sobre_la_platica(resumen_platica)
+    
+    # Enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/seminario_26_abril_2024.pdf"  # Reemplaza con el enlace directo al PDF
+    mostrar_diapositivas(enlace_pdf)
+    
+    # Botón para generar y descargar el PDF
+    pdf = generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf)
+    st.download_button(
+        label="Descargar PDF con los datos del evento",
+        data=pdf,
+        file_name="evento_24_abril.pdf",
+        mime="application/pdf",
+    )
+    
+    # Sección "Preguntas Clave"
+    st.subheader("Preguntas Clave")
+    st.write("""
+    1. ¿Cómo cambiará la proporción de adultos mayores en México hacia el año 2050, y cuáles serán las consecuencias para la salud pública?
+    2. ¿Cuál es la prevalencia de sarcopenia en las poblaciones de adultos mayores en México y cómo varía entre diferentes grupos (sin comorbilidades, con diabetes, con hipertensión, etc.)?
+    3. ¿Cómo se utiliza la teoría de conjuntos rugosos y la inteligencia artificial para clasificar y evaluar el riesgo de sarcopenia en adultos mayores?
+    4. ¿Cuáles son las preguntas o variables críticas en la ENASEM que se utilizan para evaluar el riesgo de sarcopenia (por ejemplo, fuerza de presión, caídas, movilidad)?
+    5. ¿Cómo influyen las comorbilidades como la hipertensión y la diabetes en el riesgo de sarcopenia en adultos mayores?
+    6. ¿Existen diferencias significativas en el riesgo de sarcopenia entre hombres y mujeres?
+    7. ¿Cómo se pueden utilizar los modelos desarrollados para mejorar la detección y gestión de la sarcopenia en el ámbito clínico?
+    8. ¿Qué revelan los datos de las encuestas ENASEM 2018 y 2021 sobre la distribución del riesgo de sarcopenia en la población mexicana mayor de 60 años?
+    """)
+
 
 
 # Página de inicio con el resumen
@@ -206,6 +253,8 @@ def main():
         pagina_ejemplo()
     elif selected_page == "26 de abril: Santiago Arceo":
         veintiseis_abril()
+    elif selected_page == "06 de septiembre: Mónica Rios":
+        seis_de_septiembre()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 
 if __name__ == "__main__":

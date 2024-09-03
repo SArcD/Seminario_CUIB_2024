@@ -253,7 +253,7 @@ def main():
         pagina_ejemplo()
     elif selected_page == "26 de abril: Santiago Arceo":
         veintiseis_abril()
-    elif selected_page == "06 de septiembre: Mónica Rios":
+    elif selected_page == "06 de septiembre: Mónica Ríos":
         seis_de_septiembre()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 

@@ -170,8 +170,8 @@ def seis_de_septiembre():
     st.title("Evento:  Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia")
 
     # Datos del autor
-    foto = "ArceoS.jpg"  # Cambia esta ruta a la imagen del autor
-    nombre = "Santiago Arceo Díaz"
+    foto = "rios.jpg"  # Cambia esta ruta a la imagen del autor
+    nombre = "Mónica Ríos"
     grado = "Dr. Ciencias (Astrofísica)"
     reseña = "Licenciatura y Maestría en Física y Doctor en Ciencias (Astrofísica), por las Universidades de Colima y Guanajuato, respectivamente. En su formación académica se especializó en la creación de modelos analíticos y numéricos, aplicados a las ciencias exactas y a la ingeniería aplicada. Dentro de la astrofísica, su área de investigación se centra en la evolución estelar y su relación con la tasa de producción de neutrinos y axiones, concretamente las estrellas gigantes rojas. También ha realizado trabajos en múltiples áreas de la ingeniería y la arquitectura (con simulaciones numéricas aplicadas a la sostenibilidad ambiental de las que se han realizado 6 tesis de maestría). Se encuentra realizando una estancia postdoctoral en la Universidad de Colima en la que se enfoca en el uso del machine learning para la clasificación de pacientes geriátricos, a partir de variables antropométricas."
     #st.markdown(f"<p style='text-align: justify;'>{reseña}</p>", unsafe_allow_html=True)

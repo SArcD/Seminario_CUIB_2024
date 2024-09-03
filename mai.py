@@ -188,7 +188,7 @@ def seis_de_septiembre():
     mostrar_sobre_la_platica(resumen_platica)
     
     # Enlace directo al PDF
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/hipotesis_huerta.pdf"  # Reemplaza con el enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Hipotesis_huerta.pdf"  # Reemplaza con el enlace directo al PDF
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF

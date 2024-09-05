@@ -167,7 +167,7 @@ def veintiseis_abril():
 
 
 def seis_de_septiembre():
-    st.title("Evento: Aspectos de la investigación científica")
+    st.title("Evento: El arte de las presentaciones científicas: pasos críticos para tener éxito y errores críticos para evitar")
 
     # Datos del autor
     foto = "rios.jpg"  # Cambia esta ruta a la imagen del autor

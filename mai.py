@@ -188,7 +188,7 @@ def seis_de_septiembre():
     mostrar_sobre_la_platica(resumen_platica)
     
     # Enlace directo al PDF
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/El arte de las presentaciones científicas310824_pdf.pdf"  # Reemplaza con el enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/El%20arte%20de%20las%20presentaciones%20cient%C3%ADficas310824_pdf.pdf"  # Reemplaza con el enlace directo al PDF
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF

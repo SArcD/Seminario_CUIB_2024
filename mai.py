@@ -104,12 +104,22 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
     pdf.ln(10)  # Añadir un espacio vertical después de la sección "Sobre la plática"
 
     # Enlace al PDF de diapositivas en negritas
+    #if enlace_pdf:
+    #    pdf.set_font("Times", "B", 14)
+    #    pdf.cell(200, 10, txt="Ver diapositivas: ", ln=False)
+    #    pdf.set_font("Times", "", 12)  # Texto normal para el enlace
+    #    pdf.cell(0, 10, txt=enlace_pdf, ln=True, link=enlace_pdf)
+
+    # Enlace al PDF de diapositivas en negritas
     if enlace_pdf:
         pdf.set_font("Times", "B", 14)
-        pdf.cell(200, 10, txt="Ver diapositivas: ", ln=False)
+        pdf.cell(40, 10, "Ver diapositivas: ", ln=False)
         pdf.set_font("Times", "", 12)  # Texto normal para el enlace
+        # Crear un enlace clicable
         pdf.cell(0, 10, txt=enlace_pdf, ln=True, link=enlace_pdf)
 
+
+    
     # Descargar la imagen de la cintilla desde GitHub y agregarla en la parte inferior
     cintilla_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/udec.png"  # URL de la imagen
     response = requests.get(cintilla_url)

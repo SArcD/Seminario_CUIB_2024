@@ -50,7 +50,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
 
     # Título
     #pdf.set_font("Arial", "B", 16)
-    pdf.set_font("Times", "", 16)
+    pdf.set_font("Times", "B", 16)
 
     pdf.cell(200, 10, txt="Evento: Creación y tipos de hipótesis", ln=True, align='C')
 
@@ -58,8 +58,8 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
 
     # Acerca del autor
     #pdf.set_font("Arial", "B", 12)
-    pdf.set_font("Times", "", 14)
-    pdf.cell(200, 10, txt="**Acerca del autor**", ln=True)
+    pdf.set_font("Times", "B", 16)
+    pdf.cell(200, 10, txt="Acerca del autor", ln=True)
     
     # Añadir la imagen del autor
     pdf.image(foto, x=10, y=pdf.get_y() + 5, w=30)  
@@ -80,7 +80,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
     pdf.cell(200, 10, txt="Sobre la plática", ln=True)
     
     # Resumen de la plática
-    pdf.set_font("Times", "", 14)
+    pdf.set_font("Times", "B", 14)
     #pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, resumen_platica)
 

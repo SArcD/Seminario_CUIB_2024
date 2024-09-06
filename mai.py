@@ -237,10 +237,7 @@ def pagina_ejemplo():
 
 En ese argumento no se emplea ningún indicador de premisa o conclusión y, aun así, es inequívoco. Otro ejemplo lo ofreció una academia en su respuesta a la crítica aguda a la arquitectura moderna, realizada por el novelista y ensayista Tom Wolfe:
 
-<em>"Tom Wolfe sugiere que los grandes arquitectos modernistas exigen dogmáticamente muros blancos, construcciones de acero y líneas rectas mientras que evitan materiales lujosos. Sin embargo, Mies van der Rohe utilizó mármol travertino y ónix en su afamado Pabellón de Barcelona, y el color es parte integral de la Unite d’Habitation de Le Corbusier, cuyas curvas esculturales son posibles por la construcción en concreto. El señor Wolfe perpetúa una impresión plana, exagerada y falsa del modernismo arquitectónico."</em>
-
-    </div>
-    ''', unsafe_allow_html=True)
+<em>"Tom Wolfe sugiere que los grandes arquitectos modernistas exigen dogmáticamente muros blancos, construcciones de acero y líneas rectas mientras que evitan materiales lujosos. Sin embargo, Mies van der Rohe utilizó mármol travertino y ónix en su afamado Pabellón de Barcelona, y el color es parte integral de la Unite d’Habitation de Le Corbusier, cuyas curvas esculturales son posibles por la construcción en concreto. El señor Wolfe perpetúa una impresión plana, exagerada y falsa del modernismo arquitectónico."</em> </div> ''', unsafe_allow_html=True)
 
 
 

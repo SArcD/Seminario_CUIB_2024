@@ -102,7 +102,7 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
     cintilla_img.save("temp_cintilla.png")  # Guardar temporalmente la imagen de la cintilla
     
     # Añadir la cintilla (imagen) centrada en la parte inferior
-    image_width = 50  # Ancho de la imagen cintilla (ajústalo si es necesario)
+    image_width = 75  # Ancho de la imagen cintilla (ajústalo si es necesario)
     pdf_width = 210
     x_position = (pdf_width - image_width) / 2  # Centrar la imagen
     y_position = 280  # Posición en la parte inferior, ajustada para la altura de la imagen

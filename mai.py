@@ -46,7 +46,7 @@ import requests
 from PIL import Image
 from io import BytesIO
 
-def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
+def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
     # Crear el PDF
     pdf = FPDF()
     pdf.add_page()
@@ -139,7 +139,9 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
 
 # Página de ejemplo
 def pagina_ejemplo():
-    st.title("Evento: Creación y tipos de hipótesis")
+    titulo = "Evento: Creación y tipos de hipótesis"
+st.title(titulo_pdf)
+    st.title(titulo)
 
     # Datos del autor
     foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/DrHuerta.jpg"
@@ -177,7 +179,11 @@ def pagina_ejemplo():
 
 
 def veintiseis_abril():
-    st.title("Evento:  Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia")
+
+    titulo = "Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia"
+    st.title(titulo)
+    
+    #st.title("Evento:  Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia")
 
     # Datos del autor
     foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/ArceoS.jpg"
@@ -227,7 +233,8 @@ def veintiseis_abril():
 
 
 def seis_de_septiembre():
-    st.title("Evento: El arte de las presentaciones científicas: pasos críticos para tener éxito y errores críticos para evitar")
+    titulo = "Evento: El arte de las presentaciones científicas: pasos críticos para tener éxito y errores críticos para evitar"
+    st.title(titulo)
 
     # Datos del autor
     #foto = "rios.jpg"  # Cambia esta ruta a la imagen del autor
@@ -254,7 +261,7 @@ def seis_de_septiembre():
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF
-    pdf = generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf)
+    pdf = generar_pdf(titulo, foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf)
     st.download_button(
         label="Descargar PDF con los datos del evento",
         data=pdf,

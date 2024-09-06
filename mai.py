@@ -255,16 +255,30 @@ def seis_de_septiembre():
     perfil_scholar = "https://scholar.google.com.mx/citations?hl=en&user=5mgGr3kAAAAJ"
     
     # Mostrar la imagen del autor y la segunda imagen en columnas
-    col1, col2 = st.columns(2)
+  #  col1, col2 = st.columns(2)
     
+  #  with col1:
+  #      # Mostrar la imagen del autor
+  #      st.image(foto_autor, width=150)
+    
+  #  with col2:
+  #      # Mostrar la imagen adicional a la derecha
+  #      st.image(foto_derecha, width=300)
+
+        # Usar tres columnas para ajustar la posición de la imagen de la derecha
+    col1, col2, col3 = st.columns([2, 0.5, 1])  # Ajustar las proporciones de las columnas
+
     with col1:
         # Mostrar la imagen del autor
         st.image(foto_autor, width=150)
     
-    with col2:
-        # Mostrar la imagen adicional a la derecha
-        st.image(foto_derecha, width=300)
+    with col3:
+        # Mostrar la imagen adicional, desplazada ligeramente hacia la izquierda
+        st.image(foto_derecha, width=300)  # Ajustar el tamaño
 
+
+
+    
     # Mostrar detalles del autor
     st.subheader(nombre)
     st.write(f"**Grado:** {grado}")

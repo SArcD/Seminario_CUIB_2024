@@ -78,12 +78,12 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
         ("Perfil", perfil_scholar)
     ]
 
-    # Imprimir etiquetas y contenido con negritas usando multi_cell para evitar que el texto se mueva a la derecha
+    # Imprimir etiquetas y contenido con negritas
     for etiqueta, contenido in informacion:
         pdf.set_font("Times", "B", 14)  # Negritas para la etiqueta
-        pdf.multi_cell(0, 10, f"{etiqueta}: ", ln=False)  # Etiqueta en negritas
+        pdf.cell(40, 10, f"{etiqueta}: ")  # Usar cell para la etiqueta
         pdf.set_font("Times", "", 14)  # Texto normal para el contenido
-        pdf.multi_cell(0, 10, contenido)  # Contenido normal
+        pdf.multi_cell(0, 10, contenido)  # Usar multi_cell para el contenido que puede ser largo
 
     # Asegurarse de que el contenido siguiente no se superponga con la imagen
     current_y = max(pdf.get_y(), 70)  # Asegúrate de que el texto no suba por encima de la imagen
@@ -121,7 +121,6 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
     pdf.image("temp_cintilla.png", x=x_position, y=y_position, w=image_width)
 
     return pdf.output(dest="S").encode("latin1")
-
 
 
 # Página de ejemplo

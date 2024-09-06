@@ -117,7 +117,8 @@ def pagina_ejemplo():
     st.title("Evento: Creación y tipos de hipótesis")
 
     # Datos del autor
-    foto = "DrHuerta.jpg"  # Cambia esta ruta a la imagen del autor
+    foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/DrHuerta.jpg"
+    #foto = "DrHuerta.jpg"  # Cambia esta ruta a la imagen del autor
     nombre = "Miguel Huerta"
     grado = "PhD en Ciencias"
     reseña = "Miguel Huerta Doctor en Ciencias con especialidad en Fisiología y Biofísica Es Profesor-Investigador Titular C del Centro Universitario de Investigaciones Biomédicas de la Universidad de Colima. Es miembro del Sistema Nacional de Investigadores en el nivel 3 emérito. Su campo de investigación es la Biomedicina, con énfasis en la fisiología y biofísica del sistema neuromuscular y la fisiopatología de la diabetes mellitus. Ha publicado más de cien artículos revistas indizadas al Journal of Citation Reports y ha graduado a más de 40 Maestros y Doctores en Ciencias en programas SNP-CONAHCyT."
@@ -154,7 +155,9 @@ def veintiseis_abril():
     st.title("Evento:  Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia")
 
     # Datos del autor
-    foto = "ArceoS.jpg"  # Cambia esta ruta a la imagen del autor
+    foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/ArceoS.jpg"
+
+    #foto = "ArceoS.jpg"  # Cambia esta ruta a la imagen del autor
     nombre = "Santiago Arceo Díaz"
     grado = "Dr. Ciencias (Astrofísica)"
     reseña = "Licenciatura y Maestría en Física y Doctor en Ciencias (Astrofísica), por las Universidades de Colima y Guanajuato, respectivamente. En su formación académica se especializó en la creación de modelos analíticos y numéricos, aplicados a las ciencias exactas y a la ingeniería aplicada. Dentro de la astrofísica, su área de investigación se centra en la evolución estelar y su relación con la tasa de producción de neutrinos y axiones, concretamente las estrellas gigantes rojas. También ha realizado trabajos en múltiples áreas de la ingeniería y la arquitectura (con simulaciones numéricas aplicadas a la sostenibilidad ambiental de las que se han realizado 6 tesis de maestría). Se encuentra realizando una estancia postdoctoral en la Universidad de Colima en la que se enfoca en el uso del machine learning para la clasificación de pacientes geriátricos, a partir de variables antropométricas."
@@ -202,7 +205,9 @@ def seis_de_septiembre():
     st.title("Evento: El arte de las presentaciones científicas: pasos críticos para tener éxito y errores críticos para evitar")
 
     # Datos del autor
-    foto = "rios.jpg"  # Cambia esta ruta a la imagen del autor
+    #foto = "rios.jpg"  # Cambia esta ruta a la imagen del autor
+    foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/rios.jpg"
+
     nombre = "Mónica Ríos Silva"
     grado = "Dra. Ciencias Médicas"
     reseña = "Médica cirujana y partera con especialidad en Medicina Interna y Doctorado en Ciencias Médicas por la Universidad de Colima, médica especialista del Hospital Materno Infantil de Colima y PTC de la Facultad de Medicina de la Universidad de Colima. Es profesora de los posgrados en Ciencias Médicas, Ciencias Fisiológicas, Nutrición clínica y Ciencia ambiental global. Cuenta con 42 artículos científicos en revistas con factor de impacto con más de 400 citas, desde 2019 revisora de artículos en revistas internacionales con factor de impacto mayor de 1, asesoría de 31 tesis de especialidades médicas y de maestría y doctorado en la Universidad de Colima y la Universidad de Aguascalientes. Colaboraciones de investigación: en el Centro de Investigaciones Biomédicas de Occidente y las unidades estatales del Instituto Mexicano del Seguro Social así como con la Universidad Michoacana de San Nicolás de Hidalgo. Miembro del Sistema Nacional de Investigadores Nivel II."

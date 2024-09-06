@@ -179,6 +179,70 @@ def pagina_ejemplo():
     imagen_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/65e716285fa59ca5118574bc62a47521be9f5662/Dr_Huerta_hipotesis.jpg"
     st.image(imagen_url, caption="Dr. Huerta explicando hipótesis", use_column_width=True)
 
+    st.markdown('''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+
+    ### Indicadores de argumentos
+
+    Los indicadores de argumentos son palabras o frases que señalan la presencia de una premisa o de una conclusión en un razonamiento. Ayudan a identificar la       estructura del argumento, es decir, a distinguir qué enunciados sirven como soporte (premisas) y cuál es la idea principal que se quiere demostrar o     sustentar (conclusión).
+    
+    #### Indicadores de premisas
+
+    Algunas palabras sirven para señalar las premisas de un argumento. A estas se les llama <strong>indicadores de premisas</strong>. Aquí se presenta una lista de estos indicadores de premisas:
+
+    - puesto que
+    - porque
+    - ya que
+    - como
+    - se sigue que
+    - como lo muestra
+    - dado que
+    - como lo indica tal o cual
+    - la razón es que
+    - por la razón de que
+    - puede inferirse que
+    - puede derivarse de
+    - puede deducirse de
+    - en vista del hecho de que
+
+    #### Indicadores de conclusión
+
+    Podemos determinar cuál de las proposiciones es la conclusión de un argumento y cuáles son sus premisas. Ciertamente, no puede uno confiarse en el orden en     el que aparecen las proposiciones en un pasaje. Algunas palabras sirven para introducir la conclusión de un argumento y a estas se les llama     <strong>indicadores de conclusión</strong>:
+
+    - por lo tanto
+    - de ahí que
+    - así, así que
+    - por consiguiente
+    - en consecuencia
+    - consecuentemente
+    - prueba que
+    - como resultado
+    - por esta razón
+    - por estas razones
+    - se sigue que
+    - concluyo que
+    - lo que muestra que
+    - lo que quiere decir que
+    - lo que conlleva que
+    - lo que implica que
+    - lo que permite inferir que
+    - lo que lleva a la conclusión
+    - podemos inferir que
+
+    #### Argumentos en contexto
+
+    Las palabras y frases listadas pueden ayudar a reconocer la presencia de un argumento o a identificar sus premisas o su conclusión. Pero algunas veces solo     es el significado de un pasaje o el contexto lo que indica la presencia de un argumento. Por ejemplo, durante el acalorado debate por el envío de tropas         estadounidenses a Irak en 2007, un crítico del envío de tropas escribió:
+
+<em>"Mientras nosotros enviamos a tierras extranjeras nuestros hombres y mujeres jóvenes para imponer el orden en Irak, muchos de sus llamados líderes han abandonado sus puestos. Les hemos dado a los iraquíes una oportunidad para salvar sus diferencias y nos la han arrojado a la cara. Irak no merece nuestra ayuda."</em>
+
+En ese argumento no se emplea ningún indicador de premisa o conclusión y, aun así, es inequívoco. Otro ejemplo lo ofreció una academia en su respuesta a la crítica aguda a la arquitectura moderna, realizada por el novelista y ensayista Tom Wolfe:
+
+<em>"Tom Wolfe sugiere que los grandes arquitectos modernistas exigen dogmáticamente muros blancos, construcciones de acero y líneas rectas mientras que evitan materiales lujosos. Sin embargo, Mies van der Rohe utilizó mármol travertino y ónix en su afamado Pabellón de Barcelona, y el color es parte integral de la Unite d’Habitation de Le Corbusier, cuyas curvas esculturales son posibles por la construcción en concreto. El señor Wolfe perpetúa una impresión plana, exagerada y falsa del modernismo arquitectónico."</em>
+
+    </div>
+    ''', unsafe_allow_html=True)
+
+
 
 
 def veintiseis_abril():

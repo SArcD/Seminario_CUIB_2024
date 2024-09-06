@@ -41,7 +41,6 @@ dates = {
     "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra": "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra"
 }
 
-
 from fpdf import FPDF
 import requests
 from PIL import Image
@@ -67,12 +66,34 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
     img = Image.open(BytesIO(response.content))
     img.save("temp_image.jpg")  # Guardar temporalmente para usarla en FPDF
     
-    pdf.image("temp_image.jpg", x=10, y=pdf.get_y() + 5, w=30)  
+    pdf.image("temp_image.jpg", x=10, y=pdf.get_y() + 5, w=45)  # Aumentamos la imagen al 50%
     pdf.set_xy(55, pdf.get_y())  # Posicionar el texto al lado de la imagen
 
     # Texto al lado de la imagen
+    pdf.set_font("Times", "B", 14)  # Negritas para las etiquetas
+    pdf.cell(0, 10, "Nombre: ", ln=False)
+    pdf.set_font("Times", "", 14)  # Texto normal para el contenido
+    pdf.cell(0, 10, nombre, ln=True)
+
+    pdf.set_font("Times", "B", 14)  # Negritas para la etiqueta Grado
+    pdf.cell(0, 10, "Grado: ", ln=False)
     pdf.set_font("Times", "", 14)  # Texto normal
-    pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}\nPerfil: {perfil_scholar}")
+    pdf.cell(0, 10, grado, ln=True)
+
+    pdf.set_font("Times", "B", 14)  # Negritas para la etiqueta Reseña
+    pdf.cell(0, 10, "Reseña: ", ln=False)
+    pdf.set_font("Times", "", 14)  # Texto normal
+    pdf.multi_cell(0, 10, reseña)
+
+    pdf.set_font("Times", "B", 14)  # Negritas para la etiqueta Correo
+    pdf.cell(0, 10, "Correo: ", ln=False)
+    pdf.set_font("Times", "", 14)  # Texto normal
+    pdf.cell(0, 10, correo, ln=True)
+
+    pdf.set_font("Times", "B", 14)  # Negritas para la etiqueta Perfil
+    pdf.cell(0, 10, "Perfil: ", ln=False)
+    pdf.set_font("Times", "", 14)  # Texto normal
+    pdf.cell(0, 10, perfil_scholar, ln=True)
 
     # Asegurarse de que el contenido siguiente no se superponga con la imagen
     current_y = max(pdf.get_y(), 70)  # Asegúrate de que el texto no suba por encima de la imagen
@@ -90,10 +111,10 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
 
     # Enlace al PDF de diapositivas en negritas
     if enlace_pdf:
-        pdf.set_font("Times", "B", 14)
-        pdf.cell(200, 10, txt="Diapositivas", ln=True)
-        pdf.set_font("Times", "", 12)  # Texto del enlace normal
-        pdf.cell(200, 10, txt=f"Ver diapositivas en: {enlace_pdf}", ln=True, link=enlace_pdf)
+        pdf.set_font("Times", "B", 14)  # Negritas para "Ver diapositivas"
+        pdf.cell(200, 10, txt="Ver diapositivas: ", ln=False)
+        pdf.set_font("Times", "", 12)  # Texto normal para el enlace
+        pdf.cell(0, 10, txt=enlace_pdf, ln=True, link=enlace_pdf)
 
     # Descargar la imagen de la cintilla desde GitHub y agregarla en la parte inferior
     cintilla_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/udec.png"  # URL de la imagen
@@ -102,10 +123,10 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
     cintilla_img.save("temp_cintilla.png")  # Guardar temporalmente la imagen de la cintilla
     
     # Añadir la cintilla (imagen) centrada en la parte inferior
-    image_width = 80  # Ancho de la imagen cintilla (ajústalo si es necesario)
+    image_width = 75  # Aumentar el ancho en un 50% (50 * 1.5 = 75)
     pdf_width = 210
     x_position = (pdf_width - image_width) / 2  # Centrar la imagen
-    y_position = 270  # Posición en la parte inferior, ajustada para la altura de la imagen
+    y_position = 280  # Posición en la parte inferior, ajustada para la altura de la imagen
 
     pdf.image("temp_cintilla.png", x=x_position, y=y_position, w=image_width)
 

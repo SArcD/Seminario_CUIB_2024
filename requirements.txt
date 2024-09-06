@@ -2,3 +2,5 @@ streamlit
 pdf2image
 poppler-utils
 fpdf
+requests
+Pillow

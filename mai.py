@@ -272,7 +272,7 @@ def seis_de_septiembre():
         # Mostrar la imagen del autor
         st.image(foto_autor, width=150)
     
-    with col3:
+    with col2:
         # Mostrar la imagen adicional, desplazada ligeramente hacia la izquierda
         st.image(foto_derecha, width=300)  # Ajustar el tamaño
 

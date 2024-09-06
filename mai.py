@@ -182,7 +182,7 @@ def seis_de_septiembre():
     mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar)
     
     # Información sobre la plática
-    resumen_platica = ("Te invitamos al seminario "El arte de las presentaciones científicas", donde aprenderás los aspectos clave para desarrollar presentaciones efectivas y profesionales. Basado en la obra de Michael Alley, este seminario cubrirá cuatro pilares esenciales: el discurso, la estructura, las ayudas visuales y la entrega. Descubre cómo hacer tu discurso ameno utilizando ejemplos y analogías, cómo organizar tus ideas de manera lógica con transiciones claras, y cómo diseñar ayudas visuales que refuercen tu mensaje sin sobrecargar a la audiencia. Además, aprenderás a controlar los nervios, mantener la atención del público y anticipar problemas técnicos siguiendo la "Ley de Murphy.")
+    resumen_platica = ("Te invitamos al seminario El arte de las presentaciones científicas, donde aprenderás los aspectos clave para desarrollar presentaciones efectivas y profesionales. Basado en la obra de Michael Alley, este seminario cubrirá cuatro pilares esenciales: el discurso, la estructura, las ayudas visuales y la entrega. Descubre cómo hacer tu discurso ameno utilizando ejemplos y analogías, cómo organizar tus ideas de manera lógica con transiciones claras, y cómo diseñar ayudas visuales que refuercen tu mensaje sin sobrecargar a la audiencia. Además, aprenderás a controlar los nervios, mantener la atención del público y anticipar problemas técnicos siguiendo la Ley de Murphy.")
     
     # Mostrar sección "Sobre la plática"
     mostrar_sobre_la_platica(resumen_platica)

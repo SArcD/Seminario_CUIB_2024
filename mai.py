@@ -49,13 +49,16 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
     pdf.add_page()
 
     # Título
-    pdf.set_font("Arial", "B", 16)
+    #pdf.set_font("Arial", "B", 16)
+    pdf.set_font("Helvetica", "B", 16)
+
     pdf.cell(200, 10, txt="Evento: Creación y tipos de hipótesis", ln=True, align='C')
 
     pdf.ln(10)  # Añadir un espacio vertical después del título
 
     # Acerca del autor
-    pdf.set_font("Arial", "B", 12)
+    #pdf.set_font("Arial", "B", 12)
+    pdf.set_font("Helvetica", "B", 16)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
     
     # Añadir la imagen del autor
@@ -63,7 +66,8 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
     pdf.set_xy(55, pdf.get_y())  # Posicionar el texto al lado de la imagen
 
     # Texto al lado de la imagen
-    pdf.set_font("Arial", "", 12)
+    pdf.set_font("Helvetica", "B", 16)
+    #pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}\nPerfil: {perfil_scholar}")
 
     # Asegurarse de que el contenido siguiente no se superponga con la imagen
@@ -71,18 +75,21 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
     pdf.set_y(current_y + 10)  # Añadir un espacio vertical después de la imagen y texto
 
     # Sobre la plática
-    pdf.set_font("Arial", "B", 12)
+    pdf.set_font("Helvetica", "B", 16)
+    #pdf.set_font("Arial", "B", 12)
     pdf.cell(200, 10, txt="Sobre la plática", ln=True)
     
     # Resumen de la plática
-    pdf.set_font("Arial", "", 12)
+    pdf.set_font("Helvetica", "B", 16)
+    #pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, resumen_platica)
 
     pdf.ln(10)  # Añadir un espacio vertical después de la sección "Sobre la plática"
 
     # Enlace al PDF de diapositivas
     if enlace_pdf:
-        pdf.set_font("Arial", "B", 12)
+        pdf.set_font("Helvetica", "B", 16)
+        #pdf.set_font("Arial", "B", 12)
         pdf.cell(200, 10, txt="Diapositivas", ln=True)
         pdf.set_font("Arial", "", 12)
         pdf.cell(200, 10, txt=f"Ver diapositivas en: {enlace_pdf}", ln=True, link=enlace_pdf)

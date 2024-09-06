@@ -320,6 +320,15 @@ def seis_de_septiembre():
     """)
 
 
+    # Sección "Material de apoyo"
+    st.subheader("Material de apoyo")
+    st.markdown("""
+    Para profundizar más en el tema, te recomendamos el siguiente libro:
+    
+    - [The Craft of Scientific Presentations: Critical Steps to Succeed and Critical Errors to Avoid](https://github.com/SArcD/Seminario_CUIB_2024/blob/a10ffac9338f31fbf68ce79e7629ba8155978cf2/Scientific-Presentation_book.pdf)
+    """)
+
+
 # Página de inicio con el resumen
 def pagina_inicio():
     st.title("Seminario del Centro de Investigaciones Biomédicas")

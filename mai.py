@@ -41,24 +41,20 @@ dates = {
     "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra": "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra"
 }
 
-
 from fpdf import FPDF
 
 def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
     pdf = FPDF()
     pdf.add_page()
 
-    # Título
-    #pdf.set_font("Arial", "B", 16)
+    # Título en negritas
     pdf.set_font("Times", "B", 16)
-
     pdf.cell(200, 10, txt="Evento: Creación y tipos de hipótesis", ln=True, align='C')
 
     pdf.ln(10)  # Añadir un espacio vertical después del título
 
-    # Acerca del autor
-    #pdf.set_font("Arial", "B", 12)
-    pdf.set_font("Times", "B", 16)
+    # Acerca del autor en negritas
+    pdf.set_font("Times", "B", 14)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
     
     # Añadir la imagen del autor
@@ -66,36 +62,40 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
     pdf.set_xy(55, pdf.get_y())  # Posicionar el texto al lado de la imagen
 
     # Texto al lado de la imagen
-    pdf.set_font("Times", "", 14)
-    #pdf.set_font("Arial", "", 12)
+    pdf.set_font("Times", "", 14)  # Texto normal
     pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}\nPerfil: {perfil_scholar}")
 
     # Asegurarse de que el contenido siguiente no se superponga con la imagen
     current_y = max(pdf.get_y(), 70)  # Asegúrate de que el texto no suba por encima de la imagen
     pdf.set_y(current_y + 10)  # Añadir un espacio vertical después de la imagen y texto
 
-    # Sobre la plática
-    pdf.set_font("Times", "", 14)
-    #pdf.set_font("Arial", "B", 12)
+    # Sobre la plática en negritas
+    pdf.set_font("Times", "B", 14)
     pdf.cell(200, 10, txt="Sobre la plática", ln=True)
     
     # Resumen de la plática
-    pdf.set_font("Times", "B", 14)
-    #pdf.set_font("Arial", "", 12)
+    pdf.set_font("Times", "", 14)  # Texto normal
     pdf.multi_cell(0, 10, resumen_platica)
 
     pdf.ln(10)  # Añadir un espacio vertical después de la sección "Sobre la plática"
 
-    # Enlace al PDF de diapositivas
+    # Enlace al PDF de diapositivas en negritas
     if enlace_pdf:
-        pdf.set_font("Times", "", 14)
-        #pdf.set_font("Arial", "B", 12)
+        pdf.set_font("Times", "B", 14)
         pdf.cell(200, 10, txt="Diapositivas", ln=True)
-        pdf.set_font("Arial", "", 12)
+        pdf.set_font("Times", "", 12)  # Texto del enlace normal
         pdf.cell(200, 10, txt=f"Ver diapositivas en: {enlace_pdf}", ln=True, link=enlace_pdf)
 
-    return pdf.output(dest="S").encode("latin1")
+    # Añadir la cintilla (imagen) centrada en la parte inferior
+    # La página es de 210 mm de ancho, calculamos el centro
+    image_width = 50  # Ancho de la imagen cintilla (ajústalo si es necesario)
+    pdf_width = 210
+    x_position = (pdf_width - image_width) / 2  # Centrar la imagen
+    y_position = 287  # Posición en la parte inferior, ajustada para la altura de la imagen
 
+    pdf.image("udec.png", x=x_position, y=y_position, w=image_width)
+
+    return pdf.output(dest="S").encode("latin1")
 
 
 # Página de ejemplo

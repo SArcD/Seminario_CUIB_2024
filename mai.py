@@ -71,7 +71,7 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
 
     # Texto al lado de la imagen
     pdf.set_font("Times", "", 14)  # Texto normal
-    pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}\nPerfil: {perfil_scholar}")
+    pdf.multi_cell(0, 10, f"**Nombre:** {nombre}\n**Grado:** {grado}\n**Reseña:** {reseña}\n**Correo:** {correo}\n**Perfil:** {perfil_scholar}")
 
     # Asegurarse de que el contenido siguiente no se superponga con la imagen
     current_y = max(pdf.get_y(), 70)  # Asegúrate de que el texto no suba por encima de la imagen

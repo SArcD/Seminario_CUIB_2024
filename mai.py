@@ -175,6 +175,9 @@ def pagina_ejemplo():
         file_name="evento_30_agosto.pdf",
         mime="application/pdf",
     )
+    # Agregar la imagen después del botón de descarga
+    imagen_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/65e716285fa59ca5118574bc62a47521be9f5662/Dr_Huerta_hipotesis.jpg"
+    st.image(imagen_url, caption="Dr. Huerta explicando hipótesis", use_column_width=True)
 
 
 

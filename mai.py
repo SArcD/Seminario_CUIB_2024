@@ -270,8 +270,13 @@ def seis_de_septiembre():
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")
     st.write("""
-.
+    1. ¿Cuáles son los principales errores que se deben evitar al dar una presentación científica?
+    2. ¿Qué aspectos se deben cuidar en una presentación científica para asegurar su efectividad?
+    3. ¿Qué ventajas y desventajas presentan las presentaciones científicas en comparación con otros métodos de comunicación?
+    4. ¿Cómo se puede anticipar y manejar preguntas difíciles durante una presentación?
+    5. ¿Cómo se debe estructurar el contenido de una presentación científica para mantener el interés del público?
     """)
+
 
 
 

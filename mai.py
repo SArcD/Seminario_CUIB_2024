@@ -238,31 +238,56 @@ def seis_de_septiembre():
     st.title(titulo)
 
     # Datos del autor
-    #foto = "rios.jpg"  # Cambia esta ruta a la imagen del autor
-    foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/rios.jpg"
+    foto_autor = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/rios.jpg"
+    foto_derecha = "https://github.com/SArcD/Seminario_CUIB_2024/blob/3c6cf85fdf45b0f666c86d74376a4468ef80b9c5/dramoni.PNG?raw=true"
 
     nombre = "Mónica Ríos Silva"
     grado = "Dra. Ciencias Médicas"
-    reseña = "Médica cirujana y partera con especialidad en Medicina Interna y Doctorado en Ciencias Médicas por la Universidad de Colima, médica especialista del Hospital Materno Infantil de Colima y PTC de la Facultad de Medicina de la Universidad de Colima. Es profesora de los posgrados en Ciencias Médicas, Ciencias Fisiológicas, Nutrición clínica y Ciencia ambiental global. Cuenta con 42 artículos científicos en revistas con factor de impacto con más de 400 citas, desde 2019 revisora de artículos en revistas internacionales con factor de impacto mayor de 1, asesoría de 31 tesis de especialidades médicas y de maestría y doctorado en la Universidad de Colima y la Universidad de Aguascalientes. Colaboraciones de investigación: en el Centro de Investigaciones Biomédicas de Occidente y las unidades estatales del Instituto Mexicano del Seguro Social así como con la Universidad Michoacana de San Nicolás de Hidalgo. Miembro del Sistema Nacional de Investigadores Nivel II."
-    #st.markdown(f"<p style='text-align: justify;'>{reseña}</p>", unsafe_allow_html=True)
+    reseña = ("Médica cirujana y partera con especialidad en Medicina Interna y Doctorado en Ciencias Médicas por la Universidad de Colima, "
+              "médica especialista del Hospital Materno Infantil de Colima y PTC de la Facultad de Medicina de la Universidad de Colima. "
+              "Es profesora de los posgrados en Ciencias Médicas, Ciencias Fisiológicas, Nutrición clínica y Ciencia ambiental global. "
+              "Cuenta con 42 artículos científicos en revistas con factor de impacto con más de 400 citas, desde 2019 revisora de artículos "
+              "en revistas internacionales con factor de impacto mayor de 1, asesoría de 31 tesis de especialidades médicas y de maestría y "
+              "doctorado en la Universidad de Colima y la Universidad de Aguascalientes. Colaboraciones de investigación: en el Centro de "
+              "Investigaciones Biomédicas de Occidente y las unidades estatales del Instituto Mexicano del Seguro Social así como con la "
+              "Universidad Michoacana de San Nicolás de Hidalgo. Miembro del Sistema Nacional de Investigadores Nivel II.")
     correo = "mrios@ucol.mx"
     perfil_scholar = "https://scholar.google.com.mx/citations?hl=en&user=5mgGr3kAAAAJ"
     
-    # Mostrar sección "Acerca del autor"
-    mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar)
+    # Mostrar la imagen del autor y la segunda imagen en columnas
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        # Mostrar la imagen del autor
+        st.image(foto_autor, width=150)
+    
+    with col2:
+        # Mostrar la imagen adicional a la derecha
+        st.image(foto_derecha, width=150)
+
+    # Mostrar detalles del autor
+    st.subheader(nombre)
+    st.write(f"**Grado:** {grado}")
+    st.write(reseña)
+    st.write(f"**Correo:** {correo}")
+    st.write(f"**Perfil:** [Google Scholar]({perfil_scholar})")
     
     # Información sobre la plática
-    resumen_platica = ("Te invitamos al seminario El arte de las presentaciones científicas, donde aprenderás los aspectos clave para desarrollar presentaciones efectivas y profesionales. Basado en la obra de Michael Alley, este seminario cubrirá cuatro pilares esenciales: el discurso, la estructura, las ayudas visuales y la entrega. Descubre cómo hacer tu discurso ameno utilizando ejemplos y analogías, cómo organizar tus ideas de manera lógica con transiciones claras, y cómo diseñar ayudas visuales que refuercen tu mensaje sin sobrecargar a la audiencia. Además, aprenderás a controlar los nervios, mantener la atención del público y anticipar problemas técnicos siguiendo la Ley de Murphy.")
+    resumen_platica = ("Te invitamos al seminario El arte de las presentaciones científicas, donde aprenderás los aspectos clave para desarrollar presentaciones efectivas y profesionales. "
+                       "Basado en la obra de Michael Alley, este seminario cubrirá cuatro pilares esenciales: el discurso, la estructura, las ayudas visuales y la entrega. "
+                       "Descubre cómo hacer tu discurso ameno utilizando ejemplos y analogías, cómo organizar tus ideas de manera lógica con transiciones claras, y cómo diseñar "
+                       "ayudas visuales que refuercen tu mensaje sin sobrecargar a la audiencia. Además, aprenderás a controlar los nervios, mantener la atención del público y anticipar "
+                       "problemas técnicos siguiendo la Ley de Murphy.")
     
     # Mostrar sección "Sobre la plática"
     mostrar_sobre_la_platica(resumen_platica)
     
     # Enlace directo al PDF
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/El%20arte%20de%20las%20presentaciones%20cient%C3%ADficas310824_pdf.pdf"  # Reemplaza con el enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/El%20arte%20de%20las%20presentaciones%20cient%C3%ADficas310824_pdf.pdf"
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF
-    pdf = generar_pdf(titulo, foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf)
+    pdf = generar_pdf(titulo, foto_autor, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf)
     st.download_button(
         label="Descargar PDF con los datos del evento",
         data=pdf,
@@ -279,8 +304,6 @@ def seis_de_septiembre():
     4. ¿Cómo se puede anticipar y manejar preguntas difíciles durante una presentación?
     5. ¿Cómo se debe estructurar el contenido de una presentación científica para mantener el interés del público?
     """)
-
-
 
 
 # Página de inicio con el resumen

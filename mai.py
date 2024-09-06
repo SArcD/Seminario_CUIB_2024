@@ -41,7 +41,9 @@ dates = {
     "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra": "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra"
 }
 
-# Función para generar un PDF con la información de la página
+
+from fpdf import FPDF
+
 def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
     pdf = FPDF()
     pdf.add_page()
@@ -55,17 +57,24 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
     # Acerca del autor
     pdf.set_font("Arial", "B", 12)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
-    pdf.image(foto, x=10, y=40, w=30)  # Añadir la imagen del autor
-    pdf.set_xy(55, 30)  # Posicionar el texto al lado de la imagen
+    
+    # Añadir la imagen del autor
+    pdf.image(foto, x=10, y=pdf.get_y() + 5, w=30)  
+    pdf.set_xy(55, pdf.get_y())  # Posicionar el texto al lado de la imagen
+
+    # Texto al lado de la imagen
     pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}\nPerfil: {perfil_scholar}")
 
-    pdf.ln(10)  # Añadir un espacio vertical después de la sección "Acerca del autor"
+    # Asegurarse de que el contenido siguiente no se superponga con la imagen
+    current_y = max(pdf.get_y(), 70)  # Asegúrate de que el texto no suba por encima de la imagen
+    pdf.set_y(current_y + 10)  # Añadir un espacio vertical después de la imagen y texto
 
     # Sobre la plática
-    pdf.set_y(170)  # Ajustar la posición para empezar después de la imagen y texto
     pdf.set_font("Arial", "B", 12)
     pdf.cell(200, 10, txt="Sobre la plática", ln=True)
+    
+    # Resumen de la plática
     pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, resumen_platica)
 
@@ -79,6 +88,8 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
         pdf.cell(200, 10, txt=f"Ver diapositivas en: {enlace_pdf}", ln=True, link=enlace_pdf)
 
     return pdf.output(dest="S").encode("latin1")
+
+
 
 # Página de ejemplo
 def pagina_ejemplo():

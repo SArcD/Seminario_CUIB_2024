@@ -249,10 +249,6 @@ def pagina_ejemplo():
     
     st.markdown(contenido, unsafe_allow_html=True)
 
-# Llamada a la función para mostrar la página
-pagina_ejemplo()
-
-
 
 def veintiseis_abril():
 

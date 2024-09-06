@@ -50,7 +50,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
 
     # Título
     #pdf.set_font("Arial", "B", 16)
-    pdf.set_font("Helvetica", "B", 16)
+    pdf.set_font("Times", "", 14)
 
     pdf.cell(200, 10, txt="Evento: Creación y tipos de hipótesis", ln=True, align='C')
 
@@ -58,7 +58,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
 
     # Acerca del autor
     #pdf.set_font("Arial", "B", 12)
-    pdf.set_font("Helvetica", "B", 16)
+    pdf.set_font("Times", "", 14)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
     
     # Añadir la imagen del autor
@@ -66,7 +66,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
     pdf.set_xy(55, pdf.get_y())  # Posicionar el texto al lado de la imagen
 
     # Texto al lado de la imagen
-    pdf.set_font("Helvetica", "B", 16)
+    pdf.set_font("Times", "", 14)
     #pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, f"Nombre: {nombre}\nGrado: {grado}\nReseña: {reseña}\nCorreo: {correo}\nPerfil: {perfil_scholar}")
 
@@ -75,12 +75,12 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
     pdf.set_y(current_y + 10)  # Añadir un espacio vertical después de la imagen y texto
 
     # Sobre la plática
-    pdf.set_font("Helvetica", "B", 16)
+    pdf.set_font("Times", "", 14)
     #pdf.set_font("Arial", "B", 12)
     pdf.cell(200, 10, txt="Sobre la plática", ln=True)
     
     # Resumen de la plática
-    pdf.set_font("Helvetica", "B", 16)
+    pdf.set_font("Times", "", 14)
     #pdf.set_font("Arial", "", 12)
     pdf.multi_cell(0, 10, resumen_platica)
 
@@ -88,7 +88,7 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
 
     # Enlace al PDF de diapositivas
     if enlace_pdf:
-        pdf.set_font("Helvetica", "B", 16)
+        pdf.set_font("Times", "", 14)
         #pdf.set_font("Arial", "B", 12)
         pdf.cell(200, 10, txt="Diapositivas", ln=True)
         pdf.set_font("Arial", "", 12)

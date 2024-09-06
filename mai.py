@@ -140,7 +140,6 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 # Página de ejemplo
 def pagina_ejemplo():
     titulo = "Evento: Creación y tipos de hipótesis"
-st.title(titulo_pdf)
     st.title(titulo)
 
     # Datos del autor

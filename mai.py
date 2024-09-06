@@ -263,7 +263,7 @@ def seis_de_septiembre():
     
     with col2:
         # Mostrar la imagen adicional a la derecha
-        st.image(foto_derecha, width=150)
+        st.image(foto_derecha, width=300)
 
     # Mostrar detalles del autor
     st.subheader(nombre)

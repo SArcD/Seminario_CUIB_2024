@@ -137,19 +137,22 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 
     return pdf.output(dest="S").encode("latin1")
 
+import streamlit as st
 
-# Página de ejemplo
 def pagina_ejemplo():
     titulo = "Evento: Creación y tipos de hipótesis"
     st.title(titulo)
 
     # Datos del autor
     foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/DrHuerta.jpg"
-    #foto = "DrHuerta.jpg"  # Cambia esta ruta a la imagen del autor
     nombre = "Miguel Huerta"
     grado = "PhD en Ciencias"
-    reseña = "Miguel Huerta Doctor en Ciencias con especialidad en Fisiología y Biofísica Es Profesor-Investigador Titular C del Centro Universitario de Investigaciones Biomédicas de la Universidad de Colima. Es miembro del Sistema Nacional de Investigadores en el nivel 3 emérito. Su campo de investigación es la Biomedicina, con énfasis en la fisiología y biofísica del sistema neuromuscular y la fisiopatología de la diabetes mellitus. Ha publicado más de cien artículos revistas indizadas al Journal of Citation Reports y ha graduado a más de 40 Maestros y Doctores en Ciencias en programas SNP-CONAHCyT."
-    #st.markdown(f"<p style='text-align: justify;'>{reseña}</p>", unsafe_allow_html=True)
+    reseña = ("Miguel Huerta Doctor en Ciencias con especialidad en Fisiología y Biofísica. Es Profesor-Investigador "
+              "Titular C del Centro Universitario de Investigaciones Biomédicas de la Universidad de Colima. "
+              "Es miembro del Sistema Nacional de Investigadores en el nivel 3 emérito. Su campo de investigación "
+              "es la Biomedicina, con énfasis en la fisiología y biofísica del sistema neuromuscular y la fisiopatología "
+              "de la diabetes mellitus. Ha publicado más de cien artículos en revistas indizadas al Journal of Citation "
+              "Reports y ha graduado a más de 40 Maestros y Doctores en Ciencias en programas SNP-CONAHCyT.")
     correo = "huertam@ucol.mx"
     perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"
     
@@ -164,7 +167,7 @@ def pagina_ejemplo():
     mostrar_sobre_la_platica(resumen_platica)
     
     # Enlace directo al PDF
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/asp.pdf"  # Reemplaza con el enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/asp.pdf"
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF
@@ -175,17 +178,19 @@ def pagina_ejemplo():
         file_name="evento_30_agosto.pdf",
         mime="application/pdf",
     )
+    
     # Agregar la imagen después del botón de descarga
     imagen_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/65e716285fa59ca5118574bc62a47521be9f5662/Dr_Huerta_hipotesis.jpg"
     st.image(imagen_url, caption="Dr. Huerta explicando hipótesis", use_column_width=True)
-
-    st.markdown('''
+    
+    # Añadir contenido sobre "Indicadores de argumentos" debajo
+    contenido = '''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
 
     ### Indicadores de argumentos
 
-    Los indicadores de argumentos son palabras o frases que señalan la presencia de una premisa o de una conclusión en un razonamiento. Ayudan a identificar la       estructura del argumento, es decir, a distinguir qué enunciados sirven como soporte (premisas) y cuál es la idea principal que se quiere demostrar o     sustentar (conclusión).
-    
+    Los indicadores de argumentos son palabras o frases que señalan la presencia de una premisa o de una conclusión en un razonamiento. Ayudan a identificar la estructura del argumento, es decir, a distinguir qué enunciados sirven como soporte (premisas) y cuál es la idea principal que se quiere demostrar o sustentar (conclusión).
+
     #### Indicadores de premisas
 
     Algunas palabras sirven para señalar las premisas de un argumento. A estas se les llama <strong>indicadores de premisas</strong>. Aquí se presenta una lista de estos indicadores de premisas:
@@ -207,7 +212,7 @@ def pagina_ejemplo():
 
     #### Indicadores de conclusión
 
-    Podemos determinar cuál de las proposiciones es la conclusión de un argumento y cuáles son sus premisas. Ciertamente, no puede uno confiarse en el orden en     el que aparecen las proposiciones en un pasaje. Algunas palabras sirven para introducir la conclusión de un argumento y a estas se les llama     <strong>indicadores de conclusión</strong>:
+    Podríamos determinar cuál de las proposiciones es la conclusión de un argumento y cuáles son sus premisas. Ciertamente, no puede uno confiarse en el orden en el que aparecen las proposiciones en un pasaje. Algunas palabras sirven para introducir la conclusión de un argumento y a estas se les llama <strong>indicadores de conclusión</strong>:
 
     - por lo tanto
     - de ahí que
@@ -231,14 +236,21 @@ def pagina_ejemplo():
 
     #### Argumentos en contexto
 
-    Las palabras y frases listadas pueden ayudar a reconocer la presencia de un argumento o a identificar sus premisas o su conclusión. Pero algunas veces solo     es el significado de un pasaje o el contexto lo que indica la presencia de un argumento. Por ejemplo, durante el acalorado debate por el envío de tropas         estadounidenses a Irak en 2007, un crítico del envío de tropas escribió:
+    Las palabras y frases listadas pueden ayudar a reconocer la presencia de un argumento o a identificar sus premisas o su conclusión. Pero algunas veces solo es el significado de un pasaje o el contexto lo que indica la presencia de un argumento. Por ejemplo, durante el acalorado debate por el envío de tropas estadounidenses a Irak en 2007, un crítico del envío de tropas escribió:
 
-<em>"Mientras nosotros enviamos a tierras extranjeras nuestros hombres y mujeres jóvenes para imponer el orden en Irak, muchos de sus llamados líderes han abandonado sus puestos. Les hemos dado a los iraquíes una oportunidad para salvar sus diferencias y nos la han arrojado a la cara. Irak no merece nuestra ayuda."</em>
+    <em>"Mientras nosotros enviamos a tierras extranjeras nuestros hombres y mujeres jóvenes para imponer el orden en Irak, muchos de sus llamados líderes han abandonado sus puestos. Les hemos dado a los iraquíes una oportunidad para salvar sus diferencias y nos la han arrojado a la cara. Irak no merece nuestra ayuda."</em>
 
-En ese argumento no se emplea ningún indicador de premisa o conclusión y, aun así, es inequívoco. Otro ejemplo lo ofreció una academia en su respuesta a la crítica aguda a la arquitectura moderna, realizada por el novelista y ensayista Tom Wolfe:
+    En ese argumento no se emplea ningún indicador de premisa o conclusión y, aun así, es inequívoco. Otro ejemplo lo ofreció una academia en su respuesta a la crítica aguda a la arquitectura moderna, realizada por el novelista y ensayista Tom Wolfe:
 
-<em>"Tom Wolfe sugiere que los grandes arquitectos modernistas exigen dogmáticamente muros blancos, construcciones de acero y líneas rectas mientras que evitan materiales lujosos. Sin embargo, Mies van der Rohe utilizó mármol travertino y ónix en su afamado Pabellón de Barcelona, y el color es parte integral de la Unite d’Habitation de Le Corbusier, cuyas curvas esculturales son posibles por la construcción en concreto. El señor Wolfe perpetúa una impresión plana, exagerada y falsa del modernismo arquitectónico."</em> </div> ''', unsafe_allow_html=True)
+    <em>"Tom Wolfe sugiere que los grandes arquitectos modernistas exigen dogmáticamente muros blancos, construcciones de acero y líneas rectas mientras que evitan materiales lujosos. Sin embargo, Mies van der Rohe utilizó mármol travertino y ónix en su afamado Pabellón de Barcelona, y el color es parte integral de la Unite d’Habitation de Le Corbusier, cuyas curvas esculturales son posibles por la construcción en concreto. El señor Wolfe perpetúa una impresión plana, exagerada y falsa del modernismo arquitectónico."</em>
 
+    </div>
+    '''
+    
+    st.markdown(contenido, unsafe_allow_html=True)
+
+# Llamada a la función para mostrar la página
+pagina_ejemplo()
 
 
 

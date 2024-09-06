@@ -60,14 +60,18 @@ def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resume
     # Acerca del autor en negritas
     pdf.set_font("Times", "B", 14)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
-    
+
     # Añadir la imagen del autor desde la URL
     response = requests.get(foto_url)
     img = Image.open(BytesIO(response.content))
     img.save("temp_image.jpg")  # Guardar temporalmente para usarla en FPDF
     
-    pdf.image("temp_image.jpg", x=10, y=pdf.get_y() + 5, w=30)  
-    pdf.set_xy(55, pdf.get_y())  # Posicionar el texto al lado de la imagen
+    # Posicionar la imagen del autor y asegurarse de que el texto esté alineado después de la imagen
+    img_height = 40  # Ajustar la altura de la imagen
+    pdf.image("temp_image.jpg", x=10, y=pdf.get_y() + 5, w=30, h=img_height)  # Imagen de tamaño ajustado
+
+    # Ajustar la posición para que el texto comience después de la imagen
+    pdf.set_y(pdf.get_y() + img_height + 5)  # Añadir espacio debajo de la imagen
 
     # Lista de etiquetas y contenido
     informacion = [

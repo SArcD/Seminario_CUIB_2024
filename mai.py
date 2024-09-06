@@ -41,9 +41,14 @@ dates = {
     "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra": "29 de noviembre: Alberto Bricio y Ricardo Marentes y Valeria Ibarra"
 }
 
-from fpdf import FPDF
 
-def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
+from fpdf import FPDF
+import requests
+from PIL import Image
+from io import BytesIO
+
+def generar_pdf(foto_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
+    # Crear el PDF
     pdf = FPDF()
     pdf.add_page()
 
@@ -57,8 +62,12 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
     pdf.set_font("Times", "B", 14)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
     
-    # Añadir la imagen del autor
-    pdf.image(foto, x=10, y=pdf.get_y() + 5, w=30)  
+    # Añadir la imagen del autor desde la URL
+    response = requests.get(foto_url)
+    img = Image.open(BytesIO(response.content))
+    img.save("temp_image.jpg")  # Guardar temporalmente para usarla en FPDF
+    
+    pdf.image("temp_image.jpg", x=10, y=pdf.get_y() + 5, w=30)  
     pdf.set_xy(55, pdf.get_y())  # Posicionar el texto al lado de la imagen
 
     # Texto al lado de la imagen
@@ -86,14 +95,19 @@ def generar_pdf(foto, nombre, grado, reseña, correo, perfil_scholar, resumen_pl
         pdf.set_font("Times", "", 12)  # Texto del enlace normal
         pdf.cell(200, 10, txt=f"Ver diapositivas en: {enlace_pdf}", ln=True, link=enlace_pdf)
 
+    # Descargar la imagen de la cintilla desde GitHub y agregarla en la parte inferior
+    cintilla_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/udec.png"  # URL de la imagen
+    response = requests.get(cintilla_url)
+    cintilla_img = Image.open(BytesIO(response.content))
+    cintilla_img.save("temp_cintilla.png")  # Guardar temporalmente la imagen de la cintilla
+    
     # Añadir la cintilla (imagen) centrada en la parte inferior
-    # La página es de 210 mm de ancho, calculamos el centro
     image_width = 50  # Ancho de la imagen cintilla (ajústalo si es necesario)
     pdf_width = 210
     x_position = (pdf_width - image_width) / 2  # Centrar la imagen
-    y_position = 287  # Posición en la parte inferior, ajustada para la altura de la imagen
+    y_position = 280  # Posición en la parte inferior, ajustada para la altura de la imagen
 
-    pdf.image("udec.png", x=x_position, y=y_position, w=image_width)
+    pdf.image("temp_cintilla.png", x=x_position, y=y_position, w=image_width)
 
     return pdf.output(dest="S").encode("latin1")
 

@@ -53,8 +53,7 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 
     # Título en negritas
     pdf.set_font("Times", "B", 16)
-    pdf.cell(200, 10, txt="Evento: Creación y tipos de hipótesis", ln=True, align='C')
-
+    pdf.cell(200, 10, txt=titulo, ln=True, align='C')
     pdf.ln(10)  # Añadir un espacio vertical después del título
 
     # Acerca del autor en negritas
@@ -104,20 +103,12 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
     pdf.ln(10)  # Añadir un espacio vertical después de la sección "Sobre la plática"
 
     # Enlace al PDF de diapositivas en negritas
-    #if enlace_pdf:
-    #    pdf.set_font("Times", "B", 14)
-    #    pdf.cell(200, 10, txt="Ver diapositivas: ", ln=False)
-    #    pdf.set_font("Times", "", 12)  # Texto normal para el enlace
-    #    pdf.cell(0, 10, txt=enlace_pdf, ln=True, link=enlace_pdf)
-
-    # Enlace al PDF de diapositivas en negritas
     if enlace_pdf:
         pdf.set_font("Times", "B", 14)
         pdf.cell(40, 10, "Ver diapositivas: ", ln=False)
         pdf.set_font("Times", "", 12)  # Texto normal para el enlace
         # Crear un enlace clicable
         pdf.cell(0, 10, txt=enlace_pdf, ln=True, link=enlace_pdf)
-
 
     
     # Descargar la imagen de la cintilla desde GitHub y agregarla en la parte inferior
@@ -182,8 +173,6 @@ def veintiseis_abril():
     titulo = "Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia"
     st.title(titulo)
     
-    #st.title("Evento:  Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia")
-
     # Datos del autor
     foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/ArceoS.jpg"
 

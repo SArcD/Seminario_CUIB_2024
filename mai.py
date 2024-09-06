@@ -52,10 +52,20 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
     pdf.add_page()
 
     # Título en negritas
+    #pdf.set_font("Times", "B", 16)
+    #pdf.cell(200, 10, txt=titulo, ln=True, align='C')
+    #pdf.ln(10)  # Añadir un espacio vertical después del título
+
+
+    # Título en negritas usando multi_cell para manejar títulos largos y centrados
     pdf.set_font("Times", "B", 16)
-    pdf.cell(200, 10, txt=titulo, ln=True, align='C')
+    page_width = pdf.w - 2 * pdf.l_margin  # Calcular el ancho de la página
+    pdf.multi_cell(page_width, 10, txt=titulo, align='C')  # Utilizar multi_cell para que el título largo se ajuste y esté centrado
+
     pdf.ln(10)  # Añadir un espacio vertical después del título
 
+
+    
     # Acerca del autor en negritas
     pdf.set_font("Times", "B", 14)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)

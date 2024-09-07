@@ -155,6 +155,10 @@ def pagina_ejemplo():
               "Reports y ha graduado a más de 40 Maestros y Doctores en Ciencias en programas SNP-CONAHCyT.")
     
     correo = "huertam@ucol.mx"
+        # Espacio vertical entre el resumen y la sección "Acerca del autor"
+    st.write("")
+    st.write("")
+    
     perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"
     
     # Mostrar la imagen del autor con tamaño ajustado

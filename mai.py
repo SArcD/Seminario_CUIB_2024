@@ -147,14 +147,29 @@ def pagina_ejemplo():
     foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/DrHuerta.jpg"
     nombre = "Miguel Huerta"
     grado = "PhD en Ciencias"
+    
     reseña = ("Miguel Huerta Doctor en Ciencias con especialidad en Fisiología y Biofísica. Es Profesor-Investigador "
               "Titular C del Centro Universitario de Investigaciones Biomédicas de la Universidad de Colima. "
               "Es miembro del Sistema Nacional de Investigadores en el nivel 3 emérito. Su campo de investigación "
               "es la Biomedicina, con énfasis en la fisiología y biofísica del sistema neuromuscular y la fisiopatología "
               "de la diabetes mellitus. Ha publicado más de cien artículos en revistas indizadas al Journal of Citation "
               "Reports y ha graduado a más de 40 Maestros y Doctores en Ciencias en programas SNP-CONAHCyT.")
+    
     correo = "huertam@ucol.mx"
     perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"
+    
+    # Mostrar la información del autor con el texto justificado
+    st.image(foto, caption=nombre, use_column_width=True)
+    
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <strong>{nombre}</strong>, {grado}. {reseña} <br><br>
+    Puedes contactar al autor por correo electrónico: <a href="mailto:{correo}">{correo}</a> <br>
+    Perfil de Google Scholar: <a href="{perfil_scholar}" target="_blank">{perfil_scholar}</a>
+    </div>
+    ''', unsafe_allow_html=True)
+
+
     
     # Mostrar sección "Acerca del autor"
     mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar)

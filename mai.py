@@ -137,6 +137,7 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 
 import streamlit as st
 
+
 def pagina_ejemplo():
     titulo = "Evento: Creación y tipos de hipótesis"
     st.title(titulo)
@@ -162,23 +163,31 @@ def pagina_ejemplo():
         <img src="{foto}" alt="{nombre}" style="width: 300px; border-radius: 10px;">
     </div>
     ''', unsafe_allow_html=True)
+
+    # Espacio antes del resumen de la plática
+    st.write("")
     
     # Mostrar la información de la plática con el texto justificado (Resumen de la plática antes de la reseña)
     resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
                        "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
-    st.write("")
+    
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">
     <strong>Resumen de la plática:</strong> {resumen_platica}
     </div>
     ''', unsafe_allow_html=True)
-    
-    # Mostrar la reseña del autor
+
+    # Espacio vertical entre el resumen y la sección "Acerca del autor"
+    st.write("")
+    st.write("")
+
+    # Mostrar la sección "Acerca del autor"
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">
+    <strong>Acerca del autor</strong><br><br>
     <strong>{nombre}</strong>, {grado}. {reseña} <br><br>
-    Puedes contactar al autor por correo electrónico: <a href="mailto:{correo}">{correo}</a> <br>
-    Perfil de Google Scholar: <a href="{perfil_scholar}" target="_blank">{perfil_scholar}</a>
+    <strong>Puedes contactar al autor por correo electrónico:</strong> <a href="mailto:{correo}">{correo}</a> <br>
+    <strong>Perfil de Google Scholar:</strong> <a href="{perfil_scholar}" target="_blank">{perfil_scholar}</a>
     </div>
     ''', unsafe_allow_html=True)
     
@@ -264,8 +273,6 @@ def pagina_ejemplo():
     '''
     
     st.markdown(contenido, unsafe_allow_html=True)
-
-
 
 
 def veintiseis_abril():

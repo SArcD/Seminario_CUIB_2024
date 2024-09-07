@@ -159,7 +159,7 @@ def pagina_ejemplo():
     perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"
     
     # Mostrar la información del autor con el texto justificado
-    st.image(foto, caption=nombre, use_column_width=True)
+    st.image(foto, caption=nombre, use_column_width=False)
     
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">

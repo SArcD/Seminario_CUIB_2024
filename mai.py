@@ -184,12 +184,20 @@ def pagina_ejemplo():
     # Mostrar sección "Acerca del autor"
     #mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar)
     
+    # Mostrar sección "Sobre la plática"
+    #mostrar_sobre_la_platica(resumen_platica)
+
     # Información sobre la plática
     resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
                        "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
     
-    # Mostrar sección "Sobre la plática"
-    #mostrar_sobre_la_platica(resumen_platica)
+    # Mostrar la información de la plática con el texto justificado
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <strong>Resumen de la plática:</strong> {resumen_platica}
+    </div>
+    ''', unsafe_allow_html=True)
+
     
     # Enlace directo al PDF
     enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/asp.pdf"

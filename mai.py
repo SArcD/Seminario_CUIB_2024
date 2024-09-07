@@ -160,7 +160,7 @@ def pagina_ejemplo():
     st.image(foto, caption=nombre, use_column_width=False)
     
     st.markdown(f'''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">
     <strong>{nombre}</strong>, {grado}. {reseña} <br><br>
     Puedes contactar al autor por correo electrónico: <a href="mailto:{correo}">{correo}</a> <br>
     Perfil de Google Scholar: <a href="{perfil_scholar}" target="_blank">{perfil_scholar}</a>
@@ -170,7 +170,7 @@ def pagina_ejemplo():
 
 
     st.markdown(f'''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">
     Esta plática abordará la creación y tipos de hipótesis en la investigación científica, explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente."
     </div>
     ''', unsafe_allow_html=True)
@@ -206,7 +206,7 @@ def pagina_ejemplo():
     
     # Añadir contenido sobre "Indicadores de argumentos" debajo
     contenido = '''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">
 
     ### Indicadores de argumentos
 

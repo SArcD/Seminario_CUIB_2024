@@ -292,7 +292,18 @@ def veintiseis_abril():
     perfil_scholar = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
     
     # Mostrar la información del autor con el texto justificado
-    st.image(foto, caption=nombre, use_column_width=True)
+    #st.image(foto, caption=nombre, use_column_width=True)
+
+    #correo = "santiagoarceo@ucol.mx"
+    #perfil_scholar = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
+    
+    # Mostrar la imagen del autor con tamaño ajustado
+    st.markdown(f'''
+    <div style="text-align: center;">
+        <img src="{foto}" alt="{nombre}" style="width: 300px; border-radius: 10px;">
+    </div>
+    ''', unsafe_allow_html=True)
+    
     
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">

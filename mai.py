@@ -163,6 +163,17 @@ def pagina_ejemplo():
     </div>
     ''', unsafe_allow_html=True)
     
+    # Mostrar la información de la plática con el texto justificado (Resumen de la plática antes de la reseña)
+    resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
+                       "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
+    
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">
+    <strong>Resumen de la plática:</strong> {resumen_platica}
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    # Mostrar la reseña del autor
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">
     <strong>{nombre}</strong>, {grado}. {reseña} <br><br>
@@ -170,34 +181,6 @@ def pagina_ejemplo():
     Perfil de Google Scholar: <a href="{perfil_scholar}" target="_blank">{perfil_scholar}</a>
     </div>
     ''', unsafe_allow_html=True)
-
-
-
-    st.markdown(f'''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">
-    Esta plática abordará la creación y tipos de hipótesis en la investigación científica, explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente."
-    </div>
-    ''', unsafe_allow_html=True)
-
-
-    
-    # Mostrar sección "Acerca del autor"
-    #mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar)
-    
-    # Mostrar sección "Sobre la plática"
-    #mostrar_sobre_la_platica(resumen_platica)
-
-    # Información sobre la plática
-    resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
-                       "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
-    
-    # Mostrar la información de la plática con el texto justificado
-    st.markdown(f'''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
-    <strong>Resumen de la plática:</strong> {resumen_platica}
-    </div>
-    ''', unsafe_allow_html=True)
-
     
     # Enlace directo al PDF
     enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/asp.pdf"
@@ -282,7 +265,8 @@ def pagina_ejemplo():
     
     st.markdown(contenido, unsafe_allow_html=True)
 
-import streamlit as st
+
+
 
 def veintiseis_abril():
     titulo = "Aplicación de la Inteligencia Artificial y Conjuntos Rugosos de Participantes Geriátricos en las ENASEM 2018 y 2021: Modelos para el Cálculo de Riesgo de Sarcopenia"

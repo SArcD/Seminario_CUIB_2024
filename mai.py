@@ -181,8 +181,8 @@ def pagina_ejemplo():
     #mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar)
     
     # Información sobre la plática
-    #resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
-    #                   "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
+    resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
+                       "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
     
     # Mostrar sección "Sobre la plática"
     #mostrar_sobre_la_platica(resumen_platica)

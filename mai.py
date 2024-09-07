@@ -168,16 +168,29 @@ def pagina_ejemplo():
     ''', unsafe_allow_html=True)
 
 
+    st.markdown(f'''
+
+    </div>
+    ''', unsafe_allow_html=True)
+
+
+        st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    Esta plática abordará la creación y tipos de hipótesis en la investigación científica, explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente."
+    </div>
+    ''', unsafe_allow_html=True)
+
+
     
     # Mostrar sección "Acerca del autor"
     #mostrar_acerca_del_autor(foto, nombre, grado, reseña, correo, perfil_scholar)
     
     # Información sobre la plática
-    resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
-                       "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
+    #resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
+    #                   "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
     
     # Mostrar sección "Sobre la plática"
-    mostrar_sobre_la_platica(resumen_platica)
+    #mostrar_sobre_la_platica(resumen_platica)
     
     # Enlace directo al PDF
     enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/asp.pdf"

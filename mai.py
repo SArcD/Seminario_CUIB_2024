@@ -64,8 +64,6 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 
     pdf.ln(10)  # Añadir un espacio vertical después del título
 
-
-    
     # Acerca del autor en negritas
     pdf.set_font("Times", "B", 14)
     pdf.cell(200, 10, txt="Acerca del autor", ln=True)
@@ -148,7 +146,7 @@ def pagina_ejemplo():
     nombre = "Miguel Huerta"
     grado = "PhD en Ciencias"
     
-    reseña = ("Miguel Huerta Doctor en Ciencias con especialidad en Fisiología y Biofísica. Es Profesor-Investigador "
+    reseña = ("Doctor en Ciencias con especialidad en Fisiología y Biofísica. Es Profesor-Investigador "
               "Titular C del Centro Universitario de Investigaciones Biomédicas de la Universidad de Colima. "
               "Es miembro del Sistema Nacional de Investigadores en el nivel 3 emérito. Su campo de investigación "
               "es la Biomedicina, con énfasis en la fisiología y biofísica del sistema neuromuscular y la fisiopatología "

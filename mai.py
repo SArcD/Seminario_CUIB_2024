@@ -166,7 +166,7 @@ def pagina_ejemplo():
     # Mostrar la información de la plática con el texto justificado (Resumen de la plática antes de la reseña)
     resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica, "
                        "explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
-    
+    st.write("")
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">
     <strong>Resumen de la plática:</strong> {resumen_platica}

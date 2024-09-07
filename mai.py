@@ -156,8 +156,12 @@ def pagina_ejemplo():
     correo = "huertam@ucol.mx"
     perfil_scholar = "https://scholar.google.com.mx/citations?user=7jGGpnoAAAAJ&hl=en&oi=ao"
     
-    # Mostrar la información del autor con el texto justificado
-    st.image(foto, caption=nombre, use_column_width=False)
+    # Mostrar la imagen del autor con tamaño ajustado
+    st.markdown(f'''
+    <div style="text-align: center;">
+        <img src="{foto}" alt="{nombre}" style="width: 300px; border-radius: 10px;">
+    </div>
+    ''', unsafe_allow_html=True)
     
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 16px;">

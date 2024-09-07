@@ -168,13 +168,8 @@ def pagina_ejemplo():
     ''', unsafe_allow_html=True)
 
 
+
     st.markdown(f'''
-
-    </div>
-    ''', unsafe_allow_html=True)
-
-
-        st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
     Esta plática abordará la creación y tipos de hipótesis en la investigación científica, explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente."
     </div>

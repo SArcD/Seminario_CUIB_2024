@@ -529,20 +529,20 @@ def septiembre_trece():
     
 
     
-# Sección "Preguntas Clave"
-st.subheader("Preguntas Clave")
-st.markdown('''
-<div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
-1. ¿Cuáles son las características principales de la planificación de experimentos científicos que se destacaron en la charla?<br>
-2. ¿Qué importancia tienen los diseños experimentales que involucran animales en la investigación científica?<br>
-3. ¿Cómo se debe definir y controlar las variables en un experimento para asegurar la validez y confiabilidad de las mediciones?<br>
-4. ¿Por qué es esencial controlar las variables externas en los experimentos científicos?<br>
-5. ¿Qué aspectos éticos se deben considerar al realizar experimentos con animales?<br>
-6. ¿Cómo se induce la diabetes en modelos animales, como las ratas, y qué tipos de diabetes se pueden clasificar en estos experimentos?<br>
-7. ¿Qué desafíos presenta la simulación de la preeclampsia en modelos animales y cómo se emplean para evaluar terapias preventivas?<br>
-8. ¿Cuál es la relevancia de estudiar diferentes tratamientos en modelos animales para entender los mecanismos fisiológicos de enfermedades como la diabetes?<br>
-</div>
-''', unsafe_allow_html=True)
+    # Sección "Preguntas Clave"
+    st.subheader("Preguntas Clave")
+    st.markdown('''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    1. ¿Cuáles son las características principales de la planificación de experimentos científicos que se destacaron en la charla?<br>
+    2. ¿Qué importancia tienen los diseños experimentales que involucran animales en la investigación científica?<br>
+    3. ¿Cómo se debe definir y controlar las variables en un experimento para asegurar la validez y confiabilidad de las mediciones?<br>
+    4. ¿Por qué es esencial controlar las variables externas en los experimentos científicos?<br>
+    5. ¿Qué aspectos éticos se deben considerar al realizar experimentos con animales?<br>
+    6. ¿Cómo se induce la diabetes en modelos animales, como las ratas, y qué tipos de diabetes se pueden clasificar en estos experimentos?<br>
+    7. ¿Qué desafíos presenta la simulación de la preeclampsia en modelos animales y cómo se emplean para evaluar terapias preventivas?<br>
+    8. ¿Cuál es la relevancia de estudiar diferentes tratamientos en modelos animales para entender los mecanismos fisiológicos de enfermedades como la diabetes?    <br>
+    </div>
+    ''', unsafe_allow_html=True)
 
 
 # Llamada a la función para mostrar la página

@@ -583,6 +583,8 @@ def main():
         veintiseis_abril()
     elif selected_page == "06 de septiembre: Mónica Ríos":
         seis_de_septiembre()
+    elif selected_page == "13 de septiembre: Mariano, Julio y Minerva":
+        septiembre_trece()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 
 if __name__ == "__main__":

@@ -469,7 +469,7 @@ def septiembre_trece():
     st.title(titulo)
     
     # Datos del autor
-    foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/ArceoS.jpg"
+    foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Expo_septiembre_trece.jpg"
     nombre = "Julio César Alcaraz Siqueiros"
     grado = "Dr. Ciencias (Astrofísica)"
     
@@ -511,7 +511,7 @@ def septiembre_trece():
     ''', unsafe_allow_html=True)
     
     # Enlace directo al PDF
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/seminario_26_abril_2024.pdf"
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SeminarioInterno_13Sep2024_completo.pdf"
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF
@@ -519,7 +519,7 @@ def septiembre_trece():
     st.download_button(
         label="Descargar PDF con los datos del evento",
         data=pdf,
-        file_name="evento_26_abril.pdf",
+        file_name="evento_13_septiembre.pdf",
         mime="application/pdf",
     )
 

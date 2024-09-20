@@ -524,7 +524,7 @@ def septiembre_trece():
     )
 
     # Agregar la imagen después del botón de descarga
-    imagen_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/65e716285fa59ca5118574bc62a47521be9f5662/Dr_Huerta_hipotesis.jpg"
+    imagen_url = "Expo_septiembre_trece.jpg"
     st.image(imagen_url, caption="Ponentes del 13 de septiembre", use_column_width=True)
     
 

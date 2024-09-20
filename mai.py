@@ -464,6 +464,99 @@ def seis_de_septiembre():
     - [The Craft of Scientific Presentations: Critical Steps to Succeed and Critical Errors to Avoid](https://github.com/SArcD/Seminario_CUIB_2024/blob/a10ffac9338f31fbf68ce79e7629ba8155978cf2/Scientific-Presentation_book.pdf)
     """)
 
+def septiembre_trece():
+    titulo = "Diseños experimentales con animales: modelo de diabetes y modelo de preeclampsia"
+    st.title(titulo)
+    
+    # Datos del autor
+    foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/ArceoS.jpg"
+    nombre = "Julio César Alcaraz Siqueiros"
+    grado = "Dr. Ciencias (Astrofísica)"
+    
+    reseña = ("")
+    
+    correo = "julio_siqueiros@ucol.mx"
+    perfil_scholar = "https://portal.ucol.mx/fcba/docentes.htm"
+    
+    # Mostrar la información del autor con el texto justificado
+    #st.image(foto, caption=nombre, use_column_width=True)
+
+    #correo = "santiagoarceo@ucol.mx"
+    #perfil_scholar = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
+    
+    # Mostrar la imagen del autor con tamaño ajustado
+    st.markdown(f'''
+    <div style="text-align: center;">
+        <img src="{foto}" alt="{nombre}" style="width: 300px; border-radius: 10px;">
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <strong>{nombre}</strong>, {grado}. {reseña} <br><br>
+    Puedes contactar al autor por correo electrónico: <a href="mailto:{correo}">{correo}</a> <br>
+    Perfil de Google Scholar: <a href="{perfil_scholar}" target="_blank">{perfil_scholar}</a>
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    # Información sobre la plática
+    resumen_platica = ("En la charla se presentaron las características principales y los principios fundamentales que
+involucran la planificación de experimentos científicos. El enfoque principal se centró en los
+diseños experimentales que involucran animales, destacando la importancia de la definición de
+grupos a partir de las variables, el control e influencia de variables externas y la importancia de
+cuidar la validez y confiabilidad de las medicoones con el objetivo de lograr la replicabilidad y
+validez estadística de los resultados. Se mencionaron brevemente las consideraciones éticas que
+deben considerarse para llevar a cabo experimentos con animales.
+Posteriormente, se abordó de manera específica el tema de los experimentos en animales
+utilizando dos modelos patológicos: el modelo de diabetes y el modelo de preeclampsia. En el
+caso de la diabetes, se explicó como es la inducción de la enfermedad en ratas, las consideraciones
+para clasificar el tipo de diabetes inducida, y como este modelo permite estudiar los efectos de
+diferentes tratamientos y comprender mejor los mecanismos fisiológicos involucrados en esta
+enfermedad. Para el modelo de preeclampsia, se destacaron los síntomas y características que
+destacan en esta enfermedad, así como los desafíos y metodologías específicas empleadas para
+simular esta complicación del embarazo en modelos animales, todo con el objetivo de evaluar
+terapias preventivas de este padecimiento.")
+    
+    # Mostrar la información de la plática con el texto justificado
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <strong>Resumen de la plática:</strong> {resumen_platica}
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    # Enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/seminario_26_abril_2024.pdf"
+    mostrar_diapositivas(enlace_pdf)
+    
+    # Botón para generar y descargar el PDF
+    pdf = generar_pdf(titulo, foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf)
+    st.download_button(
+        label="Descargar PDF con los datos del evento",
+        data=pdf,
+        file_name="evento_26_abril.pdf",
+        mime="application/pdf",
+    )
+    
+    # Sección "Preguntas Clave"
+    st.subheader("Preguntas Clave")
+    st.markdown('''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    1. ¿Cómo cambiará la proporción de adultos mayores en México hacia el año 2050, y cuáles serán las consecuencias para la salud pública?<br>
+    2. ¿Cuál es la prevalencia de sarcopenia en las poblaciones de adultos mayores en México y cómo varía entre diferentes grupos (sin comorbilidades, con diabetes, con hipertensión, etc.)?<br>
+    3. ¿Cómo se utiliza la teoría de conjuntos rugosos y la inteligencia artificial para clasificar y evaluar el riesgo de sarcopenia en adultos mayores?<br>
+    4. ¿Cuáles son las preguntas o variables críticas en la ENASEM que se utilizan para evaluar el riesgo de sarcopenia (por ejemplo, fuerza de presión, caídas, movilidad)?<br>
+    5. ¿Cómo influyen las comorbilidades como la hipertensión y la diabetes en el riesgo de sarcopenia en adultos mayores?<br>
+    6. ¿Existen diferencias significativas en el riesgo de sarcopenia entre hombres y mujeres?<br>
+    7. ¿Cómo se pueden utilizar los modelos desarrollados para mejorar la detección y gestión de la sarcopenia en el ámbito clínico?<br>
+    8. ¿Qué revelan los datos de las encuestas ENASEM 2018 y 2021 sobre la distribución del riesgo de sarcopenia en la población mexicana mayor de 60 años?<br>
+    </div>
+    ''', unsafe_allow_html=True)
+
+# Llamada a la función para mostrar la página
+#veintiseis_abril()
+
+
 
 # Página de inicio con el resumen
 def pagina_inicio():

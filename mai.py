@@ -481,7 +481,7 @@ def septiembre_trece():
     nombre2 = "Héctor Mariano Jiménez Leal"
     grado2 = ""
     reseña2 = ""
-    correo2 = "hector_jimenez@ucol.mx"
+    correo2 = "hectormariano_jimenez@ucol.mx"
     perfil_scholar2 = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
     
     # Datos del tercer autor
@@ -489,7 +489,7 @@ def septiembre_trece():
     nombre3 = "Minerva Silvia Márquez Villar"
     grado3 = ""
     reseña3 = ""
-    correo3 = "minerva_marquez@ucol.mx"
+    correo3 = "mmarquez20@ucol.mx"
     perfil_scholar3 = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
     
     # Mostrar información de los autores

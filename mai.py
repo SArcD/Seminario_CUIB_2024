@@ -561,7 +561,7 @@ def pagina_inicio():
     **Datos de contacto:**
     
     **Encargado:** Santiago Arceo Díaz  
-    **Correo:** santiarceo@ucol.mx
+    **Correo:** santiagoarceo@ucol.mx
     """)
 
 # Página principal

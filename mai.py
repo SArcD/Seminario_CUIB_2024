@@ -529,20 +529,21 @@ def septiembre_trece():
     
 
     
-    # Sección "Preguntas Clave"
-    st.subheader("Preguntas Clave")
-    st.markdown('''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
-    1. ¿Cómo cambiará la proporción de adultos mayores en México hacia el año 2050, y cuáles serán las consecuencias para la salud pública?<br>
-    2. ¿Cuál es la prevalencia de sarcopenia en las poblaciones de adultos mayores en México y cómo varía entre diferentes grupos (sin comorbilidades, con diabetes, con hipertensión, etc.)?<br>
-    3. ¿Cómo se utiliza la teoría de conjuntos rugosos y la inteligencia artificial para clasificar y evaluar el riesgo de sarcopenia en adultos mayores?<br>
-    4. ¿Cuáles son las preguntas o variables críticas en la ENASEM que se utilizan para evaluar el riesgo de sarcopenia (por ejemplo, fuerza de presión, caídas, movilidad)?<br>
-    5. ¿Cómo influyen las comorbilidades como la hipertensión y la diabetes en el riesgo de sarcopenia en adultos mayores?<br>
-    6. ¿Existen diferencias significativas en el riesgo de sarcopenia entre hombres y mujeres?<br>
-    7. ¿Cómo se pueden utilizar los modelos desarrollados para mejorar la detección y gestión de la sarcopenia en el ámbito clínico?<br>
-    8. ¿Qué revelan los datos de las encuestas ENASEM 2018 y 2021 sobre la distribución del riesgo de sarcopenia en la población mexicana mayor de 60 años?<br>
-    </div>
-    ''', unsafe_allow_html=True)
+# Sección "Preguntas Clave"
+st.subheader("Preguntas Clave")
+st.markdown('''
+<div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+1. ¿Cuáles son las características principales de la planificación de experimentos científicos que se destacaron en la charla?<br>
+2. ¿Qué importancia tienen los diseños experimentales que involucran animales en la investigación científica?<br>
+3. ¿Cómo se debe definir y controlar las variables en un experimento para asegurar la validez y confiabilidad de las mediciones?<br>
+4. ¿Por qué es esencial controlar las variables externas en los experimentos científicos?<br>
+5. ¿Qué aspectos éticos se deben considerar al realizar experimentos con animales?<br>
+6. ¿Cómo se induce la diabetes en modelos animales, como las ratas, y qué tipos de diabetes se pueden clasificar en estos experimentos?<br>
+7. ¿Qué desafíos presenta la simulación de la preeclampsia en modelos animales y cómo se emplean para evaluar terapias preventivas?<br>
+8. ¿Cuál es la relevancia de estudiar diferentes tratamientos en modelos animales para entender los mecanismos fisiológicos de enfermedades como la diabetes?<br>
+</div>
+''', unsafe_allow_html=True)
+
 
 # Llamada a la función para mostrar la página
 #veintiseis_abril()

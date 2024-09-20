@@ -537,7 +537,7 @@ def septiembre_trece():
 
     # Agregar la imagen después del botón de descarga
     imagen_url = "Expo_septiembre_trece.jpg"
-    st.image(imagen_url, caption="Ponentes del 13 de septiembre", use_column_width=True)
+    st.image(imagen_url, caption="Ponentes del 13 de septiembre: Mariano, Minerva y Julio César (de izquierda a derecha)", use_column_width=True)
     
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")

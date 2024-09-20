@@ -501,22 +501,7 @@ def septiembre_trece():
     ''', unsafe_allow_html=True)
     
     # Información sobre la plática
-    resumen_platica = ("En la charla se presentaron las características principales y los principios fundamentales que
-involucran la planificación de experimentos científicos. El enfoque principal se centró en los
-diseños experimentales que involucran animales, destacando la importancia de la definición de
-grupos a partir de las variables, el control e influencia de variables externas y la importancia de
-cuidar la validez y confiabilidad de las medicoones con el objetivo de lograr la replicabilidad y
-validez estadística de los resultados. Se mencionaron brevemente las consideraciones éticas que
-deben considerarse para llevar a cabo experimentos con animales.
-Posteriormente, se abordó de manera específica el tema de los experimentos en animales
-utilizando dos modelos patológicos: el modelo de diabetes y el modelo de preeclampsia. En el
-caso de la diabetes, se explicó como es la inducción de la enfermedad en ratas, las consideraciones
-para clasificar el tipo de diabetes inducida, y como este modelo permite estudiar los efectos de
-diferentes tratamientos y comprender mejor los mecanismos fisiológicos involucrados en esta
-enfermedad. Para el modelo de preeclampsia, se destacaron los síntomas y características que
-destacan en esta enfermedad, así como los desafíos y metodologías específicas empleadas para
-simular esta complicación del embarazo en modelos animales, todo con el objetivo de evaluar
-terapias preventivas de este padecimiento.")
+    resumen_platica = ("En la charla se presentaron las características principales y los principios fundamentales que involucran la planificación de experimentos científicos. El enfoque principal se centró en los diseños experimentales que involucran animales, destacando la importancia de la definición de grupos a partir de las variables, el control e influencia de variables externas y la importancia de cuidar la validez y confiabilidad de las medicoones con el objetivo de lograr la replicabilidad y validez estadística de los resultados. Se mencionaron brevemente las consideraciones éticas que deben considerarse para llevar a cabo experimentos con animales. Posteriormente, se abordó de manera específica el tema de los experimentos en animales utilizando dos modelos patológicos: el modelo de diabetes y el modelo de preeclampsia. En el caso de la diabetes, se explicó como es la inducción de la enfermedad en ratas, las consideraciones para clasificar el tipo de diabetes inducida, y como este modelo permite estudiar los efectos de diferentes tratamientos y comprender mejor los mecanismos fisiológicos involucrados en esta enfermedad. Para el modelo de preeclampsia, se destacaron los síntomas y características que destacan en esta enfermedad, así como los desafíos y metodologías específicas empleadas para simular esta complicación del embarazo en modelos animales, todo con el objetivo de evaluar terapias preventivas de este padecimiento.")
     
     # Mostrar la información de la plática con el texto justificado
     st.markdown(f'''

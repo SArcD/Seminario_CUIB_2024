@@ -468,37 +468,49 @@ def septiembre_trece():
     titulo = "Diseños experimentales con animales: modelo de diabetes y modelo de preeclampsia"
     st.title(titulo)
     
-    # Datos del autor
-    foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Expo_septiembre_trece.jpg"
-    nombre = "Julio César Alcaraz Siqueiros"
-    grado = ""
+    # Datos del primer autor
+    foto1 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Expo_septiembre_trece.jpg"
+    nombre1 = "Julio César Alcaraz Siqueiros"
+    grado1 = ""
+    reseña1 = ""
+    correo1 = "julio_siqueiros@ucol.mx"
+    perfil_scholar1 = "https://portal.ucol.mx/fcba/docentes.htm"
     
-    reseña = ("")
+    # Datos del segundo autor
+    foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Expo_septiembre_trece.jpg"
+    nombre2 = "Héctor Mariano Jiménez Leal"
+    grado2 = ""
+    reseña2 = ""
+    correo2 = "hector_jimenez@ucol.mx"
+    perfil_scholar2 = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
     
-    correo = "julio_siqueiros@ucol.mx"
-    perfil_scholar = "https://portal.ucol.mx/fcba/docentes.htm"
+    # Datos del tercer autor
+    foto3 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Expo_septiembre_trece.jpg"
+    nombre3 = "Minerva Silvia Márquez Villar"
+    grado3 = ""
+    reseña3 = ""
+    correo3 = "minerva_marquez@ucol.mx"
+    perfil_scholar3 = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
     
-    # Mostrar la información del autor con el texto justificado
-    #st.image(foto, caption=nombre, use_column_width=True)
-
-    #correo = "santiagoarceo@ucol.mx"
-    #perfil_scholar = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
+    # Mostrar información de los autores
+    autores = [(foto1, nombre1, grado1, reseña1, correo1, perfil_scholar1),
+               (foto2, nombre2, grado2, reseña2, correo2, perfil_scholar2),
+               (foto3, nombre3, grado3, reseña3, correo3, perfil_scholar3)]
     
-    # Mostrar la imagen del autor con tamaño ajustado
-    st.markdown(f'''
-    <div style="text-align: center;">
-        <img src="{foto}" alt="{nombre}" style="width: 300px; border-radius: 10px;">
-    </div>
-    ''', unsafe_allow_html=True)
-    
-    
-    st.markdown(f'''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
-    <strong>{nombre}</strong>, {grado}. {reseña} <br><br>
-    Puedes contactar al autor por correo electrónico: <a href="mailto:{correo}">{correo}</a> <br>
-    Perfil de Google Scholar: <a href="{perfil_scholar}" target="_blank">{perfil_scholar}</a>
-    </div>
-    ''', unsafe_allow_html=True)
+    for foto, nombre, grado, reseña, correo, perfil_scholar in autores:
+        st.markdown(f'''
+        <div style="text-align: center;">
+            <img src="{foto}" alt="{nombre}" style="width: 300px; border-radius: 10px;">
+        </div>
+        ''', unsafe_allow_html=True)
+        
+        st.markdown(f'''
+        <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        <strong>{nombre}</strong>, {grado}. {reseña} <br><br>
+        Puedes contactar al autor por correo electrónico: <a href="mailto:{correo}">{correo}</a> <br>
+        Perfil de Google Scholar: <a href="{perfil_scholar}" target="_blank">{perfil_scholar}</a>
+        </div>
+        ''', unsafe_allow_html=True)
     
     # Información sobre la plática
     resumen_platica = ("En la charla se presentaron las características principales y los principios fundamentales que involucran la planificación de experimentos científicos. El enfoque principal se centró en los diseños experimentales que involucran animales, destacando la importancia de la definición de grupos a partir de las variables, el control e influencia de variables externas y la importancia de cuidar la validez y confiabilidad de las medicoones con el objetivo de lograr la replicabilidad y validez estadística de los resultados. Se mencionaron brevemente las consideraciones éticas que deben considerarse para llevar a cabo experimentos con animales. Posteriormente, se abordó de manera específica el tema de los experimentos en animales utilizando dos modelos patológicos: el modelo de diabetes y el modelo de preeclampsia. En el caso de la diabetes, se explicó como es la inducción de la enfermedad en ratas, las consideraciones para clasificar el tipo de diabetes inducida, y como este modelo permite estudiar los efectos de diferentes tratamientos y comprender mejor los mecanismos fisiológicos involucrados en esta enfermedad. Para el modelo de preeclampsia, se destacaron los síntomas y características que destacan en esta enfermedad, así como los desafíos y metodologías específicas empleadas para simular esta complicación del embarazo en modelos animales, todo con el objetivo de evaluar terapias preventivas de este padecimiento.")
@@ -515,7 +527,7 @@ def septiembre_trece():
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF
-    pdf = generar_pdf(titulo, foto, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf)
+    pdf = generar_pdf(titulo, foto1, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf)
     st.download_button(
         label="Descargar PDF con los datos del evento",
         data=pdf,
@@ -526,8 +538,6 @@ def septiembre_trece():
     # Agregar la imagen después del botón de descarga
     imagen_url = "Expo_septiembre_trece.jpg"
     st.image(imagen_url, caption="Ponentes del 13 de septiembre", use_column_width=True)
-    
-
     
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")
@@ -540,10 +550,9 @@ def septiembre_trece():
     5. ¿Qué aspectos éticos se deben considerar al realizar experimentos con animales?<br>
     6. ¿Cómo se induce la diabetes en modelos animales, como las ratas, y qué tipos de diabetes se pueden clasificar en estos experimentos?<br>
     7. ¿Qué desafíos presenta la simulación de la preeclampsia en modelos animales y cómo se emplean para evaluar terapias preventivas?<br>
-    8. ¿Cuál es la relevancia de estudiar diferentes tratamientos en modelos animales para entender los mecanismos fisiológicos de enfermedades como la diabetes?    <br>
+    8. ¿Cuál es la relevancia de estudiar diferentes tratamientos en modelos animales para entender los mecanismos fisiológicos de enfermedades como la diabetes?<br>
     </div>
     ''', unsafe_allow_html=True)
-
 
 # Llamada a la función para mostrar la página
 #veintiseis_abril()

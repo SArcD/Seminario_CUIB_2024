@@ -471,7 +471,7 @@ def septiembre_trece():
     # Datos del autor
     foto = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Expo_septiembre_trece.jpg"
     nombre = "Julio César Alcaraz Siqueiros"
-    grado = "Dr. Ciencias (Astrofísica)"
+    grado = ""
     
     reseña = ("")
     

@@ -640,16 +640,16 @@ def octubre_cuatro():
     st.subheader("Material complementario")
 
     # Imagen 1
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_00.PNG", caption="Figura 1: Ejemplo de un diseño de estudio transversal descriptivo.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_00.PNG", caption="Figura 1: Onjetivo de un estudio transversal.")
 
     # Imagen 2
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_01.PNG", caption="Figura 2: Análisis de datos obtenidos en un estudio transversal.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_01.PNG", caption="Figura 2: Ventajas de los estudios transversales.")
 
     # Imagen 3
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_02.PNG", caption="Figura 3: Comparación de prevalencias en diferentes subgrupos de la población.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_02.PNG", caption="Figura 3: Desventajas de los estudios transversales.")
 
     # Imagen 4
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_03.PNG", caption="Figura 4: Representación gráfica de los resultados de un estudio transversal.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_03.PNG", caption="Figura 4: Conclusiones.")
 
 
 # Página de inicio con el resumen

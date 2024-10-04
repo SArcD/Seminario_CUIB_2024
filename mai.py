@@ -615,7 +615,7 @@ def octubre_cuatro():
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF
-    pdf = generar_pdf(titulo, nombre1, correo1, resumen_platica, enlace_pdf)
+    pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
     st.download_button(
         label="Descargar PDF con los datos del evento",
         data=pdf,
@@ -637,9 +637,6 @@ def octubre_cuatro():
     8. ¿Cuál es la relevancia de estudiar diferentes tratamientos en modelos animales para entender los mecanismos fisiológicos de enfermedades como la diabetes?<br>
     </div>
     ''', unsafe_allow_html=True)
-
-
-
 
 # Página de inicio con el resumen
 def pagina_inicio():

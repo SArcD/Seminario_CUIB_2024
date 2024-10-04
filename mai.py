@@ -640,17 +640,33 @@ def octubre_cuatro():
     st.subheader("Material complementario")
 
     # Imagen 1
+    st.write("""Los estudios transversales miden los casos de sujetos con una enfermedad o evento de interés en un punto temporal específico, como si se tratase de tomar una fotografía para capturar un momento determinado. Esto los diferencia de los estudios longitudinales, donde se incluye el seguimiento a través del tiempo de los individuos.
+    
+    """)
+    
+    
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_00.PNG", caption="Figura 1: Onjetivo de un estudio transversal.")
 
+st.write("""
+    Los estudios transversales se emplean para la determinación de prevalencias, las cuales son la frecuencia de una enfermedad o evento de interés en una población. Además, pueden explorar posibles asociaciones entre exposiciones y eventos de interés, que pueden estudiarse posteriormente a través de distintos diseños de estudio. Una de sus aplicaciones es identificar la frecuencia de factores de riesgo de enfermedades. Debido a que la exposición y el desenlace se miden en una sola ocasión, este tipo de investigación no presenta pérdidas de seguimiento. Asimismo, son relativamente sencillos, poco consumidores de tiempo y de bajo costo monetario.
+""")
+    
     # Imagen 2
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_01.PNG", caption="Figura 2: Ventajas de los estudios transversales.")
 
+st.write("""
+La principal característica de los estudios transversales es asimismo una desventaja, ya que al medir la exposición y el evento de interés o enfermedad simultáneamente no es posible determinar si la exposición precedió al evento. Por lo tanto, estos estudios son incapaces de establecer una relación de causa y efecto, solo detectar si existe asociación entre ambos.
+Estos pueden estar sujetos a sesgos, como lo son el sesgo de información, de selección y de confusión, los cuales pueden distorsionar los resultados. Además. tienen la desventaja de que, en casos donde la enfermedad sea de corta duración o tenga una gran letalidad, puede llegar a subestimar los resultados al no capturar a los pacientes si estos se curan o fallecen antes de ser incluidos en el estudio. Por otro lado, si una enfermedad o evento de interés es muy raro, difícilmente podría capturarse un caso en el estudio.
+""")
+    
     # Imagen 3
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_02.PNG", caption="Figura 3: Desventajas de los estudios transversales.")
 
     # Imagen 4
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_03.PNG", caption="Figura 4: Conclusiones.")
 
+st.write(""" En resumen, los estudios transversales pueden emplearse para la determinación de prevalencias (descriptivos) o para identificar si existe asociación entre variables y generar nuevas hipótesis (analíticos). Se caracterizan por medir la exposición y el evento de interés al mismo tiempo, por lo que pueden determinar si existe asociación entre estos pero no es posible establecer causalidad. Debido a esto, suelen ser un paso previo para investigaciones más rigurosas.
+""")
 
 # Página de inicio con el resumen
 def pagina_inicio():

@@ -578,7 +578,7 @@ def octubre_cuatro():
     
     # Lista de autores
     autores = [
-        {"foto": None, "nombre": nombre1, "grado": None, "reseña": None, "correo": correo1, "perfil_scholar": None},
+        {"foto": None, "nombre": nombre1, "grado": grado1, "reseña": reseña1, "correo": correo1, "perfil_scholar": None},
         {"foto": foto2, "nombre": nombre2, "grado": grado2, "reseña": reseña2, "correo": correo2, "perfil_scholar": None}
     ]
     

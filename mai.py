@@ -31,7 +31,7 @@ dates = {
     "13 de septiembre: Mariano, Julio y Minerva": "13 de septiembre: Mariano, Julio y Minerva",
     "20 de septiembre: Daniela Rios y Victoria García y Julián": "20 de septiembre: Daniela Rios y Victoria García y Julián",
     "27 de septiembre: Julián": "27 de septiembre: Julián",
-    "04 de octubre: Fernanda y Cesar": "04 de octubre: Fernanda y Cesar",
+    "04 de octubre: Fernanda y Cesar": "04 de octubre: Fernanda y Michel",
     "11 de octubre: Yoli y Mónica Ríos": "11 de octubre: Yoli y Mónica Ríos",
     "18 de octubre: Ricardo y Fernanda García": "18 de octubre: Ricardo y Fernanda García",
     "25 de octubre: Liliana y Alondra": "25 de octubre: Liliana y Alondra",
@@ -712,7 +712,7 @@ def main():
         seis_de_septiembre()
     elif selected_page == "13 de septiembre: Mariano, Julio y Minerva":
         septiembre_trece()
-    elif selected_page == "04 de octubre: Fernanda y Cesar":
+    elif selected_page == "04 de octubre: Fernanda y Michel":
         octubre_cuatro()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 

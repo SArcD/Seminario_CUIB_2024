@@ -586,7 +586,7 @@ def octubre_cuatro():
     #perfil_scholar3 = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
     
     # Mostrar información de los autores
-    autores = [(foto1, nombre1, correo1),
+    autores = [(nombre1, correo1),
                (foto2, nombre2, grado2, reseña2, correo2)
                ]
     

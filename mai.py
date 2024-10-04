@@ -636,6 +636,22 @@ def octubre_cuatro():
     8. ¿Cómo se pueden utilizar los estudios transversales seriados para observar cambios en una población a lo largo del tiempo?
     """)
 
+    # Sección "Material complementario"
+    st.subheader("Material complementario")
+
+    # Imagen 1
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_00.PNG", caption="Figura 1: Ejemplo de un diseño de estudio transversal descriptivo.")
+
+    # Imagen 2
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_01.PNG", caption="Figura 2: Análisis de datos obtenidos en un estudio transversal.")
+
+    # Imagen 3
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_02.PNG", caption="Figura 3: Comparación de prevalencias en diferentes subgrupos de la población.")
+
+    # Imagen 4
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_03.PNG", caption="Figura 4: Representación gráfica de los resultados de un estudio transversal.")
+
+
 # Página de inicio con el resumen
 def pagina_inicio():
     st.title("Seminario del Centro de Investigaciones Biomédicas")

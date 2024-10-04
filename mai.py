@@ -615,13 +615,13 @@ def octubre_cuatro():
     mostrar_diapositivas(enlace_pdf)
     
     # Botón para generar y descargar el PDF
-    pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
-    st.download_button(
-        label="Descargar PDF con los datos del evento",
-        data=pdf,
-        file_name="evento_04_octubre.pdf",
-        mime="application/pdf",
-    )
+    #pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
+    #st.download_button(
+    #    label="Descargar PDF con los datos del evento",
+    #    data=pdf,
+    #    file_name="evento_04_octubre.pdf",
+    #    mime="application/pdf",
+    #)
     
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")

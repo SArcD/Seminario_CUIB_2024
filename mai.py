@@ -606,16 +606,7 @@ def octubre_cuatro():
         ''', unsafe_allow_html=True)
     
     # Información sobre la plática
-    resumen_platica = ("Los estudios transversales son un tipo de investigación observacional que recopila datos de una población
-en un único momento del tiempo. Su principal objetivo es medir la prevalencia de una enfermedad o
-condición y evaluar posibles relaciones entre variables en ese momento específico. Existen tres tipos
-principales: Descriptivos: Se enfocan en describir la distribución de una característica o enfermedad en
-una población sin analizar asociaciones o causas. Analíticos: Buscan analizar la relación entre una
-exposición (como un factor de riesgo) y un resultado (como una enfermedad), aunque no pueden
-establecer causalidad, solo asociación. Seriados: Consisten en realizar múltiples estudios transversales a
-lo largo del tiempo en la misma población, permitiendo observar cambios o tendencias. Son estudios
-rápidos y económicos, pero tienen limitaciones como la imposibilidad de determinar la temporalidad entre
-causa y efecto.")
+    resumen_platica = ("Los estudios transversales son un tipo de investigación observacional que recopila datos de una población en un único momento del tiempo. Su principal objetivo es medir la prevalencia de una enfermedad o condición y evaluar posibles relaciones entre variables en ese momento específico. Existen tres tipos principales: Descriptivos: Se enfocan en describir la distribución de una característica o enfermedad en una población sin analizar asociaciones o causas. Analíticos: Buscan analizar la relación entre una exposición (como un factor de riesgo) y un resultado (como una enfermedad), aunque no pueden establecer causalidad, solo asociación. Seriados: Consisten en realizar múltiples estudios transversales a lo largo del tiempo en la misma población, permitiendo observar cambios o tendencias. Son estudios rápidos y económicos, pero tienen limitaciones como la imposibilidad de determinar la temporalidad entre causa y efecto.")
     
     # Mostrar la información de la plática con el texto justificado
     st.markdown(f'''
@@ -633,13 +624,13 @@ causa y efecto.")
     st.download_button(
         label="Descargar PDF con los datos del evento",
         data=pdf,
-        file_name="evento_13_septiembre.pdf",
+        file_name="evento_04_octubre.pdf",
         mime="application/pdf",
     )
 
     # Agregar la imagen después del botón de descarga
-    imagen_url = "Expo_septiembre_trece.jpg"
-    st.image(imagen_url, caption="Ponentes del 13 de septiembre: Mariano, Minerva y Julio César (de izquierda a derecha)", use_column_width=True)
+    #imagen_url = "Expo_septiembre_trece.jpg"
+    #st.image(imagen_url, caption="Ponentes del 13 de septiembre: Mariano, Minerva y Julio César (de izquierda a derecha)", use_column_width=True)
     
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")
@@ -701,7 +692,6 @@ def main():
         seis_de_septiembre()
     elif selected_page == "13 de septiembre: Mariano, Julio y Minerva":
         septiembre_trece()
-
     elif selected_page == "04 de octubre: Fernanda y Cesar":
         octubre_cuatro()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos

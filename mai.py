@@ -625,18 +625,16 @@ def octubre_cuatro():
     
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")
-    st.markdown('''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
-    1. ¿Cuáles son las características principales de la planificación de experimentos científicos que se destacaron en la charla?<br>
-    2. ¿Qué importancia tienen los diseños experimentales que involucran animales en la investigación científica?<br>
-    3. ¿Cómo se debe definir y controlar las variables en un experimento para asegurar la validez y confiabilidad de las mediciones?<br>
-    4. ¿Por qué es esencial controlar las variables externas en los experimentos científicos?<br>
-    5. ¿Qué aspectos éticos se deben considerar al realizar experimentos con animales?<br>
-    6. ¿Cómo se induce la diabetes en modelos animales, como las ratas, y qué tipos de diabetes se pueden clasificar en estos experimentos?<br>
-    7. ¿Qué desafíos presenta la simulación de la preeclampsia en modelos animales y cómo se emplean para evaluar terapias preventivas?<br>
-    8. ¿Cuál es la relevancia de estudiar diferentes tratamientos en modelos animales para entender los mecanismos fisiológicos de enfermedades como la diabetes?<br>
-    </div>
-    ''', unsafe_allow_html=True)
+    st.write("""
+    1. ¿Qué es un estudio transversal y cuál es su principal objetivo?
+    2. ¿Qué diferencias existen entre los estudios transversales descriptivos y analíticos?
+    3. ¿Cuáles son las ventajas de los estudios transversales en términos de tiempo y costos?
+    4. ¿Qué limitaciones tienen los estudios transversales al intentar establecer relaciones causales?
+    5. ¿Cómo se mide la prevalencia de una condición o enfermedad en un estudio transversal?
+    6. ¿Qué tipos de variables son más adecuadas para analizar en estudios transversales?
+    7. ¿Qué retos presenta la selección de la muestra en los estudios transversales para garantizar la representatividad de la población?
+    8. ¿Cómo se pueden utilizar los estudios transversales seriados para observar cambios en una población a lo largo del tiempo?
+    """)
 
 # Página de inicio con el resumen
 def pagina_inicio():

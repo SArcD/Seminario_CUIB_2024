@@ -557,6 +557,106 @@ def septiembre_trece():
 # Llamada a la función para mostrar la página
 #veintiseis_abril()
 
+def octubre_cuatro():
+    titulo = "Estudios transversales."
+    st.title(titulo)
+    
+    # Datos del primer autor
+    #foto1 = ""
+    nombre1 = "Michel Baltazar César"
+    #grado1 = "Maestro en Ingeniería de Procesos"
+    #reseña1 = " Es matemático de formación y después realizó un posgrado en Ingeniería de Procesos enfocado en Bioingeniería, ambos por la Universidad de Colima. Durante su desarrollo profesional y académico he tenido la experiencia en trabajo experimental y teórico aplicado a biología matemática, donde ha realizado modelos matemáticos predictivos basados en ecuaciones diferenciales y matriciales que describen procesos biológicos y químicos, haciendo simulaciones por computadora (MATLAB, R y Python), y comprobando las predicciones de manera experimental. Su formación le ha dado habilidades en el manejo de instrumentos de laboratorio tales como, monitoreo en línea y fuera de línea de biorreactores, caracterización y extracción de enzimas extracelulares, bioprocesos de los azúcares y trabajo experimental con animales. Además de la recolección, análisis e interpretación de datos usando herramientas estadísticas, probabilísticas y de programación para la realización de modelos predictivos de un proceso. Lo anterior lo llevó a continuar sus estudios de doctorado. Actualmente es estudiante del Doctorado en Ciencias Fisiológicas en el Laboratorio de Fiosiología del Músculo Esquelético de la Universidad de Colima, también se desempeña como profesor por horas en la Facultad de Ciencias Biológicas y Agropecuarias de la misma universidad, y además es miembro activo de la asociación civil DAYIN A.C. (Desarrollo y Ayuda con Investigación)."
+    correo1 = "cmichel@ucol.mx"
+    #perfil_scholar1 = "https://www.researchgate.net/profile/Julio-Alcaraz-Siqueiros-2"
+    
+    # Datos del segundo autor
+    foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.jpg"
+    nombre2 = "Fernanda Edith Valdez Aguilar"
+    grado2 = "Química Farmaceutica Bióloga"
+    reseña2 = "Fernanda Edith Valdez Aguilar, Química Farmacéutica Bióloga egresada de la Universidad de Colima. Durante su desarrollo académico en la facultad obtuvo experiencia en el ámbito de la experimentación con animales. Actualmente es estudiante de la Maestría en Ciencias Médicas de la Universidad de Colima."
+    correo2 = "fvaldez2@ucol.mx"
+    #perfil_scholar2 = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
+    
+    # Datos del tercer autor
+    #foto3 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Expo_septiembre_trece.jpg"
+    #nombre3 = "Minerva Silvia Márquez Villar"
+    #grado3 = ""
+    #reseña3 = ""
+    #correo3 = "mmarquez20@ucol.mx"
+    #perfil_scholar3 = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
+    
+    # Mostrar información de los autores
+    autores = [(foto1, nombre1, correo1),
+               (foto2, nombre2, grado2, reseña2, correo2)
+               ]
+    
+    for foto, nombre, grado, reseña, correo, perfil_scholar in autores:
+        st.markdown(f'''
+        <div style="text-align: center;">
+            <img src="{foto}" alt="{nombre}" style="width: 300px; border-radius: 10px;">
+        </div>
+        ''', unsafe_allow_html=True)
+        
+        st.markdown(f'''
+        <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        <strong>{nombre}</strong>, {grado}. {reseña} <br><br>
+        Puedes contactar al autor por correo electrónico: <a href="mailto:{correo}">{correo}</a> <br>
+        Perfil de Google Scholar: <a href="{perfil_scholar}" target="_blank">{perfil_scholar}</a>
+        </div>
+        ''', unsafe_allow_html=True)
+    
+    # Información sobre la plática
+    resumen_platica = ("Los estudios transversales son un tipo de investigación observacional que recopila datos de una población
+en un único momento del tiempo. Su principal objetivo es medir la prevalencia de una enfermedad o
+condición y evaluar posibles relaciones entre variables en ese momento específico. Existen tres tipos
+principales: Descriptivos: Se enfocan en describir la distribución de una característica o enfermedad en
+una población sin analizar asociaciones o causas. Analíticos: Buscan analizar la relación entre una
+exposición (como un factor de riesgo) y un resultado (como una enfermedad), aunque no pueden
+establecer causalidad, solo asociación. Seriados: Consisten en realizar múltiples estudios transversales a
+lo largo del tiempo en la misma población, permitiendo observar cambios o tendencias. Son estudios
+rápidos y económicos, pero tienen limitaciones como la imposibilidad de determinar la temporalidad entre
+causa y efecto.")
+    
+    # Mostrar la información de la plática con el texto justificado
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <strong>Resumen de la plática:</strong> {resumen_platica}
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    # Enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SeminarioInterno_04octubre2024_completo.pdf"
+    mostrar_diapositivas(enlace_pdf)
+    
+    # Botón para generar y descargar el PDF
+    pdf = generar_pdf(titulo, foto1, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf)
+    st.download_button(
+        label="Descargar PDF con los datos del evento",
+        data=pdf,
+        file_name="evento_13_septiembre.pdf",
+        mime="application/pdf",
+    )
+
+    # Agregar la imagen después del botón de descarga
+    imagen_url = "Expo_septiembre_trece.jpg"
+    st.image(imagen_url, caption="Ponentes del 13 de septiembre: Mariano, Minerva y Julio César (de izquierda a derecha)", use_column_width=True)
+    
+    # Sección "Preguntas Clave"
+    st.subheader("Preguntas Clave")
+    st.markdown('''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    1. ¿Cuáles son las características principales de la planificación de experimentos científicos que se destacaron en la charla?<br>
+    2. ¿Qué importancia tienen los diseños experimentales que involucran animales en la investigación científica?<br>
+    3. ¿Cómo se debe definir y controlar las variables en un experimento para asegurar la validez y confiabilidad de las mediciones?<br>
+    4. ¿Por qué es esencial controlar las variables externas en los experimentos científicos?<br>
+    5. ¿Qué aspectos éticos se deben considerar al realizar experimentos con animales?<br>
+    6. ¿Cómo se induce la diabetes en modelos animales, como las ratas, y qué tipos de diabetes se pueden clasificar en estos experimentos?<br>
+    7. ¿Qué desafíos presenta la simulación de la preeclampsia en modelos animales y cómo se emplean para evaluar terapias preventivas?<br>
+    8. ¿Cuál es la relevancia de estudiar diferentes tratamientos en modelos animales para entender los mecanismos fisiológicos de enfermedades como la diabetes?<br>
+    </div>
+    ''', unsafe_allow_html=True)
+
+
 
 
 # Página de inicio con el resumen
@@ -601,6 +701,9 @@ def main():
         seis_de_septiembre()
     elif selected_page == "13 de septiembre: Mariano, Julio y Minerva":
         septiembre_trece()
+
+    elif selected_page == "04 de octubre: Fernanda y Cesar":
+        octubre_cuatro()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 
 if __name__ == "__main__":

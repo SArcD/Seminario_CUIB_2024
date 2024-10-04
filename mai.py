@@ -563,6 +563,8 @@ def octubre_cuatro():
     
     # Datos del primer autor
     nombre1 = "Michel Baltazar César"
+    grado1 = " "
+    reseña1 = (" ")
     correo1 = "cmichel@ucol.mx"
     
     # Datos del segundo autor

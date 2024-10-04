@@ -566,7 +566,7 @@ def octubre_cuatro():
     correo1 = "cmichel@ucol.mx"
     
     # Datos del segundo autor
-    foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.png"
+    foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.PNG"
     nombre2 = "Fernanda Edith Valdez Aguilar"
     grado2 = "Química Farmacéutica Bióloga"
     reseña2 = ("Fernanda Edith Valdez Aguilar, Química Farmacéutica Bióloga egresada de la Universidad de Colima. "

@@ -676,14 +676,14 @@ def octubre_dieciocho():
     
     # Datos del primer autor
     nombre1 = "Ricardo García Rodríguez"
-    grado1 = " "
+    grado1 = "Maestro en Piscología"
     reseña1 = (" ")
     correo1 = "ricardo_garcia@ucol.mx"
     
     # Datos del segundo autor
     #foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.PNG"
     nombre2 = "María Fernanda García"
-    grado2 = " "
+    grado2 = "Maestra en Ciencias"
     reseña2 = (" ")
     correo2 = "mgarcia109@ucol.mx"
     

@@ -590,10 +590,10 @@ def octubre_cuatro():
                 <img src="{autor['foto']}" alt="{autor['nombre']}" style="width: 300px; border-radius: 10px;">
             </div>
             ''', unsafe_allow_html=True)
-        
-        # Mostrar la información del autor
+    
+        # Mostrar la información del autor con un espacio antes del resumen
         st.markdown(f'''
-        <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        <div style="margin-top: 20px; text-align: justify; font-family: Times New Roman; font-size: 14px;">
         <strong>{autor['nombre']}</strong>{", " + autor['grado'] if autor['grado'] else ""}. 
         {autor['reseña'] if autor['reseña'] else ""} <br><br>
         Puedes contactar al autor por correo electrónico: <a href="mailto:{autor['correo']}">{autor['correo']}</a> 

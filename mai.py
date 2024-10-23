@@ -757,14 +757,14 @@ def octubre_dieciocho():
     """)
     
     
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_00.PNG", caption="Figura 1: Onjetivo de un estudio transversal.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Rg1.PNG", caption="Figura 1: Onjetivo de un estudio transversal.")
 
     st.write("""
     Relata una división general acerca de los análisis estadísticos necesarios para un estudio de cohorte.
     """)
     
     # Imagen 2
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_01.PNG", caption="Figura 2: Ventajas de los estudios transversales.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Rg2.PNG", caption="Figura 2: Ventajas de los estudios transversales.")
 
     #st.write("""
     #La principal característica de los estudios transversales es asimismo una desventaja, ya que al medir la exposición y el evento de interés o enfermedad simultáneamente no es posible determinar si la exposición precedió al evento. Por lo tanto, estos estudios son incapaces de establecer una relación de causa y efecto, solo detectar si existe asociación entre ambos.

@@ -670,6 +670,115 @@ def octubre_cuatro():
     st.write(""" En resumen, los estudios transversales pueden emplearse para la determinación de prevalencias (descriptivos) o para identificar si existe asociación entre variables y generar nuevas hipótesis (analíticos). Se caracterizan por medir la exposición y el evento de interés al mismo tiempo, por lo que pueden determinar si existe asociación entre estos pero no es posible establecer causalidad. Debido a esto, suelen ser un paso previo para investigaciones más rigurosas.
     """)
 
+def octubre_dieciocho():
+    titulo = "Estudios de Cohorte"
+    st.title(titulo)
+    
+    # Datos del primer autor
+    nombre1 = "Ricardo García Rodríguez"
+    grado1 = " "
+    reseña1 = (" ")
+    correo1 = "ricardo_garcia@ucol.mx"
+    
+    # Datos del segundo autor
+    #foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.PNG"
+    nombre2 = "María Fernanda García"
+    grado2 = " "
+    reseña2 = (" ")
+    correo2 = "mgarcia109@ucol.mx"
+    
+    # Lista de autores
+    autores = [
+        {"foto": None, "nombre": nombre1, "grado": grado1, "reseña": reseña1, "correo": correo1, "perfil_scholar": None},
+        {"foto": None, "nombre": nombre2, "grado": grado2, "reseña": reseña2, "correo": correo2, "perfil_scholar": None}
+    ]
+    
+    for autor in autores:
+        # Si hay una foto, mostrarla
+        if autor["foto"]:
+            st.markdown(f'''
+            <div style="text-align: center;">
+                <img src="{autor['foto']}" alt="{autor['nombre']}" style="width: 300px; border-radius: 10px;">
+            </div>
+            ''', unsafe_allow_html=True)
+        
+        # Mostrar la información del autor
+        st.markdown(f'''
+        <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        <strong>{autor['nombre']}</strong>{", " + autor['grado'] if autor['grado'] else ""}. 
+        {autor['reseña'] if autor['reseña'] else ""} <br><br>
+        Puedes contactar al autor por correo electrónico: <a href="mailto:{autor['correo']}">{autor['correo']}</a> 
+        </div>
+        ''', unsafe_allow_html=True)
+    
+    # Información sobre la plática
+    resumen_platica = ("Un diseño de cohorte es un tipo de estudio observacional que se utiliza para investigar la relación entre una exposición (como un factor de riesgo o una intervención) y un resultado a lo largo del tiempo. En este diseño, se selecciona un grupo de individuos que no presentan la condición o enfermedad de interés al inicio del estudio, pero que están expuestos o no a un factor de riesgo específico. Luego, se sigue a estos individuos durante un periodo de tiempo para observar la aparición de la enfermedad o el resultado de interés.")
+    
+    # Mostrar la información de la plática con el texto justificado
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <strong>Resumen de la plática:</strong> {resumen_platica}
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    # Enlace directo al PDF
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Diseños de cohorte FINAL.pdf"
+    mostrar_diapositivas(enlace_pdf)
+    
+    # Botón para generar y descargar el PDF
+    #pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
+    #st.download_button(
+    #    label="Descargar PDF con los datos del evento",
+    #    data=pdf,
+    #    file_name="evento_04_octubre.pdf",
+    #    mime="application/pdf",
+    #)
+    
+    # Sección "Preguntas Clave"
+    st.subheader("Preguntas Clave")
+    st.write("""
+    1. ¿Qué es un estudio de cohorte y cuál es su principal objetivo?
+    2. ¿Qué diferencias existen entre los estudios de cohorte prospectivos y retrospectivos?
+    3. ¿Cuáles son las ventajas de los estudios de cohorte en términos de seguimiento longitudinal y evaluación del riesgo?
+    4. ¿Qué limitaciones tienen los estudios de cohorte al intentar controlar las variables confusoras y establecer relaciones causales?
+    5. ¿Cómo se mide la incidencia de una condición o enfermedad en un estudio de cohorte?
+    6. ¿Qué tipos de variables son más adecuadas para analizar en estudios de cohorte?
+    7. ¿Qué retos presenta la selección de la muestra en los estudios de cohorte para garantizar la validez externa y la no pérdida de participantes a lo largo del tiempo?
+    8. ¿Cómo se pueden utilizar los estudios de cohorte para identificar factores de riesgo y observar la evolución de una condición o enfermedad a lo largo del tiempo?
+    """)
+
+    # Sección "Material complementario"
+    st.subheader("Material complementario")
+
+    # Imagen 1
+    st.write("""Esta diapositiva habla acerca de que existen diversos tipos de cohorte categorizados de acuerdo a 4 grandes parámetros.    
+    """)
+    
+    
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_00.PNG", caption="Figura 1: Onjetivo de un estudio transversal.")
+
+    st.write("""
+    Relata una división general acerca de los análisis estadísticos necesarios para un estudio de cohorte.
+    """)
+    
+    # Imagen 2
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_01.PNG", caption="Figura 2: Ventajas de los estudios transversales.")
+
+    #st.write("""
+    #La principal característica de los estudios transversales es asimismo una desventaja, ya que al medir la exposición y el evento de interés o enfermedad simultáneamente no es posible determinar si la exposición precedió al evento. Por lo tanto, estos estudios son incapaces de establecer una relación de causa y efecto, solo detectar si existe asociación entre ambos.
+    #Estos pueden estar sujetos a sesgos, como lo son el sesgo de información, de selección y de confusión, los cuales pueden distorsionar los resultados. Además. tienen la desventaja de que, en casos donde la enfermedad sea de corta duración o tenga una gran letalidad, puede llegar a subestimar los resultados al no capturar a los pacientes si estos se curan o fallecen antes de ser incluidos en el estudio. Por otro lado, si una enfermedad o evento de interés es muy raro, difícilmente podría capturarse un caso en el estudio.
+    #""")
+    
+    ## Imagen 3
+    #st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_02.PNG", caption="Figura 3: Desventajas de los estudios transversales.")
+
+    ## Imagen 4
+    #st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_03.PNG", caption="Figura 4: Conclusiones.")
+
+    #st.write(""" En resumen, los estudios transversales pueden emplearse para la determinación de prevalencias (descriptivos) o para identificar si existe asociación entre variables y generar nuevas hipótesis (analíticos). Se caracterizan por medir la exposición y el evento de interés al mismo tiempo, por lo que pueden determinar si existe asociación entre estos pero no es posible establecer causalidad. Debido a esto, suelen ser un paso previo para investigaciones más rigurosas.
+    #""")
+
+
 # Página de inicio con el resumen
 def pagina_inicio():
     st.title("Seminario del Centro de Investigaciones Biomédicas")
@@ -714,6 +823,8 @@ def main():
         septiembre_trece()
     elif selected_page == "04 de octubre: Fernanda y Michel":
         octubre_cuatro()
+    elif selected_page == "18 de octubre: Ricardo y Fernanda García":
+        octubre_dieciocho()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 
 if __name__ == "__main__":

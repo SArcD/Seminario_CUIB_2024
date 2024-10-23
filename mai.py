@@ -721,16 +721,11 @@ def octubre_dieciocho():
     </div>
     ''', unsafe_allow_html=True)
     
-    # Enlace directo al PDF
-    #enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Diseños de cohorte FINAL.pdf"
-    #mostrar_diapositivas(enlace_pdf)
 
-    # Enlace directo al PDF
     enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Dise%C3%B1os%20de%20cohorte%20FINAL.pdf"
 
-    # Usamos un iframe para mostrar el PDF en Streamlit
-    st.markdown(f'<iframe src="{enlace_pdf}" width="700" height="1000"></iframe>', unsafe_allow_html=True)
-
+    # Mostrar el enlace como texto clicable
+    st.markdown(f'[Haz clic aquí para ver las diapositivas]({enlace_pdf})')
     
     # Botón para generar y descargar el PDF
     #pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)

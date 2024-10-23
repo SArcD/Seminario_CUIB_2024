@@ -728,13 +728,46 @@ def octubre_dieciocho():
     st.markdown(f'[Haz clic aquí para ver las diapositivas]({enlace_pdf})')
     
     # Botón para generar y descargar el PDF
-    pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
-    st.download_button(
-        label="Descargar PDF con los datos del evento",
-        data=pdf,
-        file_name="evento_04_octubre.pdf",
-        mime="application/pdf",
-    )
+    #pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
+    #st.download_button(
+    #    label="Descargar PDF con los datos del evento",
+    #    data=pdf,
+    #    file_name="evento_04_octubre.pdf",
+    #    mime="application/pdf",
+    #)
+
+
+    # Función para generar el PDF
+    def generar_pdf(titulo, autores, resumen_platica, enlace_pdf):
+        pdf = FPDF()
+        pdf.add_page()
+
+        # Título
+        pdf.set_font("Arial", "B", 16)
+        pdf.cell(200, 10, titulo, ln=True, align="C")
+
+        # Añadir información de cada autor
+        pdf.set_font("Arial", size=12)
+        pdf.ln(10)  # Salto de línea
+
+        for autor in autores:
+            pdf.cell(200, 10, f"Autor: {autor['nombre']}", ln=True, align="L")
+            if autor['grado']:
+                pdf.cell(200, 10, f"Grado: {autor['grado']}", ln=True, align="L")
+            if autor['correo']:
+                pdf.cell(200, 10, f"Correo: {autor['correo']}", ln=True, align="L")
+            pdf.ln(5)  # Pequeño espacio entre autores
+
+        # Resumen de la plática
+        pdf.ln(10)  # Salto de línea
+        pdf.multi_cell(0, 10, f"Resumen: {resumen_platica}", align="L")
+
+        # Enlace a las diapositivas
+        pdf.ln(10)  # Salto de línea
+        pdf.cell(200, 10, f"Enlace a las diapositivas: {enlace_pdf}", ln=True, align="L")
+
+        # Devolver el PDF como un objeto de bytes
+        return pdf.output(dest="S").encode("latin1")
     
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")

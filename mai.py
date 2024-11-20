@@ -834,20 +834,32 @@ def noviembre_quince():
     correo1 = "rosio@ucol.mx"
     perfil_scholar1 = "https://scholar.google.com.mx/citations?hl=en&user=NRAT-KwAAAAJ"
 
-    # Mostrar la información del autor
+    # Mostrar la imagen del autor
     st.markdown(f'''
     <div style="text-align: center;">
         <img src="{foto1}" alt="{nombre1}" style="width: 300px; border-radius: 10px;">
+        <div style="font-family: Times New Roman; font-size: 14px; margin-top: 5px;">
+            <em>Dra. Xóchitl Trujillo</em>
+        </div>
     </div>
     ''', unsafe_allow_html=True)
 
+    # Título de la sección "Acerca del autor" debajo de la imagen
     st.markdown(f'''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
-    <strong>{nombre1}</strong>{", " + grado1 if grado1 else ""}. 
-    {reseña1 if reseña1 else ""} <br><br>
-    <strong>Puedes contactar al autor por correo electrónico:<strong> <a href="mailto:{correo1}">{correo1}</a> 
+    <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold; margin-top: 10px;">
+        Acerca de la autora
     </div>
     ''', unsafe_allow_html=True)
+
+    # Mostrar la reseña del autor
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        <strong>{nombre1}</strong>{", " + grado1 if grado1 else ""}. 
+        {reseña1 if reseña1 else ""} <br><br>
+        <strong>Puedes contactar al autor por correo electrónico:</strong> <a href="mailto:{correo1}">{correo1}</a> 
+    </div>
+    ''', unsafe_allow_html=True)
+
 
     st.markdown(f'''
     <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold;">

@@ -740,7 +740,7 @@ import requests
 from PIL import Image
 from io import BytesIO
 
-def generar_pdf(titulo, foto1, imagen_derecha_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
+def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf):
     # Crear el PDF
     pdf = FPDF()
     pdf.add_page()
@@ -775,11 +775,11 @@ def generar_pdf(titulo, foto1, imagen_derecha_url, nombre, grado, reseña, corre
 
     # Información del autor
     informacion = [
-        ("Nombre", nombre),
-        ("Grado", grado),
-        ("Reseña", reseña),
-        ("Correo", correo),
-        ("Perfil", perfil_scholar)
+        ("Nombre", nombre1),
+        ("Grado", grado1),
+        ("Reseña", reseña1),
+        ("Correo", correo1),
+        ("Perfil", perfil_scholar1)
     ]
 
     for etiqueta, contenido in informacion:

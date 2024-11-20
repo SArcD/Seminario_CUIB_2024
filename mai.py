@@ -66,7 +66,7 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 
     # Acerca del autor en negritas
     pdf.set_font("Times", "B", 14)
-    pdf.cell(200, 10, txt="Acerca del autor", ln=True)
+    pdf.cell(200, 10, txt="Datos", ln=True)
 
     # Añadir la imagen del autor desde la URL
     response = requests.get(foto_url)

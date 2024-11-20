@@ -1024,7 +1024,7 @@ def noviembre_dosdos():
     <div style="text-align: center;">
         <img src="{foto1}" alt="{nombre1}" style="width: 300px; border-radius: 10px;">
         <div style="font-family: Times New Roman; font-size: 14px; margin-top: 5px;">
-            <em>Dra. Xóchitl Trujillo</em>
+            <em>Dr. Santiago Arceo Díaz</em>
         </div>
     </div>
     ''', unsafe_allow_html=True)

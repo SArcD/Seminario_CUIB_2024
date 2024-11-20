@@ -740,6 +740,15 @@ import requests
 from PIL import Image
 from io import BytesIO
 
+def convertir_a_rgb(imagen):
+    """Convierte una imagen a RGB, rellenando la transparencia si existe."""
+    if imagen.mode == "RGBA":
+        fondo = Image.new("RGB", imagen.size, (255, 255, 255))  # Fondo blanco
+        fondo.paste(imagen, mask=imagen.split()[3])  # Aplicar máscara de transparencia
+        return fondo
+    else:
+        return imagen.convert("RGB")
+
 def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf):
     # Crear el PDF
     pdf = FPDF()
@@ -753,19 +762,25 @@ def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, co
 
     # Descargar y agregar la imagen del autor (izquierda)
     response_foto = requests.get(foto1)
-    img_foto = Image.open(BytesIO(response_foto.content))
-    img_foto.save("temp_image.jpg")  # Guardar temporalmente para usarla en FPDF
-
-    img_height = 40  # Altura ajustada de la imagen
-    img_width = 30  # Proporción ajustada
-    pdf.image("temp_image.jpg", x=10, y=pdf.get_y(), w=img_width, h=img_height)
+    if response_foto.status_code == 200:
+        img_foto = Image.open(BytesIO(response_foto.content))
+        img_foto = convertir_a_rgb(img_foto)  # Convertir a RGB manejando transparencia
+        img_foto.save("temp_image.jpg")  # Guardar temporalmente
+        img_height = 40  # Altura ajustada de la imagen
+        img_width = 30  # Proporción ajustada
+        pdf.image("temp_image.jpg", x=10, y=pdf.get_y(), w=img_width, h=img_height)
+    else:
+        print("Error al descargar la imagen izquierda.")
 
     # Descargar y agregar la imagen derecha
     response_derecha = requests.get(imagen_derecha_url)
-    img_derecha = Image.open(BytesIO(response_derecha.content))
-    img_derecha.save("temp_image_derecha.jpg")  # Guardar temporalmente para usarla en FPDF
-
-    pdf.image("temp_image_derecha.jpg", x=50, y=pdf.get_y(), w=img_width, h=img_height)
+    if response_derecha.status_code == 200:
+        img_derecha = Image.open(BytesIO(response_derecha.content))
+        img_derecha = convertir_a_rgb(img_derecha)  # Convertir a RGB manejando transparencia
+        img_derecha.save("temp_image_derecha.jpg")  # Guardar temporalmente
+        pdf.image("temp_image_derecha.jpg", x=50, y=pdf.get_y(), w=img_width, h=img_height)
+    else:
+        print("Error al descargar la imagen derecha.")
 
     # Ajustar posición del texto "Acerca de la autora" debajo de las imágenes
     pdf.set_y(pdf.get_y() + img_height + 5)  # Mover hacia abajo para que no se superponga con las imágenes

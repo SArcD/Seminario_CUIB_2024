@@ -882,8 +882,9 @@ def noviembre_quince():
     
     # Información sobre la plática
     resumen_platica = (
-        "En esta plática se presenta la relevancia de las publicaciones científicas para el mundo académico y se describe el proceso que concluye con cualquier investigación científica: la redacción, envío, revisión y publicación de un artículo científico. Se comienza por dar algunos consejos para facilitar la redacción del artículo científico (desde reglas básicas de estilo y redacción hasta la descripción detallada de las secciones que lo componen). Después se dan consejos para la selección de la revista adecuada y se describen aspectos importantes de la revisión de forma y fondo del artículo (la revisión por pares). Por último, se abordan las consideraciones éticas relacionadas con la publicación de un artículo científico y el uso de la inteligencia artificial en la redacción. "
+        "Esta plática aborda la importancia de las publicaciones científicas en el ámbito académico, destacando el proceso de redacción, envío, revisión y publicación de artículos. Se comienza por dar algunos consejos para facilitar la redacción del artículo (desde reglas básicas de estilo hasta la descripción de cada sección). Después se dan recomendaciones para la selección de la revista y se describen aspectos importantes de la revisión por pares. Por último, se abordan las consideraciones éticas relacionadas con la publicación de un artículo científico y el uso de la inteligencia artificial en la redacción. "
     )
+    
     enlace_pdf = "https://acortar.link/aS2bXR"
     #https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
 

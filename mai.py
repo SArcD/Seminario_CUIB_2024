@@ -250,7 +250,7 @@ def pagina_ejemplo():
 
     # Datos del autor
     foto1 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/DrHuerta.jpg"
-    imagen_derecha_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_0.PNG"
+    imagen_derecha_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Huerta_00.PNG"
     nombre1 = "Miguel Huerta"
     grado1 = "PhD en Ciencias"
     reseña1 = ("Doctor en Ciencias con especialidad en Fisiología y Biofísica. Es Profesor-Investigador "

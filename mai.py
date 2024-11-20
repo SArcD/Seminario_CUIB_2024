@@ -736,6 +736,74 @@ def octubre_dieciocho():
     #    mime="application/pdf",
     #)
 
+def noviembre_quince():
+    titulo = "Estudios de Cohorte"
+    st.title(titulo)
+    
+    # Datos del primer autor
+    nombre1 = "Ricardo García Rodríguez"
+    grado1 = "Maestro en Piscología"
+    reseña1 = (" ")
+    correo1 = "ricardo_garcia@ucol.mx"
+    
+    # Datos del segundo autor
+    #foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.PNG"
+    nombre2 = "María Fernanda García"
+    grado2 = "Maestra en Ciencias"
+    reseña2 = (" ")
+    correo2 = "mgarcia109@ucol.mx"
+    
+    # Lista de autores
+    autores = [
+        {"foto": None, "nombre": nombre1, "grado": grado1, "reseña": reseña1, "correo": correo1, "perfil_scholar": None},
+        {"foto": None, "nombre": nombre2, "grado": grado2, "reseña": reseña2, "correo": correo2, "perfil_scholar": None}
+    ]
+    
+    for autor in autores:
+        # Si hay una foto, mostrarla
+        if autor["foto"]:
+            st.markdown(f'''
+            <div style="text-align: center;">
+                <img src="{autor['foto']}" alt="{autor['nombre']}" style="width: 300px; border-radius: 10px;">
+            </div>
+            ''', unsafe_allow_html=True)
+        
+        # Mostrar la información del autor
+        st.markdown(f'''
+        <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        <strong>{autor['nombre']}</strong>{", " + autor['grado'] if autor['grado'] else ""}. 
+        {autor['reseña'] if autor['reseña'] else ""} <br><br>
+        Puedes contactar al autor por correo electrónico: <a href="mailto:{autor['correo']}">{autor['correo']}</a> 
+        </div>
+        ''', unsafe_allow_html=True)
+    
+    # Información sobre la plática
+    resumen_platica = ("Un diseño de cohorte es un tipo de estudio observacional que se utiliza para investigar la relación entre una exposición (como un factor de riesgo o una intervención) y un resultado a lo largo del tiempo. En este diseño, se selecciona un grupo de individuos que no presentan la condición o enfermedad de interés al inicio del estudio, pero que están expuestos o no a un factor de riesgo específico. Luego, se sigue a estos individuos durante un periodo de tiempo para observar la aparición de la enfermedad o el resultado de interés.")
+    
+    # Mostrar la información de la plática con el texto justificado
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <strong>Resumen de la plática:</strong> {resumen_platica}
+    </div>
+    ''', unsafe_allow_html=True)
+    
+
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Dise%C3%B1os%20de%20cohorte%20FINAL.pdf"
+
+    # Mostrar el enlace como texto clicable
+    st.markdown(f'[Haz clic aquí para ver las diapositivas]({enlace_pdf})')
+    
+    # Botón para generar y descargar el PDF
+    #pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
+    #st.download_button(
+    #    label="Descargar PDF con los datos del evento",
+    #    data=pdf,
+    #    file_name="evento_04_octubre.pdf",
+    #    mime="application/pdf",
+    #)
+
+
+    
 
     # Función para generar el PDF
     def generar_pdf(titulo, autores, resumen_platica, enlace_pdf):
@@ -860,6 +928,8 @@ def main():
         octubre_cuatro()
     elif selected_page == "18 de octubre: Ricardo y Fernanda García":
         octubre_dieciocho()
+    elif selected_page == "15 de noviembre: Xóchitl Trujillo":
+        noviembre_quince()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 
 if __name__ == "__main__":

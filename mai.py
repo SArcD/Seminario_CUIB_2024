@@ -789,7 +789,7 @@ def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, co
     pdf.set_y(pdf.get_y() + img_height + 5)  # Mover hacia abajo para que no se superponga con las imágenes
     pdf.set_font("Times", "B", 14)
     pdf.cell(200, 10, txt="Acerca de la autora", ln=True)
-    pdf.ln(5)  # Espacio entre el título y el contenido
+    #pdf.ln(5)  # Espacio entre el título y el contenido
 
     # Información del autor
     informacion = [

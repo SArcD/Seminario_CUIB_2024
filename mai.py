@@ -740,7 +740,7 @@ import requests
 from PIL import Image
 from io import BytesIO
 
-def generar_pdf(titulo, foto_url, imagen_derecha_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
+def generar_pdf(titulo, foto1, imagen_derecha_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
     # Crear el PDF
     pdf = FPDF()
     pdf.add_page()
@@ -752,7 +752,7 @@ def generar_pdf(titulo, foto_url, imagen_derecha_url, nombre, grado, reseña, co
     pdf.ln(10)  # Espacio debajo del título
 
     # Descargar y agregar la imagen del autor (izquierda)
-    response_foto = requests.get(foto_url)
+    response_foto = requests.get(foto1)
     img_foto = Image.open(BytesIO(response_foto.content))
     img_foto.save("temp_image.jpg")  # Guardar temporalmente para usarla en FPDF
 
@@ -831,6 +831,7 @@ def noviembre_quince():
 
     # Datos del autor
     foto1 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/FotoXochitl.jpg"
+    imagen_derecha_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_0.PNG"
     nombre1 = "Xóchitl Angélica Rosio Trujillo Trujillo"
     grado1 = "Doctora en Ciencias Fisiológicas"
     reseña1 = (
@@ -920,7 +921,8 @@ def noviembre_quince():
 
     # Generar y descargar el PDF
     #pdf = generar_pdf(titulo, nombre1, correo1, grado1, resumen_platica, enlace_pdf)
-    pdf = generar_pdf(titulo, foto1, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf)
+    #pdf = generar_pdf(titulo, foto1, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf)
+    pdf = generar_pdf(titulo, foto1, imagen_derecha_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
 
     st.download_button(
         label="Descargar PDF con los datos del evento",

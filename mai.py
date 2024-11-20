@@ -1005,7 +1005,7 @@ def noviembre_dosdos():
 
     # Datos del autor
     foto1 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Arceo_S.jpg"
-    imagen_derecha_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_0.PNG"
+    imagen_derecha_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_00.PNG"
     nombre1 = "Santiago Arceo Díaz"
     grado1 = "Doctor en Ciencias (Astrofísica)"
     reseña1 = ("Licenciatura y Maestría en Física y Doctor en Ciencias (Astrofísica), por las Universidades de Colima y Guanajuato, respectivamente. "

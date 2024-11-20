@@ -968,15 +968,15 @@ def noviembre_quince():
     st.subheader("Material complementario")
 
     # Imagen 1
-    st.write("""Esta diapositiva habla acerca de que existen diversos tipos de cohorte categorizados de acuerdo a 4 grandes parámetros.    
-    """)
+    #st.write("""Esta diapositiva habla acerca de que existen diversos tipos de cohorte categorizados de acuerdo a 4 grandes parámetros.    
+    #""")
     
     
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_1.PNG", caption="Figura 1: Aspectos importantes de la publicación científica.")
 
-    st.write("""
-    Relata una división general acerca de los análisis estadísticos necesarios para un estudio de cohorte.
-    """)
+    #st.write("""
+    #Relata una división general acerca de los análisis estadísticos necesarios para un estudio de cohorte.
+    #""")
     
     # Imagen 2
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_2.PNG", caption="Figura 2: El papel del revisor en la publicación científica.")
@@ -989,6 +989,13 @@ def noviembre_quince():
 
     # Imagen 5
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_4.PNG", caption="Figura 5: Tips para sobrevivir a la revisión por pares.")
+
+
+    # Enlace adicional
+    st.write("### Lucha contra las revistas y los congresos predadores")
+    st.markdown(
+    '[Haz clic aquí para acceder al documento](https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Summary%20report.pdf)',
+    unsafe_allow_html=True
 
 
 

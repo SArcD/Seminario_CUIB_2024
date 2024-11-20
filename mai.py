@@ -849,6 +849,15 @@ def noviembre_quince():
     </div>
     ''', unsafe_allow_html=True)
 
+    st.markdown(f'''
+    <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold;">
+        
+    </div>
+    <div style="margin-top: 10px; text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        
+    </div>
+    ''', unsafe_allow_html=True)
+    
     # Información sobre la plática
     resumen_platica = (
         "En esta plática se presenta la relevancia de las publicaciones científicas para el mundo académico y "

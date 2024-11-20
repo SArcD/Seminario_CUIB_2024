@@ -1032,7 +1032,7 @@ def noviembre_dosdos():
     # Título de la sección "Acerca del autor" debajo de la imagen
     st.markdown(f'''
     <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold; margin-top: 10px;">
-        Acerca de la autora
+        Acerca del autor
     </div>
     ''', unsafe_allow_html=True)
 

@@ -740,7 +740,7 @@ import requests
 from PIL import Image
 from io import BytesIO
 
-def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
+def generar_pdf(titulo, foto_url, imagen_derecha_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
     # Crear el PDF
     pdf = FPDF()
     pdf.add_page()
@@ -751,19 +751,27 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
     pdf.multi_cell(page_width, 10, txt=titulo, align='C')
     pdf.ln(10)  # Espacio debajo del título
 
-    # Descargar y agregar la imagen del autor
-    response = requests.get(foto_url)
-    img = Image.open(BytesIO(response.content))
-    img.save("temp_image.jpg")  # Guardar temporalmente para usarla en FPDF
+    # Descargar y agregar la imagen del autor (izquierda)
+    response_foto = requests.get(foto_url)
+    img_foto = Image.open(BytesIO(response_foto.content))
+    img_foto.save("temp_image.jpg")  # Guardar temporalmente para usarla en FPDF
 
     img_height = 40  # Altura ajustada de la imagen
-    pdf.image("temp_image.jpg", x=10, y=pdf.get_y(), w=30, h=img_height)  # Agregar la imagen
+    img_width = 30  # Proporción ajustada
+    pdf.image("temp_image.jpg", x=10, y=pdf.get_y(), w=img_width, h=img_height)
 
-    # Ajustar la posición del texto "Acerca de la autora" debajo de la imagen
-    pdf.set_y(pdf.get_y() + img_height + 5)  # Mover hacia abajo para que no se superponga con la imagen
+    # Descargar y agregar la imagen derecha
+    response_derecha = requests.get(imagen_derecha_url)
+    img_derecha = Image.open(BytesIO(response_derecha.content))
+    img_derecha.save("temp_image_derecha.jpg")  # Guardar temporalmente para usarla en FPDF
+
+    pdf.image("temp_image_derecha.jpg", x=50, y=pdf.get_y(), w=img_width, h=img_height)
+
+    # Ajustar posición del texto "Acerca de la autora" debajo de las imágenes
+    pdf.set_y(pdf.get_y() + img_height + 5)  # Mover hacia abajo para que no se superponga con las imágenes
     pdf.set_font("Times", "B", 14)
     pdf.cell(200, 10, txt="Acerca de la autora", ln=True)
-    #pdf.ln(5)  # Espacio entre el título y el contenido
+    pdf.ln(5)  # Espacio entre el título y el contenido
 
     # Información del autor
     informacion = [
@@ -788,7 +796,7 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 
     pdf.set_font("Times", "", 12)  # Texto normal
     pdf.multi_cell(0, 10, resumen_platica)
-    #pdf.ln(10)  # Espacio debajo de la sección "Sobre la plática"
+    pdf.ln(10)  # Espacio debajo de la sección "Sobre la plática"
 
     # Enlace a las diapositivas
     if enlace_pdf:
@@ -799,8 +807,8 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 
     # Descargar y agregar la cintilla
     cintilla_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/udec.png"
-    response = requests.get(cintilla_url)
-    cintilla_img = Image.open(BytesIO(response.content))
+    response_cintilla = requests.get(cintilla_url)
+    cintilla_img = Image.open(BytesIO(response_cintilla.content))
     cintilla_img.save("temp_cintilla.png")  # Guardar temporalmente la imagen
 
     image_width = 90  # Ancho de la cintilla

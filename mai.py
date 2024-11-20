@@ -1069,7 +1069,9 @@ def noviembre_dosdos():
     resumen_platica = (
         "Se muestran los resultados mediante algoritmos de aprendizaje no supervisado a una muestra de derechohabientes de las Delegaciones Sur y Norte del Instituto Mexicano del Seguro Social. Particularmente, se describe una estrategia para generar un diagnóstico inicial de sarcopenia a partir de las medidas antropométricas y de desempeño físico de las personas adultas mayores. Se comparan dos estrategias: una en la que se recurre al cribado secuencial de pacientes (siguiendo las recomendaciones del Grupo Europeo de trabajo para el estudio de sarcopenia en personas ancianas, EWGSOP2) y otra en la que se clasifica para los pacientes utilizado simultáneamente la fuerza de agarre, el índice de masa muscular esquelética y la velocidad de marcha. Además, se discute la incidencia de algunas comorbilidades en los grupos de pacientes con sarcopenia descartada y no descartada.")
     
-    enlace_pdf = "https://acortar.link/aS2bXR"
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Coloquio%20sarcopenia%202024.pdf"
+
+    #Coloquio sarcopenia 2024.pdf
     #https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
 
     st.markdown(f'''

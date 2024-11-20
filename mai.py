@@ -789,8 +789,8 @@ def noviembre_quince():
     ''', unsafe_allow_html=True)
     
 
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Dise%C3%B1os%20de%20cohorte%20FINAL.pdf"
-
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
+Publicacion para principiantes-LAB.pdf
     # Mostrar el enlace como texto clicable
     st.markdown(f'[Haz clic aquí para ver las diapositivas]({enlace_pdf})')
     

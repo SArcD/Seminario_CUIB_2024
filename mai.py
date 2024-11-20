@@ -860,12 +860,13 @@ def noviembre_quince():
     </div>
     ''', unsafe_allow_html=True)
     
-    # Mostrar la reseña del autor
+    # Mostrar la reseña del autor y contacto
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
         <strong>{nombre1}</strong>{", " + grado1 if grado1 else ""}. 
         {reseña1 if reseña1 else ""} <br><br>
-        <strong>Puedes contactar al autor por correo electrónico:</strong> <a href="mailto:{correo1}">{correo1}</a> 
+        <strong>Puedes contactar al autor por correo electrónico:</strong> <a href="mailto:{correo1}">{correo1}</a> <br><br>
+        <strong>Perfil en Google Scholar:</strong> <a href="{perfil_scholar1}" target="_blank">{perfil_scholar1}</a>
     </div>
     ''', unsafe_allow_html=True)
 

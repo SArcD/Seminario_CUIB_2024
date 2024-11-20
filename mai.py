@@ -1000,23 +1000,25 @@ def noviembre_quince():
 def noviembre_dosdos():
     import streamlit as st
 
-    titulo = "Seminario del 22 de noviembre: "
+    titulo = "Seminario del 22 de noviembre: Análisis de marcadores antropométricos de sarcopenia utilizando modelos de aprendizaje supervisado "
     st.title(titulo)
 
     # Datos del autor
     foto1 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/FotoXochitl.jpg"
     imagen_derecha_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_0.PNG"
-    nombre1 = "Xóchitl Angélica Rosio Trujillo Trujillo"
-    grado1 = "Doctora en Ciencias Fisiológicas"
-    reseña1 = (
-        "Bióloga, Maestra y Doctora en Ciencias Fisiológicas con especialidad en Fisiología. "
-        "Es Profesora-Investigadora de Tiempo Completo de la Universidad de Colima. Cuenta con perfil deseable "
-        "y es miembro del Sistema Nacional de Investigadores en el nivel 3. Su línea de investigación es en Biomedicina "
-        "con una producción científica de más de noventa artículos en revistas internacionales."
-    )
-    correo1 = "rosio@ucol.mx"
-    perfil_scholar1 = "https://scholar.google.com.mx/citations?hl=en&user=NRAT-KwAAAAJ"
+    nombre1 = "Santiago Arceo Díaz"
+    grado1 = "Doctor en Ciencias (Astrofísica)"
+    reseña1 = ("Licenciatura y Maestría en Física y Doctor en Ciencias (Astrofísica), por las Universidades de Colima y Guanajuato, respectivamente. "
+              "En su formación académica se especializó en la creación de modelos analíticos y numéricos, aplicados a las ciencias exactas y a la ingeniería aplicada. "
+              "Dentro de la astrofísica, su área de investigación se centra en la evolución estelar y su relación con la tasa de producción de neutrinos y axiones, "
+              "concretamente las estrellas gigantes rojas. También ha realizado trabajos en múltiples áreas de la ingeniería y la arquitectura (con simulaciones numéricas "
+              "aplicadas a la sostenibilidad ambiental de las que se han realizado 6 tesis de maestría). Se encuentra realizando una estancia postdoctoral en la Universidad "
+              "de Colima en la que se enfoca en el uso del machine learning para la clasificación de pacientes geriátricos, a partir de variables antropométricas.")
+    
+    correo1 = "santiagoarceo@ucol.mx"
+    perfil_scholar1 = "https://scholar.google.com.mx/citations?user=SFgL-gkAAAAJ&hl=en"
 
+    
     # Mostrar la imagen del autor
     st.markdown(f'''
     <div style="text-align: center;">
@@ -1065,8 +1067,7 @@ def noviembre_dosdos():
     
     # Información sobre la plática
     resumen_platica = (
-        "Esta plática aborda la importancia de las publicaciones científicas en el ámbito académico, destacando el proceso de redacción, envío, revisión y publicación de artículos. Se comienza por dar algunos consejos para facilitar la redacción del artículo (desde reglas básicas de estilo hasta la descripción de cada sección). Después se dan recomendaciones para la selección de la revista y se describen aspectos importantes de la revisión por pares. Por último, se abordan las consideraciones éticas relacionadas con la publicación de un artículo científico y el uso de la inteligencia artificial en la redacción. "
-    )
+        "Se muestran los resultados mediante algoritmos de aprendizaje no supervisado a una muestra de derechohabientes de las Delegaciones Sur y Norte del Instituto Mexicano del Seguro Social. Particularmente, se describe una estrategia para generar un diagnóstico inicial de sarcopenia a partir de las medidas antropométricas y de desempeño físico de las personas adultas mayores. Se comparan dos estrategias: una en la que se recurre al cribado secuencial de pacientes (siguiendo las recomendaciones del Grupo Europeo de trabajo para el estudio de sarcopenia en personas ancianas, EWGSOP2) y otra en la que se clasifica para los pacientes utilizado simultáneamente la fuerza de agarre, el índice de masa muscular esquelética y la velocidad de marcha. Además, se discute la incidencia de algunas comorbilidades en los grupos de pacientes con sarcopenia descartada y no descartada.")
     
     enlace_pdf = "https://acortar.link/aS2bXR"
     #https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
@@ -1108,16 +1109,25 @@ def noviembre_dosdos():
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")
     st.write("""
-1. **¿Por qué es importante publicar los resultados de una investigación científica y qué impacto tiene en la carrera de un investigador?**
-2. **¿Cuáles son los principales tipos de revisión por pares y qué ventajas y desventajas ofrece cada uno?**
-3. **¿Qué criterios utiliza una persona revisora para evaluar la calidad y relevancia de un manuscrito científico?**
-4. **¿Qué prácticas éticas deben seguirse al momento de preparar y someter un manuscrito científico para publicación?**
-5. **¿Qué elementos deben incluirse en las secciones esenciales de un manuscrito, como introducción, métodos, resultados y discusión?**
-6. **¿Qué características definen una revista científica de calidad y cómo se pueden identificar revistas predatorias?**
-7. **¿Cuáles son las razones comunes por las que un manuscrito puede ser rechazado por una revista científica?**
-8. **¿Cómo deben manejarse las disputas de autoría y qué medidas pueden tomarse para prevenirlas desde el inicio del proyecto?**
-9. **¿Qué recomendaciones específicas se ofrecen para responder a los comentarios de los revisores tras el proceso de revisión por pares?**
-10. **¿Cómo se debe utilizar la inteligencia artificial en la elaboración y análisis de manuscritos científicos según las recomendaciones actuales?**
+1. **¿Cuáles son las principales comorbilidades asociadas con la sarcopenia en la muestra de participantes y cómo varían entre hombres y mujeres?**
+
+2. **¿Qué métodos de diagnóstico y evaluación de severidad se utilizan para identificar la sarcopenia según el consenso EWGSOP2?**
+
+3.**¿Cómo se valida la ecuación IMMEA y cuáles son las variables antropométricas principales utilizadas en su cálculo?**
+
+4.**¿Qué resultados principales se obtuvieron al aplicar modelos de clustering a los datos de fuerza de agarre, IMMEA y velocidad de marcha?**
+
+5.**¿Cuáles son los puntos de corte antropométricos sugeridos para diagnosticar sarcopenia en hombres y mujeres?**
+
+6.**¿Qué diferencias significativas se observaron entre los pacientes con sarcopenia grave y los pacientes clasificados como no graves en términos de fuerza, IMMEA y velocidad de marcha?**
+
+7.**¿Qué rol desempeñan los modelos de árboles de decisión en la clasificación de pacientes con sarcopenia y cómo coinciden con los puntos de corte propuestos por el consenso?**
+
+8.**¿Qué proporción de la muestra total corresponde a pacientes con sarcopenia y cómo están distribuidos en las categorías de severidad?**
+
+9.**¿Qué variables adicionales, como circunferencia de pantorrilla, cintura y brazo, pueden servir como discriminadores de sarcopenia según estudios complementarios?**
+
+10.**¿Qué limitaciones o discrepancias se encontraron al comparar los datos de desempeño físico (velocidad de marcha) con los valores de fuerza e IMMEA para clasificar sarcopenia?**
     """)
 
     # Sección "Material complementario"

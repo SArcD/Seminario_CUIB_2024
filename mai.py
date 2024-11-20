@@ -851,6 +851,15 @@ def noviembre_quince():
     </div>
     ''', unsafe_allow_html=True)
 
+    st.markdown(f'''
+    <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold;">
+        
+    </div>
+    <div style="margin-top: 10px; text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        
+    </div>
+    ''', unsafe_allow_html=True)
+    
     # Mostrar la reseña del autor
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">

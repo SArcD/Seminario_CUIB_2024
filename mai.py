@@ -751,10 +751,6 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
     pdf.multi_cell(page_width, 10, txt=titulo, align='C')
     pdf.ln(10)  # Espacio debajo del título
 
-    # Acerca del autor
-    pdf.set_font("Times", "B", 14)
-    pdf.cell(200, 10, txt="Acerca del autor", ln=True)
-
     # Descargar y agregar la imagen del autor
     response = requests.get(foto_url)
     img = Image.open(BytesIO(response.content))
@@ -762,6 +758,12 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 
     img_height = 40  # Altura ajustada de la imagen
     pdf.image("temp_image.jpg", x=10, y=pdf.get_y() + 5, w=30, h=img_height)  # Agregar la imagen
+
+    
+    # Acerca del autor
+    pdf.set_font("Times", "B", 14)
+    pdf.cell(200, 10, txt="Acerca de la  autora", ln=True)
+
 
     # Ajustar posición del texto para que no se superponga con la imagen
     pdf.set_y(pdf.get_y() + img_height + 5)

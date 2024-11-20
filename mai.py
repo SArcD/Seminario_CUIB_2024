@@ -840,14 +840,16 @@ def noviembre_quince():
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")
     st.write("""
-    1. ¿Qué es un estudio de cohorte y cuál es su principal objetivo?
-    2. ¿Qué diferencias existen entre los estudios de cohorte prospectivos y retrospectivos?
-    3. ¿Cuáles son las ventajas de los estudios de cohorte en términos de seguimiento longitudinal y evaluación del riesgo?
-    4. ¿Qué limitaciones tienen los estudios de cohorte al intentar controlar las variables confusoras y establecer relaciones causales?
-    5. ¿Cómo se mide la incidencia de una condición o enfermedad en un estudio de cohorte?
-    6. ¿Qué tipos de variables son más adecuadas para analizar en estudios de cohorte?
-    7. ¿Qué retos presenta la selección de la muestra en los estudios de cohorte para garantizar la validez externa y la no pérdida de participantes a lo largo del tiempo?
-    8. ¿Cómo se pueden utilizar los estudios de cohorte para identificar factores de riesgo y observar la evolución de una condición o enfermedad a lo largo del tiempo?
+1. **¿Por qué es importante publicar los resultados de una investigación científica y qué impacto tiene en la carrera de un investigador?**
+2. **¿Cuáles son los principales tipos de revisión por pares y qué ventajas y desventajas ofrece cada uno?**
+3. **¿Qué criterios utiliza una persona revisora para evaluar la calidad y relevancia de un manuscrito científico?**
+4. **¿Qué prácticas éticas deben seguirse al momento de preparar y someter un manuscrito científico para publicación?**
+5. **¿Qué elementos deben incluirse en las secciones esenciales de un manuscrito, como introducción, métodos, resultados y discusión?**
+6. **¿Qué características definen una revista científica de calidad y cómo se pueden identificar revistas predatorias?**
+7. **¿Cuáles son las razones comunes por las que un manuscrito puede ser rechazado por una revista científica?**
+8. **¿Cómo deben manejarse las disputas de autoría y qué medidas pueden tomarse para prevenirlas desde el inicio del proyecto?**
+9. **¿Qué recomendaciones específicas se ofrecen para responder a los comentarios de los revisores tras el proceso de revisión por pares?**
+10. **¿Cómo se debe utilizar la inteligencia artificial en la elaboración y análisis de manuscritos científicos según las recomendaciones actuales?**
     """)
 
     # Sección "Material complementario"

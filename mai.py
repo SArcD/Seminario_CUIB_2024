@@ -245,7 +245,7 @@ def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, co
 
 
 def pagina_ejemplo():
-    titulo = "Evento: Creación y tipos de hipótesis"
+    titulo = "Seminario del 30 de agosto: Creación y tipos de hipótesis"
     st.title(titulo)
 
     # Datos del autor
@@ -975,7 +975,7 @@ def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, co
     # Ajustar posición del texto "Acerca de la autora" debajo de las imágenes
     pdf.set_y(pdf.get_y() + img_height + 5)  # Mover hacia abajo para que no se superponga con las imágenes
     pdf.set_font("Times", "B", 14)
-    pdf.cell(200, 10, txt="Acerca de la autora", ln=True)
+    pdf.cell(200, 10, txt="Datos", ln=True)
     #pdf.ln(5)  # Espacio entre el título y el contenido
 
     # Información del autor
@@ -1061,7 +1061,7 @@ def noviembre_quince():
     # Título de la sección "Acerca del autor" debajo de la imagen
     st.markdown(f'''
     <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold; margin-top: 10px;">
-        Acerca de la autora
+        Datos
     </div>
     ''', unsafe_allow_html=True)
 

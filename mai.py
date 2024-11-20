@@ -995,7 +995,7 @@ def noviembre_quince():
     st.write("### Lucha contra las revistas y los congresos predadores")
     st.markdown(
     '[Haz clic aquí para acceder al documento](https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Summary%20report.pdf)',
-    unsafe_allow_html=True
+    unsafe_allow_html=True)
 
 
 

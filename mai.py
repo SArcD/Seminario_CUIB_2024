@@ -845,7 +845,7 @@ def noviembre_quince():
     <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
     <strong>{nombre1}</strong>{", " + grado1 if grado1 else ""}. 
     {reseña1 if reseña1 else ""} <br><br>
-    Puedes contactar al autor por correo electrónico: <a href="mailto:{correo1}">{correo1}</a> 
+    <strong>Puedes contactar al autor por correo electrónico:<strong> <a href="mailto:{correo1}">{correo1}</a> 
     </div>
     ''', unsafe_allow_html=True)
 
@@ -859,8 +859,9 @@ def noviembre_quince():
     #https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
 
     st.markdown(f'''
-    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
-    <strong>Resumen de la plática:</strong> {resumen_platica}
+    <div style="text-align: center; font-family: Times New Roman; font-size: 16px;">
+    <strong>Resumen de la plática:</strong><br>
+    {resumen_platica}
     </div>
     ''', unsafe_allow_html=True)
 

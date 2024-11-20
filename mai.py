@@ -750,15 +750,14 @@ def noviembre_quince():
     
     # Datos del segundo autor
     #foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.PNG"
-    nombre2 = " "
-    grado2 = " "
-    reseña2 = (" ")
-    correo2 = " "
+    #nombre2 = " "
+    #grado2 = " "
+    #reseña2 = (" ")
+    #correo2 = " "
     
     # Lista de autores
     autores = [
-        {"foto": foto1, "nombre": nombre1, "grado": grado1, "reseña": reseña1, "correo": correo1, "perfil_scholar": perfil_scholar1},
-        {"foto": None, "nombre": None, "grado": None, "reseña": None, "correo": None, "perfil_scholar": None}
+        {"foto": foto1, "nombre": nombre1, "grado": grado1, "reseña": reseña1, "correo": correo1, "perfil_scholar": perfil_scholar1}
     ]
     
     for autor in autores:

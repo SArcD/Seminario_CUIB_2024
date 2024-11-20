@@ -1163,9 +1163,9 @@ def noviembre_dosdos():
 
 
     # Enlace adicional
-    st.write("### Lucha contra las revistas y los congresos predadores")
+    st.write("### ¿Qué es el aprendizaje no supervisado?")
     st.markdown(
-    '[Haz clic aquí para acceder al documento](https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Summary%20report.pdf)',
+    '[Haz clic aquí para acceder al enlace](https://www.datacamp.com/es/blog/introduction-to-unsupervised-learning)',
     unsafe_allow_html=True)
 
 

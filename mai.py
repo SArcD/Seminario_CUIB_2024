@@ -267,7 +267,7 @@ def pagina_ejemplo():
     <div style="text-align: center;">
         <img src="{foto1}" alt="{nombre1}" style="width: 300px; border-radius: 10px;">
         <div style="font-family: Times New Roman; font-size: 14px; margin-top: 5px;">
-            <em>Dra. Xóchitl Trujillo</em>
+            <em>Dr. Miguel Huerta Viera</em>
         </div>
     </div>
     ''', unsafe_allow_html=True)
@@ -275,7 +275,7 @@ def pagina_ejemplo():
     # Título de la sección "Acerca del autor" debajo de la imagen
     st.markdown(f'''
     <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold; margin-top: 10px;">
-        Acerca de la autora
+        Acerca del autor
     </div>
     ''', unsafe_allow_html=True)
 

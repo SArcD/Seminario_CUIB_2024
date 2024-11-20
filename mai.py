@@ -814,7 +814,7 @@ def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, co
 
     pdf.set_font("Times", "", 12)  # Texto normal
     pdf.multi_cell(0, 10, resumen_platica)
-    pdf.ln(10)  # Espacio debajo de la sección "Sobre la plática"
+    #pdf.ln(10)  # Espacio debajo de la sección "Sobre la plática"
 
     # Enlace a las diapositivas
     if enlace_pdf:

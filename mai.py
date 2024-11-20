@@ -735,35 +735,83 @@ def octubre_dieciocho():
     #    file_name="evento_04_octubre.pdf",
     #    mime="application/pdf",
     #)
+from fpdf import FPDF
+import requests
+from PIL import Image
+from io import BytesIO
 
-def generar_pdf(titulo, autor, correo, grado, resumen_platica, enlace_pdf):
-    from fpdf import FPDF
-
+def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
+    # Crear el PDF
     pdf = FPDF()
     pdf.add_page()
 
-    # Título
-    pdf.set_font("Arial", "B", 16)
-    pdf.cell(200, 10, titulo, ln=True, align="C")
+    # Título en negritas y centrado
+    pdf.set_font("Times", "B", 16)
+    page_width = pdf.w - 2 * pdf.l_margin  # Ancho de la página
+    pdf.multi_cell(page_width, 10, txt=titulo, align='C')
+    pdf.ln(10)  # Espacio debajo del título
 
-    # Añadir información del autor
-    pdf.set_font("Arial", size=12)
-    pdf.ln(10)  # Salto de línea
-    pdf.cell(200, 10, f"Autor: {autor}", ln=True, align="L")
-    if grado:
-        pdf.cell(200, 10, f"Grado: {grado}", ln=True, align="L")
-    if correo:
-        pdf.cell(200, 10, f"Correo: {correo}", ln=True, align="L")
+    # Acerca del autor
+    pdf.set_font("Times", "B", 14)
+    pdf.cell(200, 10, txt="Acerca del autor", ln=True)
 
-    # Resumen de la plática
-    pdf.ln(10)  # Salto de línea
-    pdf.multi_cell(0, 10, f"Resumen: {resumen_platica}", align="L")
+    # Descargar y agregar la imagen del autor
+    response = requests.get(foto_url)
+    img = Image.open(BytesIO(response.content))
+    img.save("temp_image.jpg")  # Guardar temporalmente para usarla en FPDF
+
+    img_height = 40  # Altura ajustada de la imagen
+    pdf.image("temp_image.jpg", x=10, y=pdf.get_y() + 5, w=30, h=img_height)  # Agregar la imagen
+
+    # Ajustar posición del texto para que no se superponga con la imagen
+    pdf.set_y(pdf.get_y() + img_height + 5)
+
+    # Información del autor
+    informacion = [
+        ("Nombre", nombre),
+        ("Grado", grado),
+        ("Reseña", reseña),
+        ("Correo", correo),
+        ("Perfil", perfil_scholar)
+    ]
+
+    for etiqueta, contenido in informacion:
+        pdf.set_font("Times", "B", 14)  # Negritas para las etiquetas
+        pdf.cell(40, 10, f"{etiqueta}: ", ln=False)
+        pdf.set_font("Times", "", 14)  # Texto normal para el contenido
+        pdf.multi_cell(0, 10, contenido)  # Multi-cell para contenido largo
+
+    pdf.ln(10)  # Espacio debajo de la información del autor
+
+    # Sobre la plática
+    pdf.set_font("Times", "B", 14)
+    pdf.cell(200, 10, txt="Sobre la plática", ln=True)
+
+    pdf.set_font("Times", "", 14)  # Texto normal
+    pdf.multi_cell(0, 10, resumen_platica)
+    pdf.ln(10)  # Espacio debajo de la sección "Sobre la plática"
 
     # Enlace a las diapositivas
-    pdf.ln(10)  # Salto de línea
-    pdf.cell(200, 10, f"Enlace a las diapositivas: {enlace_pdf}", ln=True, align="L")
+    if enlace_pdf:
+        pdf.set_font("Times", "B", 14)
+        pdf.cell(40, 10, "Ver diapositivas: ", ln=False)
+        pdf.set_font("Times", "", 12)
+        pdf.cell(0, 10, txt=enlace_pdf, ln=True, link=enlace_pdf)
 
-    # Devolver el PDF como un objeto de bytes
+    # Descargar y agregar la cintilla
+    cintilla_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/udec.png"
+    response = requests.get(cintilla_url)
+    cintilla_img = Image.open(BytesIO(response.content))
+    cintilla_img.save("temp_cintilla.png")  # Guardar temporalmente la imagen
+
+    image_width = 90  # Ancho de la cintilla
+    pdf_width = 210  # Ancho de la página
+    x_position = (pdf_width - image_width) / 2  # Centrar la imagen
+    y_position = 270  # Altura ajustada para la parte inferior
+
+    pdf.image("temp_cintilla.png", x=x_position, y=y_position, w=image_width)
+
+    # Retornar el PDF como bytes para descargar
     return pdf.output(dest="S").encode("latin1")
 
 

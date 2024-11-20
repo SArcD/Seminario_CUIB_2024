@@ -311,7 +311,7 @@ def pagina_ejemplo():
     # Información sobre la plática
     resumen_platica = ("Esta plática abordará la creación y tipos de hipótesis en la investigación científica , explorando las diferencias entre hipótesis nulas y alternativas, y cómo formularlas correctamente.")
     
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/asp.pdf"
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Hipotesis.pdf"
     #https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
 
     st.markdown(f'''
@@ -351,16 +351,25 @@ def pagina_ejemplo():
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")
     st.write("""
-1. **¿Por qué es importante publicar los resultados de una investigación científica y qué impacto tiene en la carrera de un investigador?**
-2. **¿Cuáles son los principales tipos de revisión por pares y qué ventajas y desventajas ofrece cada uno?**
-3. **¿Qué criterios utiliza una persona revisora para evaluar la calidad y relevancia de un manuscrito científico?**
-4. **¿Qué prácticas éticas deben seguirse al momento de preparar y someter un manuscrito científico para publicación?**
-5. **¿Qué elementos deben incluirse en las secciones esenciales de un manuscrito, como introducción, métodos, resultados y discusión?**
-6. **¿Qué características definen una revista científica de calidad y cómo se pueden identificar revistas predatorias?**
-7. **¿Cuáles son las razones comunes por las que un manuscrito puede ser rechazado por una revista científica?**
-8. **¿Cómo deben manejarse las disputas de autoría y qué medidas pueden tomarse para prevenirlas desde el inicio del proyecto?**
-9. **¿Qué recomendaciones específicas se ofrecen para responder a los comentarios de los revisores tras el proceso de revisión por pares?**
-10. **¿Cómo se debe utilizar la inteligencia artificial en la elaboración y análisis de manuscritos científicos según las recomendaciones actuales?**
+1. **¿Cuál es la diferencia entre una hipótesis empírica y una hipótesis racional, y en qué casos se utiliza cada una?**
+
+2. **¿Qué rol juega la identificación del problema en la primera etapa de la investigación científica?**
+
+3. **¿Cómo se seleccionan las hipótesis preliminares durante la segunda etapa de la investigación?**
+
+4. **¿Qué importancia tiene la recolección de datos adicionales antes de formular una hipótesis explicativa redefinida?**
+
+5. **¿Cómo se deducen consecuencias a partir de una hipótesis explicativa redefinida y qué criterios se usan para esta deducción?**
+
+6. **¿Cuáles son los métodos más comunes para poner a prueba las consecuencias deducidas de una hipótesis?**
+
+7. **¿Cómo se relacionan las hipótesis con los enfoques descriptivo, exploratorio, predictivo y explicativo en la investigación científica?**
+
+8. **¿Qué diferencias existen entre los estudios univariados y bivariados en términos del manejo de hipótesis?**
+
+9. **¿Qué ventajas ofrece una hipótesis relacional frente a una hipótesis causal en investigaciones predictivas?**
+
+10. **¿Cómo se vincula la aplicación de una teoría con la comprobación o refutación de una hipótesis en el proceso científico?**
     """)
 
     # Sección "Material complementario"

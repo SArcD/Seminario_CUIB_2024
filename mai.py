@@ -794,13 +794,13 @@ def noviembre_quince():
     st.markdown(f'[Haz clic aquí para ver las diapositivas]({enlace_pdf})')
     
     # Botón para generar y descargar el PDF
-    #pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
-    #st.download_button(
-    #    label="Descargar PDF con los datos del evento",
-    #    data=pdf,
-    #    file_name="evento_04_octubre.pdf",
-    #    mime="application/pdf",
-    #)
+    pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
+    st.download_button(
+        label="Descargar PDF con los datos del evento",
+        data=pdf,
+        file_name="evento_15_noviembre.pdf",
+        mime="application/pdf",
+    )
 
 
     
@@ -878,19 +878,7 @@ def noviembre_quince():
     # Imagen 5
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_4.PNG", caption="Figura 5: Tips para sobrevivir a la revisión por pares.")
 
-    #st.write("""
-    #La principal característica de los estudios transversales es asimismo una desventaja, ya que al medir la exposición y el evento de interés o enfermedad simultáneamente no es posible determinar si la exposición precedió al evento. Por lo tanto, estos estudios son incapaces de establecer una relación de causa y efecto, solo detectar si existe asociación entre ambos.
-    #Estos pueden estar sujetos a sesgos, como lo son el sesgo de información, de selección y de confusión, los cuales pueden distorsionar los resultados. Además. tienen la desventaja de que, en casos donde la enfermedad sea de corta duración o tenga una gran letalidad, puede llegar a subestimar los resultados al no capturar a los pacientes si estos se curan o fallecen antes de ser incluidos en el estudio. Por otro lado, si una enfermedad o evento de interés es muy raro, difícilmente podría capturarse un caso en el estudio.
-    #""")
-    
-    ## Imagen 3
-    #st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_02.PNG", caption="Figura 3: Desventajas de los estudios transversales.")
 
-    ## Imagen 4
-    #st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/va_03.PNG", caption="Figura 4: Conclusiones.")
-
-    #st.write(""" En resumen, los estudios transversales pueden emplearse para la determinación de prevalencias (descriptivos) o para identificar si existe asociación entre variables y generar nuevas hipótesis (analíticos). Se caracterizan por medir la exposición y el evento de interés al mismo tiempo, por lo que pueden determinar si existe asociación entre estos pero no es posible establecer causalidad. Debido a esto, suelen ser un paso previo para investigaciones más rigurosas.
-    #""")
 
 
 # Página de inicio con el resumen

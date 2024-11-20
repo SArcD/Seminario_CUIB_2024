@@ -860,23 +860,23 @@ def noviembre_quince():
     """)
     
     
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_1.PNG", caption="Figura 1: Tipos de cohorte.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_1.PNG", caption="Figura 1: Aspectos importantes de la publicación científica.")
 
     st.write("""
     Relata una división general acerca de los análisis estadísticos necesarios para un estudio de cohorte.
     """)
     
     # Imagen 2
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_2.PNG", caption="Figura 2: Tipos de Medidas.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_2.PNG", caption="Figura 2: El papel del revisor en la publicación científica.")
 
     # Imagen 3
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_2b.PNG", caption="Figura 3: Tipos de Medidas.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_2b.PNG", caption="Figura 3: Como planear tu primer artículo.")
 
     # Imagen 4
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_3.PNG", caption="Figura 4: Tipos de Medidas.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_3.PNG", caption="Figura 4: Tips para contar una buena historia.")
 
     # Imagen 5
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_4.PNG", caption="Figura 5: Tipos de Medidas.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_4.PNG", caption="Figura 5: Tips para sobrevivir a la revisión por pares.")
 
     #st.write("""
     #La principal característica de los estudios transversales es asimismo una desventaja, ya que al medir la exposición y el evento de interés o enfermedad simultáneamente no es posible determinar si la exposición precedió al evento. Por lo tanto, estos estudios son incapaces de establecer una relación de causa y efecto, solo detectar si existe asociación entre ambos.

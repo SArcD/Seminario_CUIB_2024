@@ -757,16 +757,13 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
     img.save("temp_image.jpg")  # Guardar temporalmente para usarla en FPDF
 
     img_height = 40  # Altura ajustada de la imagen
-    pdf.image("temp_image.jpg", x=10, y=pdf.get_y() + 5, w=30, h=img_height)  # Agregar la imagen
+    pdf.image("temp_image.jpg", x=10, y=pdf.get_y(), w=30, h=img_height)  # Agregar la imagen
 
-    
-    # Acerca del autor
+    # Ajustar la posición del texto "Acerca de la autora" debajo de la imagen
+    pdf.set_y(pdf.get_y() + img_height + 5)  # Mover hacia abajo para que no se superponga con la imagen
     pdf.set_font("Times", "B", 14)
-    pdf.cell(200, 10, txt="Acerca de la  autora", ln=True)
-
-
-    # Ajustar posición del texto para que no se superponga con la imagen
-    pdf.set_y(pdf.get_y() + img_height + 5)
+    pdf.cell(200, 10, txt="Acerca de la autora", ln=True)
+    pdf.ln(5)  # Espacio entre el título y el contenido
 
     # Información del autor
     informacion = [
@@ -778,14 +775,14 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
     ]
 
     for etiqueta, contenido in informacion:
-        pdf.set_font("Times", "B", 14)  # Negritas para las etiquetas
+        pdf.set_font("Times", "B", 12)  # Negritas para las etiquetas
         pdf.cell(40, 10, f"{etiqueta}: ", ln=False)
         pdf.set_font("Times", "", 12)  # Texto normal para el contenido
         pdf.multi_cell(0, 10, contenido)  # Multi-cell para contenido largo
 
     pdf.ln(10)  # Espacio debajo de la información del autor
 
-    # Sobre la plática
+    # Sección "Sobre la plática"
     pdf.set_font("Times", "B", 14)
     pdf.cell(200, 10, txt="Sobre la plática", ln=True)
 
@@ -815,6 +812,7 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 
     # Retornar el PDF como bytes para descargar
     return pdf.output(dest="S").encode("latin1")
+
 
 
 def noviembre_quince():

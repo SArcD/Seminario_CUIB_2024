@@ -859,11 +859,14 @@ def noviembre_quince():
     #https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
 
     st.markdown(f'''
-    <div style="text-align: center; font-family: Times New Roman; font-size: 16px;">
-    <strong>Resumen de la plática:</strong><br>
+<    div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold;">
+    Resumen de la plática
+    </div>
+    <div style="margin-top: 10px; text-align: justify; font-family: Times New Roman; font-size: 14px;">
     {resumen_platica}
     </div>
     ''', unsafe_allow_html=True)
+
 
     st.markdown(f'[Haz clic aquí para ver las diapositivas]({enlace_pdf})')
 

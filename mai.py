@@ -855,7 +855,8 @@ def noviembre_quince():
         "se describe el proceso que concluye con cualquier investigación científica: la redacción, envío, revisión "
         "y publicación de un artículo científico."
     )
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
+    enlace_pdf = "https://acortar.link/aS2bXR"
+    #https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
 
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">

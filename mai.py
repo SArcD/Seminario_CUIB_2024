@@ -922,7 +922,7 @@ def noviembre_quince():
     # Generar y descargar el PDF
     #pdf = generar_pdf(titulo, nombre1, correo1, grado1, resumen_platica, enlace_pdf)
     #pdf = generar_pdf(titulo, foto1, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf)
-    pdf = generar_pdf(titulo, foto1, imagen_derecha_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf):
+    pdf = generar_pdf(titulo, foto1, imagen_derecha_url, nombre, grado, reseña, correo, perfil_scholar, resumen_platica, enlace_pdf)
 
     st.download_button(
         label="Descargar PDF con los datos del evento",

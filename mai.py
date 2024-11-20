@@ -1138,23 +1138,26 @@ def noviembre_dosdos():
     #""")
     
     
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_1.PNG", caption="Figura 1: Aspectos importantes de la publicación científica.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_01.PNG", caption="Figura 1: Espectativas de envejeciemiento para México.")
 
     #st.write("""
     #Relata una división general acerca de los análisis estadísticos necesarios para un estudio de cohorte.
     #""")
     
     # Imagen 2
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_2.PNG", caption="Figura 2: El papel del revisor en la publicación científica.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_02.PNG", caption="Figura 2: El Cribado de pacientes con sarcopenia de acuerdo al EWGSOP2.")
 
     # Imagen 3
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_2b.PNG", caption="Figura 3: Como planear tu primer artículo.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_03.PNG", caption="Figura 3: Ejemplo de como se decartan clusters que estén por encima del umbral mínimo de fuerza (quintil del 40%).")
 
     # Imagen 4
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_3.PNG", caption="Figura 4: Tips para contar una buena historia.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_04.PNG", caption="Figura 4: Porcentaje de hombres y mujeres con sarcopenia en la muestra del IMSS del 2019 .")
 
     # Imagen 5
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_4.PNG", caption="Figura 5: Tips para sobrevivir a la revisión por pares.")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_07.PNG", caption="Figura 5: Ejemplo de un modelo de arbol de decisión basado en antropometría.")
+
+     # Imagen 5
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_09.PNG", caption="Figura 6: Puntos de corte obtenidos a partir de los modelos de árbol de decisión y su comparación con los ya publicados en la literatura.")
 
 
     # Enlace adicional

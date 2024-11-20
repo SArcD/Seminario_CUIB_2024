@@ -818,7 +818,7 @@ def generar_pdf(titulo, foto_url, nombre, grado, reseña, correo, perfil_scholar
 def noviembre_quince():
     import streamlit as st
 
-    titulo = "Publicación para principiantes"
+    titulo = "Seminario del 15 de noviembre: Publicación para principiantes"
     st.title(titulo)
 
     # Datos del autor

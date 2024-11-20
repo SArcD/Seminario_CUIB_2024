@@ -1102,7 +1102,7 @@ def noviembre_dosdos():
     st.download_button(
         label="Descargar PDF con los datos del evento",
         data=pdf,
-        file_name="evento_15_noviembre.pdf",
+        file_name="evento_22_noviembre.pdf",
         mime="application/pdf",
     )
 
@@ -1113,21 +1113,21 @@ def noviembre_dosdos():
 
 2. **¿Qué métodos de diagnóstico y evaluación de severidad se utilizan para identificar la sarcopenia según el consenso EWGSOP2?**
 
-3.**¿Cómo se valida la ecuación IMMEA y cuáles son las variables antropométricas principales utilizadas en su cálculo?**
+3. **¿Cómo se valida la ecuación IMMEA y cuáles son las variables antropométricas principales utilizadas en su cálculo?**
 
-4.**¿Qué resultados principales se obtuvieron al aplicar modelos de clustering a los datos de fuerza de agarre, IMMEA y velocidad de marcha?**
+4. **¿Qué resultados principales se obtuvieron al aplicar modelos de clustering a los datos de fuerza de agarre, IMMEA y velocidad de marcha?**
 
-5.**¿Cuáles son los puntos de corte antropométricos sugeridos para diagnosticar sarcopenia en hombres y mujeres?**
+5. **¿Cuáles son los puntos de corte antropométricos sugeridos para diagnosticar sarcopenia en hombres y mujeres?**
 
-6.**¿Qué diferencias significativas se observaron entre los pacientes con sarcopenia grave y los pacientes clasificados como no graves en términos de fuerza, IMMEA y velocidad de marcha?**
+6. **¿Qué diferencias significativas se observaron entre los pacientes con sarcopenia grave y los pacientes clasificados como no graves en términos de fuerza, IMMEA y velocidad de marcha?**
 
-7.**¿Qué rol desempeñan los modelos de árboles de decisión en la clasificación de pacientes con sarcopenia y cómo coinciden con los puntos de corte propuestos por el consenso?**
+7. **¿Qué rol desempeñan los modelos de árboles de decisión en la clasificación de pacientes con sarcopenia y cómo coinciden con los puntos de corte propuestos por el consenso?**
 
-8.**¿Qué proporción de la muestra total corresponde a pacientes con sarcopenia y cómo están distribuidos en las categorías de severidad?**
+8. **¿Qué proporción de la muestra total corresponde a pacientes con sarcopenia y cómo están distribuidos en las categorías de severidad?**
 
-9.**¿Qué variables adicionales, como circunferencia de pantorrilla, cintura y brazo, pueden servir como discriminadores de sarcopenia según estudios complementarios?**
+9. **¿Qué variables adicionales, como circunferencia de pantorrilla, cintura y brazo, pueden servir como discriminadores de sarcopenia según estudios complementarios?**
 
-10.**¿Qué limitaciones o discrepancias se encontraron al comparar los datos de desempeño físico (velocidad de marcha) con los valores de fuerza e IMMEA para clasificar sarcopenia?**
+10. **¿Qué limitaciones o discrepancias se encontraron al comparar los datos de desempeño físico (velocidad de marcha) con los valores de fuerza e IMMEA para clasificar sarcopenia?**
     """)
 
     # Sección "Material complementario"

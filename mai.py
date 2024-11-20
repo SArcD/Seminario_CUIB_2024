@@ -451,9 +451,9 @@ def pagina_ejemplo():
 
 
     # Enlace adicional
-    st.write("### Lucha contra las revistas y los congresos predadores")
+    st.write("### Introducción a la lógica")
     st.markdown(
-    '[Haz clic aquí para acceder al documento](https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Summary%20report.pdf)',
+    '[Haz clic aquí para acceder al documento](https://desarmandolacultura.wordpress.com/wp-content/uploads/2018/04/copi-irving-introduccion-a-la-logica.pdf)',
     unsafe_allow_html=True)
 
 

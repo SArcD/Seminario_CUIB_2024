@@ -779,7 +779,7 @@ def noviembre_quince():
         ''', unsafe_allow_html=True)
     
     # Información sobre la plática
-    resumen_platica = ("Un diseño de cohorte es un tipo de estudio observacional que se utiliza para investigar la relación entre una exposición (como un factor de riesgo o una intervención) y un resultado a lo largo del tiempo. En este diseño, se selecciona un grupo de individuos que no presentan la condición o enfermedad de interés al inicio del estudio, pero que están expuestos o no a un factor de riesgo específico. Luego, se sigue a estos individuos durante un periodo de tiempo para observar la aparición de la enfermedad o el resultado de interés.")
+    resumen_platica = ("En esta plática se presenta la relevancia de las publicaciones científicas para el mundo académico y se describe el proceso que concluye con cualquier investigación científica: la redacción, envío, revisión y publicación de un artículo científico. Se comienza por dar algunos consejos para facilitar la redacción del artículo científico (desde reglas básicas de estilo y redacción hasta la descripción detallada de las secciones que lo componen). Después se dan consejos para la selección de la revista adecuada y se describen aspectos importantes de la revisión de forma y fondo del artículo (la revisión por pares). Por último, se abordan las consideraciones éticas relacionadas con la publicación de un artículo científico y el uso de la inteligencia artificial en la redacción.")
     
     # Mostrar la información de la plática con el texto justificado
     st.markdown(f'''

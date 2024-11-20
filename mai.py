@@ -746,6 +746,7 @@ def noviembre_quince():
     grado1 = "Doctora en Ciencias Fisiológicas"
     reseña1 = ("Bióloga, Maestra y Doctora en Ciencias Fisiológicas con especialidad en Fisiología. Es Profesora-Investigadora de  Tiempo Completo de la Universidad de Colima. Cuenta con perfil deseable y es miembro del Sistema Nacional de Investigadores en el nivel 3. Su línea de investigación es en Biomedicina en la que cuenta con una producción científica de más de noventa artículos en revistas internacionales, varios capítulos de libro y dos libros. Imparte docencia y ha formado a más de treinta estudiantes de licenciatura y de posgrado en programas académicos adscritos al Sistema Nacional de Posgrado del CONAHCYT.")
     correo1 = "rosio@ucol.mx"
+    perfil_scholar1 = "https://scholar.google.com.mx/citations?hl=en&user=NRAT-KwAAAAJ"
     
     # Datos del segundo autor
     #foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.PNG"
@@ -756,8 +757,8 @@ def noviembre_quince():
     
     # Lista de autores
     autores = [
-        {"foto": foto1, "nombre": nombre1, "grado": grado1, "reseña": reseña1, "correo": correo1, "perfil_scholar": None},
-        {"foto": None, "nombre": nombre2, "grado": grado2, "reseña": reseña2, "correo": correo2, "perfil_scholar": None}
+        {"foto": foto1, "nombre": nombre1, "grado": grado1, "reseña": reseña1, "correo": correo1, "perfil_scholar": perfil_scholar1},
+        {"foto": None, "nombre": None, "grado": None, "reseña": None, "correo": None, "perfil_scholar": None}
     ]
     
     for autor in autores:
@@ -794,13 +795,13 @@ def noviembre_quince():
     st.markdown(f'[Haz clic aquí para ver las diapositivas]({enlace_pdf})')
     
     # Botón para generar y descargar el PDF
-    pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
-    st.download_button(
-        label="Descargar PDF con los datos del evento",
-        data=pdf,
-        file_name="evento_15_noviembre.pdf",
-        mime="application/pdf",
-    )
+    #pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
+    #st.download_button(
+    #    label="Descargar PDF con los datos del evento",
+    #    data=pdf,
+    #    file_name="evento_15_noviembre.pdf",
+    #    mime="application/pdf",
+    #)
 
 
     

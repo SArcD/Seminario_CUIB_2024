@@ -736,107 +736,96 @@ def octubre_dieciocho():
     #    mime="application/pdf",
     #)
 
+def generar_pdf(titulo, autor, correo, grado, resumen_platica, enlace_pdf):
+    from fpdf import FPDF
+
+    pdf = FPDF()
+    pdf.add_page()
+
+    # Título
+    pdf.set_font("Arial", "B", 16)
+    pdf.cell(200, 10, titulo, ln=True, align="C")
+
+    # Añadir información del autor
+    pdf.set_font("Arial", size=12)
+    pdf.ln(10)  # Salto de línea
+    pdf.cell(200, 10, f"Autor: {autor}", ln=True, align="L")
+    if grado:
+        pdf.cell(200, 10, f"Grado: {grado}", ln=True, align="L")
+    if correo:
+        pdf.cell(200, 10, f"Correo: {correo}", ln=True, align="L")
+
+    # Resumen de la plática
+    pdf.ln(10)  # Salto de línea
+    pdf.multi_cell(0, 10, f"Resumen: {resumen_platica}", align="L")
+
+    # Enlace a las diapositivas
+    pdf.ln(10)  # Salto de línea
+    pdf.cell(200, 10, f"Enlace a las diapositivas: {enlace_pdf}", ln=True, align="L")
+
+    # Devolver el PDF como un objeto de bytes
+    return pdf.output(dest="S").encode("latin1")
+
+
 def noviembre_quince():
+    import streamlit as st
+
     titulo = "Publicación para principiantes"
     st.title(titulo)
-    
-    # Datos del primer autor
+
+    # Datos del autor
     foto1 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/FotoXochitl.jpg"
     nombre1 = "Xóchitl Angélica Rosio Trujillo Trujillo"
     grado1 = "Doctora en Ciencias Fisiológicas"
-    reseña1 = ("Bióloga, Maestra y Doctora en Ciencias Fisiológicas con especialidad en Fisiología. Es Profesora-Investigadora de  Tiempo Completo de la Universidad de Colima. Cuenta con perfil deseable y es miembro del Sistema Nacional de Investigadores en el nivel 3. Su línea de investigación es en Biomedicina en la que cuenta con una producción científica de más de noventa artículos en revistas internacionales, varios capítulos de libro y dos libros. Imparte docencia y ha formado a más de treinta estudiantes de licenciatura y de posgrado en programas académicos adscritos al Sistema Nacional de Posgrado del CONAHCYT.")
+    reseña1 = (
+        "Bióloga, Maestra y Doctora en Ciencias Fisiológicas con especialidad en Fisiología. "
+        "Es Profesora-Investigadora de Tiempo Completo de la Universidad de Colima. Cuenta con perfil deseable "
+        "y es miembro del Sistema Nacional de Investigadores en el nivel 3. Su línea de investigación es en Biomedicina "
+        "con una producción científica de más de noventa artículos en revistas internacionales."
+    )
     correo1 = "rosio@ucol.mx"
     perfil_scholar1 = "https://scholar.google.com.mx/citations?hl=en&user=NRAT-KwAAAAJ"
-    
-    # Datos del segundo autor
-    #foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.PNG"
-    #nombre2 = " "
-    #grado2 = " "
-    #reseña2 = (" ")
-    #correo2 = " "
-    
-    # Lista de autores
-    autores = [
-        {"foto": foto1, "nombre": nombre1, "grado": grado1, "reseña": reseña1, "correo": correo1, "perfil_scholar": perfil_scholar1}
-    ]
-    
-    for autor in autores:
-        # Si hay una foto, mostrarla
-        if autor["foto"]:
-            st.markdown(f'''
-            <div style="text-align: center;">
-                <img src="{autor['foto']}" alt="{autor['nombre']}" style="width: 300px; border-radius: 10px;">
-            </div>
-            ''', unsafe_allow_html=True)
-        
-        # Mostrar la información del autor
-        st.markdown(f'''
-        <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
-        <strong>{autor['nombre']}</strong>{", " + autor['grado'] if autor['grado'] else ""}. 
-        {autor['reseña'] if autor['reseña'] else ""} <br><br>
-        Puedes contactar al autor por correo electrónico: <a href="mailto:{autor['correo']}">{autor['correo']}</a> 
-        </div>
-        ''', unsafe_allow_html=True)
-    
+
+    # Mostrar la información del autor
+    st.markdown(f'''
+    <div style="text-align: center;">
+        <img src="{foto1}" alt="{nombre1}" style="width: 300px; border-radius: 10px;">
+    </div>
+    ''', unsafe_allow_html=True)
+
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+    <strong>{nombre1}</strong>{", " + grado1 if grado1 else ""}. 
+    {reseña1 if reseña1 else ""} <br><br>
+    Puedes contactar al autor por correo electrónico: <a href="mailto:{correo1}">{correo1}</a> 
+    </div>
+    ''', unsafe_allow_html=True)
+
     # Información sobre la plática
-    resumen_platica = ("En esta plática se presenta la relevancia de las publicaciones científicas para el mundo académico y se describe el proceso que concluye con cualquier investigación científica: la redacción, envío, revisión y publicación de un artículo científico. Se comienza por dar algunos consejos para facilitar la redacción del artículo científico (desde reglas básicas de estilo y redacción hasta la descripción detallada de las secciones que lo componen). Después se dan consejos para la selección de la revista adecuada y se describen aspectos importantes de la revisión de forma y fondo del artículo (la revisión por pares). Por último, se abordan las consideraciones éticas relacionadas con la publicación de un artículo científico y el uso de la inteligencia artificial en la redacción.")
-    
-    # Mostrar la información de la plática con el texto justificado
+    resumen_platica = (
+        "En esta plática se presenta la relevancia de las publicaciones científicas para el mundo académico y "
+        "se describe el proceso que concluye con cualquier investigación científica: la redacción, envío, revisión "
+        "y publicación de un artículo científico."
+    )
+    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
+
     st.markdown(f'''
     <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
     <strong>Resumen de la plática:</strong> {resumen_platica}
     </div>
     ''', unsafe_allow_html=True)
-    
 
-    enlace_pdf = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
-    # Mostrar el enlace como texto clicable
     st.markdown(f'[Haz clic aquí para ver las diapositivas]({enlace_pdf})')
-    
-    # Botón para generar y descargar el PDF
-    #pdf = generar_pdf(titulo, nombre1, correo1, None, resumen_platica, enlace_pdf)
-    #st.download_button(
-    #    label="Descargar PDF con los datos del evento",
-    #    data=pdf,
-    #    file_name="evento_15_noviembre.pdf",
-    #    mime="application/pdf",
-    #)
 
+    # Generar y descargar el PDF
+    pdf = generar_pdf(titulo, nombre1, correo1, grado1, resumen_platica, enlace_pdf)
+    st.download_button(
+        label="Descargar PDF con los datos del evento",
+        data=pdf,
+        file_name="evento_15_noviembre.pdf",
+        mime="application/pdf",
+    )
 
-    
-
-    # Función para generar el PDF
-    def generar_pdf(titulo, autores, resumen_platica, enlace_pdf):
-        pdf = FPDF()
-        pdf.add_page()
-
-        # Título
-        pdf.set_font("Arial", "B", 16)
-        pdf.cell(200, 10, titulo, ln=True, align="C")
-
-        # Añadir información de cada autor
-        pdf.set_font("Arial", size=12)
-        pdf.ln(10)  # Salto de línea
-
-        for autor in autores:
-            pdf.cell(200, 10, f"Autor: {autor['nombre']}", ln=True, align="L")
-            if autor['grado']:
-                pdf.cell(200, 10, f"Grado: {autor['grado']}", ln=True, align="L")
-            if autor['correo']:
-                pdf.cell(200, 10, f"Correo: {autor['correo']}", ln=True, align="L")
-            pdf.ln(5)  # Pequeño espacio entre autores
-
-        # Resumen de la plática
-        pdf.ln(10)  # Salto de línea
-        pdf.multi_cell(0, 10, f"Resumen: {resumen_platica}", align="L")
-
-        # Enlace a las diapositivas
-        pdf.ln(10)  # Salto de línea
-        pdf.cell(200, 10, f"Enlace a las diapositivas: {enlace_pdf}", ln=True, align="L")
-
-        # Devolver el PDF como un objeto de bytes
-        return pdf.output(dest="S").encode("latin1")
-    
     # Sección "Preguntas Clave"
     st.subheader("Preguntas Clave")
     st.write("""

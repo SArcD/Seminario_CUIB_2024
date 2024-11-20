@@ -997,6 +997,164 @@ def noviembre_quince():
     '[Haz clic aquí para acceder al documento](https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Summary%20report.pdf)',
     unsafe_allow_html=True)
 
+def noviembre_dosdos():
+    import streamlit as st
+
+    titulo = "Seminario del 22 de noviembre: "
+    st.title(titulo)
+
+    # Datos del autor
+    foto1 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/FotoXochitl.jpg"
+    imagen_derecha_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_0.PNG"
+    nombre1 = "Xóchitl Angélica Rosio Trujillo Trujillo"
+    grado1 = "Doctora en Ciencias Fisiológicas"
+    reseña1 = (
+        "Bióloga, Maestra y Doctora en Ciencias Fisiológicas con especialidad en Fisiología. "
+        "Es Profesora-Investigadora de Tiempo Completo de la Universidad de Colima. Cuenta con perfil deseable "
+        "y es miembro del Sistema Nacional de Investigadores en el nivel 3. Su línea de investigación es en Biomedicina "
+        "con una producción científica de más de noventa artículos en revistas internacionales."
+    )
+    correo1 = "rosio@ucol.mx"
+    perfil_scholar1 = "https://scholar.google.com.mx/citations?hl=en&user=NRAT-KwAAAAJ"
+
+    # Mostrar la imagen del autor
+    st.markdown(f'''
+    <div style="text-align: center;">
+        <img src="{foto1}" alt="{nombre1}" style="width: 300px; border-radius: 10px;">
+        <div style="font-family: Times New Roman; font-size: 14px; margin-top: 5px;">
+            <em>Dra. Xóchitl Trujillo</em>
+        </div>
+    </div>
+    ''', unsafe_allow_html=True)
+
+    # Título de la sección "Acerca del autor" debajo de la imagen
+    st.markdown(f'''
+    <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold; margin-top: 10px;">
+        Acerca de la autora
+    </div>
+    ''', unsafe_allow_html=True)
+
+    st.markdown(f'''
+    <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold;">
+        
+    </div>
+    <div style="margin-top: 10px; text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    # Mostrar la reseña del autor y contacto
+    st.markdown(f'''
+    <div style="text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        <strong>{nombre1}</strong>{", " + grado1 if grado1 else ""}. 
+        {reseña1 if reseña1 else ""} <br><br>
+        <strong>Puedes contactar al autor por correo electrónico:</strong> <a href="mailto:{correo1}">{correo1}</a> <br><br>
+        <strong>Perfil en Google Scholar:</strong> <a href="{perfil_scholar1}" target="_blank">{perfil_scholar1}</a>
+    </div>
+    ''', unsafe_allow_html=True)
+
+
+    st.markdown(f'''
+    <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold;">
+        
+    </div>
+    <div style="margin-top: 10px; text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    # Información sobre la plática
+    resumen_platica = (
+        "Esta plática aborda la importancia de las publicaciones científicas en el ámbito académico, destacando el proceso de redacción, envío, revisión y publicación de artículos. Se comienza por dar algunos consejos para facilitar la redacción del artículo (desde reglas básicas de estilo hasta la descripción de cada sección). Después se dan recomendaciones para la selección de la revista y se describen aspectos importantes de la revisión por pares. Por último, se abordan las consideraciones éticas relacionadas con la publicación de un artículo científico y el uso de la inteligencia artificial en la redacción. "
+    )
+    
+    enlace_pdf = "https://acortar.link/aS2bXR"
+    #https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Publicacion%20para%20principiantes-LAB.pdf"
+
+    st.markdown(f'''
+    <div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold;">
+        Resumen de la plática
+    </div>
+    <div style="margin-top: 10px; text-align: justify; font-family: Times New Roman; font-size: 14px;">
+        {resumen_platica}
+    </div>
+    ''', unsafe_allow_html=True)
+
+
+#st.markdown(f'''
+#<div style="text-align: center; font-family: Times New Roman; font-size: 16px; font-weight: bold;">
+#    Resumen de la plática
+#</div>
+#<div style="margin-top: 10px; text-align: justify; font-family: Times New Roman; font-size: 14px;">
+#    {resumen_platica}
+#</div>
+#''', unsafe_allow_html=True)
+
+    
+    st.markdown(f'[Haz clic aquí para ver las diapositivas]({enlace_pdf})')
+
+    # Generar y descargar el PDF
+    #pdf = generar_pdf(titulo, nombre1, correo1, grado1, resumen_platica, enlace_pdf)
+    #pdf = generar_pdf(titulo, foto1, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf)
+    pdf = generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf)
+
+    st.download_button(
+        label="Descargar PDF con los datos del evento",
+        data=pdf,
+        file_name="evento_15_noviembre.pdf",
+        mime="application/pdf",
+    )
+
+    # Sección "Preguntas Clave"
+    st.subheader("Preguntas Clave")
+    st.write("""
+1. **¿Por qué es importante publicar los resultados de una investigación científica y qué impacto tiene en la carrera de un investigador?**
+2. **¿Cuáles son los principales tipos de revisión por pares y qué ventajas y desventajas ofrece cada uno?**
+3. **¿Qué criterios utiliza una persona revisora para evaluar la calidad y relevancia de un manuscrito científico?**
+4. **¿Qué prácticas éticas deben seguirse al momento de preparar y someter un manuscrito científico para publicación?**
+5. **¿Qué elementos deben incluirse en las secciones esenciales de un manuscrito, como introducción, métodos, resultados y discusión?**
+6. **¿Qué características definen una revista científica de calidad y cómo se pueden identificar revistas predatorias?**
+7. **¿Cuáles son las razones comunes por las que un manuscrito puede ser rechazado por una revista científica?**
+8. **¿Cómo deben manejarse las disputas de autoría y qué medidas pueden tomarse para prevenirlas desde el inicio del proyecto?**
+9. **¿Qué recomendaciones específicas se ofrecen para responder a los comentarios de los revisores tras el proceso de revisión por pares?**
+10. **¿Cómo se debe utilizar la inteligencia artificial en la elaboración y análisis de manuscritos científicos según las recomendaciones actuales?**
+    """)
+
+    # Sección "Material complementario"
+    st.subheader("Material complementario")
+
+    # Imagen 1
+    #st.write("""Esta diapositiva habla acerca de que existen diversos tipos de cohorte categorizados de acuerdo a 4 grandes parámetros.    
+    #""")
+    
+    
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_1.PNG", caption="Figura 1: Aspectos importantes de la publicación científica.")
+
+    #st.write("""
+    #Relata una división general acerca de los análisis estadísticos necesarios para un estudio de cohorte.
+    #""")
+    
+    # Imagen 2
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_2.PNG", caption="Figura 2: El papel del revisor en la publicación científica.")
+
+    # Imagen 3
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_2b.PNG", caption="Figura 3: Como planear tu primer artículo.")
+
+    # Imagen 4
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_3.PNG", caption="Figura 4: Tips para contar una buena historia.")
+
+    # Imagen 5
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/XARTT_4.PNG", caption="Figura 5: Tips para sobrevivir a la revisión por pares.")
+
+
+    # Enlace adicional
+    st.write("### Lucha contra las revistas y los congresos predadores")
+    st.markdown(
+    '[Haz clic aquí para acceder al documento](https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/Summary%20report.pdf)',
+    unsafe_allow_html=True)
+
+
+
 
 
 
@@ -1048,6 +1206,8 @@ def main():
         octubre_dieciocho()
     elif selected_page == "15 de noviembre: Xóchitl Trujillo":
         noviembre_quince()
+    elif selected_page == "22 de noviembre: Santiago Arceo":
+        noviembre_dosdos()
     # Aquí añadirás funciones similares para cada una de las fechas/eventos
 
 if __name__ == "__main__":

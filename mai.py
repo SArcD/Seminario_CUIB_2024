@@ -741,7 +741,7 @@ def noviembre_quince():
     st.title(titulo)
     
     # Datos del primer autor
-    foto1 = ""
+    foto1 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/FotoXochitl.jpg"
     nombre1 = "Xóchitl Angélica Rosio Trujillo Trujillo"
     grado1 = "Doctora en Ciencias Fisiológicas"
     reseña1 = (" Bióloga, Maestra y Doctora en Ciencias Fisiológicas con especialidad en Fisiología. Es Profesora-Investigadora de 

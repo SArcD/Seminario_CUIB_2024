@@ -737,14 +737,19 @@ def octubre_dieciocho():
     #)
 
 def noviembre_quince():
-    titulo = "Estudios de Cohorte"
+    titulo = "Publicación para principiantes"
     st.title(titulo)
     
     # Datos del primer autor
-    nombre1 = "Ricardo García Rodríguez"
-    grado1 = "Maestro en Piscología"
-    reseña1 = (" ")
-    correo1 = "ricardo_garcia@ucol.mx"
+    foto1 = ""
+    nombre1 = "Xóchitl Angélica Rosio Trujillo Trujillo"
+    grado1 = "Doctora en Ciencias Fisiológicas"
+    reseña1 = (" Bióloga, Maestra y Doctora en Ciencias Fisiológicas con especialidad en Fisiología. Es Profesora-Investigadora de 
+    Tiempo Completo de la Universidad de Colima. Cuenta con perfil deseable y es miembro del Sistema Nacional de Investigadores en el nivel 3. 
+    Su línea de investigación es en Biomedicina en la que cuenta con una producción científica de más de noventa artículos en revistas internacionales, 
+    varios capítulos de libro y dos libros. Imparte docencia y ha formado a más de treinta estudiantes de licenciatura y de posgrado en programas 
+    académicos adscritos al Sistema Nacional de Posgrado del CONAHCYT. ")
+    correo1 = "rosio@ucol.mx"
     
     # Datos del segundo autor
     #foto2 = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/valdez_aguilar.PNG"

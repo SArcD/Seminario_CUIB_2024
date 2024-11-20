@@ -772,15 +772,18 @@ def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, co
     else:
         print("Error al descargar la imagen izquierda.")
 
-    # Descargar y agregar la imagen derecha
+        # Descargar y agregar la imagen derecha
     response_derecha = requests.get(imagen_derecha_url)
     if response_derecha.status_code == 200:
         img_derecha = Image.open(BytesIO(response_derecha.content))
-        img_derecha = convertir_a_rgb(img_derecha)  # Convertir a RGB manejando transparencia
-        img_derecha.save("temp_image_derecha.jpg")  # Guardar temporalmente
-        pdf.image("temp_image_derecha.jpg", x=50, y=pdf.get_y(), w=img_width, h=img_height)
+        img_derecha = convertir_a_rgb(img_derecha)
+        img_derecha.save("temp_image_derecha.jpg")
+        aspect_ratio = img_derecha.width / img_derecha.height
+        img_derecha_width = img_height * aspect_ratio  # Calcular ancho basado en la altura
+        pdf.image("temp_image_derecha.jpg", x=50, y=pdf.get_y(), w=img_derecha_width, h=img_height)
     else:
         print("Error al descargar la imagen derecha.")
+
 
     # Ajustar posición del texto "Acerca de la autora" debajo de las imágenes
     pdf.set_y(pdf.get_y() + img_height + 5)  # Mover hacia abajo para que no se superponga con las imágenes
@@ -937,7 +940,7 @@ def noviembre_quince():
     # Generar y descargar el PDF
     #pdf = generar_pdf(titulo, nombre1, correo1, grado1, resumen_platica, enlace_pdf)
     #pdf = generar_pdf(titulo, foto1, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf)
-    pdf = generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, correo1, perfil_scholar1, reseña1, enlace_pdf)
+    pdf = generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, correo1, perfil_scholar1, resumen_platica, enlace_pdf)
 
     st.download_button(
         label="Descargar PDF con los datos del evento",

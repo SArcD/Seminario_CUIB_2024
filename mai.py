@@ -768,7 +768,7 @@ def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, co
         img_foto.save("temp_image.jpg")  # Guardar temporalmente
         img_height = 40  # Altura ajustada de la imagen
         img_width = 30  # Proporción ajustada
-        pdf.image("temp_image.jpg", x=10, y=pdf.get_y(), w=img_width, h=img_height)
+        pdf.image("temp_image.jpg", x=50, y=pdf.get_y(), w=img_width, h=img_height)
     else:
         print("Error al descargar la imagen izquierda.")
 
@@ -780,7 +780,7 @@ def generar_pdf(titulo, foto1, imagen_derecha_url, nombre1, grado1, reseña1, co
         img_derecha.save("temp_image_derecha.jpg")
         aspect_ratio = img_derecha.width / img_derecha.height
         img_derecha_width = img_height * aspect_ratio  # Calcular ancho basado en la altura
-        pdf.image("temp_image_derecha.jpg", x=50, y=pdf.get_y(), w=img_derecha_width, h=img_height)
+        pdf.image("temp_image_derecha.jpg", x=90, y=pdf.get_y(), w=img_derecha_width, h=img_height)
     else:
         print("Error al descargar la imagen derecha.")
 

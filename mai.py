@@ -1337,7 +1337,7 @@ def noviembre_dosdos():
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_02.PNG", caption="Figura 2: El Cribado de pacientes con sarcopenia de acuerdo al EWGSOP2.")
 
     # Imagen 3
-    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_03.PNG", caption="Figura 3: Ejemplo de como se decartan clusters que estén por encima del umbral mínimo de fuerza (quintil del 40%).")
+    st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_03.PNG", caption="Figura 3: Ejemplo de como se deScartan clusters que estén por encima del umbral mínimo de fuerza (quintil del 40%).")
 
     # Imagen 4
     st.image("https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_04.PNG", caption="Figura 4: Porcentaje de hombres y mujeres con sarcopenia en la muestra del IMSS del 2019 .")

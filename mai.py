@@ -1195,7 +1195,7 @@ def noviembre_dosdos():
     imagen_derecha_url = "https://raw.githubusercontent.com/SArcD/Seminario_CUIB_2024/main/SARC_00.PNG"
     nombre1 = "Santiago Arceo Díaz"
     grado1 = "Doctor en Ciencias (Astrofísica)"
-    reseña1 = ("Licenciatura y Maestría en Física y Doctor en Ciencias (Astrofísica), por las Universidades de Colima y Guanajuato, respectivamente. "
+    reseña1 = ("Licenciatura y Maestría en Física, por las Universidades de Colima y Guanajuato, respectivamente. "
               "En su formación académica se especializó en la creación de modelos analíticos y numéricos, aplicados a las ciencias exactas y a la ingeniería aplicada. "
               "Dentro de la astrofísica, su área de investigación se centra en la evolución estelar y su relación con la tasa de producción de neutrinos y axiones, "
               "concretamente las estrellas gigantes rojas. También ha realizado trabajos en múltiples áreas de la ingeniería y la arquitectura (con simulaciones numéricas "
